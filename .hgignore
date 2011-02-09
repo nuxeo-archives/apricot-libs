@@ -2,7 +2,7 @@
 ^.settings
 ^Servers
 ^External Plug-in Libraries
-target
+.*/target
 bin
 .*~
 .~.bak
