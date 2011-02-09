@@ -1,0 +1,10 @@
+^.metadata
+^.settings
+^Servers
+^External Plug-in Libraries
+target
+bin
+.*~
+.~.bak
+.*.orig
+.*.reject
