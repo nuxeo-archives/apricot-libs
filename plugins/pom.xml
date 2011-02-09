@@ -48,6 +48,7 @@
     <module>nuxeo-core/nuxeo-core-storage-sql/nuxeo-core-storage-sql-extensions</module>
 
     <module>nuxeo-services/nuxeo-platform-dublincore</module>
+    <module>nuxeo-features/nuxeo-automation/nuxeo-automation-core</module>
 
     <!-- jax-rs integration -->
     <module>nuxeo-webengine/nuxeo-webengine-jaxrs</module>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nuxeo-runtime-jetty-adapter-osgi</name>
+	<name>nuxeo-runtime-jetty-adapter-pde</name>
 	<comment></comment>
 	<projects>
 	</projects>

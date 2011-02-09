@@ -29,7 +29,7 @@ import java.util.Map;
  */
 public class ProjectGenerator {
 
-    public static final String PROJECT_NAME_SUFFIX = "-osgi";
+    public static final String PROJECT_NAME_SUFFIX = "-pde";
 
     public File root;
 
