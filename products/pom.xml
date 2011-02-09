@@ -16,8 +16,10 @@
   </parent>
 
   <modules>
-    <module>nuxeo-core-server-application</module>
-    <!--module>nuxeo-core-server-product</module-->
+    <module>org.nuxeo.osgi.core.application</module>
+    <module>org.nuxeo.osgi.core.feature</module>
+    <module>org.nuxeo.osgi.core.third_parties.feature</module>
+    <module>org.nuxeo.osgi.core.product</module>
   </modules>
 
 </project>

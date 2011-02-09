@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Nuxeo Core  Equinox Product
-Bundle-SymbolicName: nuxeo-core-server-application;singleton:=true
+Bundle-SymbolicName: org.nuxeo.osgi.core.application;singleton:=true
 Bundle-Version: 5.4.1.qualifier
 Bundle-Vendor: Nuxeo SAS
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

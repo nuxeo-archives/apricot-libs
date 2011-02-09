@@ -29,12 +29,12 @@
 		<link>
 			<name>java</name>
 			<type>2</type>
-			<locationURI>PARENT-5-PROJECT_LOC/nuxeo-runtime/nuxeo-runtime-management/src/main/java</locationURI>
+			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-runtime/nuxeo-runtime-management/src/main/java</locationURI>
 		</link>
 		<link>
 			<name>resources</name>
 			<type>2</type>
-			<locationURI>PARENT-5-PROJECT_LOC/nuxeo-runtime/nuxeo-runtime-management/src/main/resources</locationURI>
+			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-runtime/nuxeo-runtime-management/src/main/resources</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -6,7 +6,7 @@
   <name>Nuxeo Core Server</name>
   <description>Nuxeo Core Server Runtime.</description>
   <url>http://www.nuxeo.org/</url>
-  <packaging>pom</packaging>
+  <packaging>eclipse-repository</packaging>
 
   <parent>
     <groupId>org.nuxeo.osgi</groupId>
@@ -20,6 +20,7 @@
       <plugin>
         <groupId>org.sonatype.tycho</groupId>
 	<artifactId>tycho-p2-publisher-plugin</artifactId>
+	<version>${tycho-version}</version>
 	<configuration>
 	  <publishArtifacts>true</publishArtifacts>
 	</configuration>
@@ -27,6 +28,7 @@
       <plugin>
         <groupId>org.sonatype.tycho</groupId>
 	<artifactId>tycho-p2-director-plugin</artifactId>
+	<version>${tycho-version}</version>
 	<executions>
 	  <execution>
 	    <id>materialize-products</id>
@@ -44,39 +46,10 @@
 	<configuration>
 	  <products>
 	    <product>
-	      <id>org.nuxeo.core.server</id>
+	      <id>org.nuxeo.osgi.core.server</id>
 	    </product>
 	  </products>
 	</configuration>
-      </plugin>
-	<plugin>
-          <groupId>org.sonatype.tycho</groupId>
-          <artifactId>target-platform-configuration</artifactId>
-          <version>${tycho-version}</version>
-          <configuration>
-            <resolver>p2</resolver>
-	    <target>
-	      <artifact>
-		<groupId>org.nuxeo.osgi</groupId>
-		<artifactId>nuxeo-osgi-target</artifactId>
-		<version>${project.version}</version>
-		<type>target</type>
-		<classifier>core</classifier>
-	      </artifact>
-	      <ignoreTychoRepositories>true</ignoreTychoRepositories>
-	      <environments>
-		<environment>
-		  <os>linux</os>
-		  <ws>gtk</ws>
-		  <arch>x86</arch>
-		  </environment>
-		</environments>
-	    </target>
-          </configuration>
-	</plugin>
-      <plugin>
-        <groupId>org.sonatype.tycho</groupId>
-        <artifactId>target-platform-configuration</artifactId>
       </plugin>
     </plugins>
   </build>
