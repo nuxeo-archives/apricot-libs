@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< local
-	<name>nuxeo-core-schema-pde</name>
-=======
-	<name>org.nuxeo.ecm.core.schema</name>
->>>>>>> other
+	<name>nuxeo-automation-core-pde</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -33,12 +29,12 @@
 		<link>
 			<name>java</name>
 			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-core/nuxeo-core-schema/src/main/java</locationURI>
+			<locationURI>PARENT-5-PROJECT_LOC/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java</locationURI>
 		</link>
 		<link>
 			<name>resources</name>
 			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-core/nuxeo-core-schema/src/main/resources</locationURI>
+			<locationURI>PARENT-5-PROJECT_LOC/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/resources</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

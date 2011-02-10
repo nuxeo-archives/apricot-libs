@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< local
+	<name>nuxeo-core-pde</name>
+=======
 	<name>org.nuxeo.ecm.core</name>
+>>>>>>> other
 	<comment></comment>
 	<projects>
 	</projects>

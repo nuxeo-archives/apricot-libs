@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< local
+	<name>nuxeo-runtime-management-pde</name>
+=======
 	<name>org.nuxeo.runtime.management</name>
+>>>>>>> other
 	<comment></comment>
 	<projects>
 	</projects>
