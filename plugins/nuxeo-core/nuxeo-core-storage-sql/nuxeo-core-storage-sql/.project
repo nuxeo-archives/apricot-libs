@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< local
-	<name>nuxeo-core-storage-sql-pde</name>
-=======
 	<name>org.nuxeo.ecm.core.storage.sql</name>
->>>>>>> other
 	<comment></comment>
 	<projects>
 	</projects>

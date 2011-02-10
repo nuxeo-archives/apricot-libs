@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.nuxeo.osgi</groupId>
+  <artifactId>nuxeo-osgi-build</artifactId>
+  <version>5.4.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Nuxeo OSGi Build</name>
+  <description>Build Nuxeo OSGI Core Distribution and related components.</description>
+
+  <scm>
+    <connection>scm:hg:http://hg.nuxeo.org/sandbox/nuxeo-osgi</connection>
+    <developerConnection>scm:hg:https://hg.nuxeo.org/sandbox/nuxeo-osgi</developerConnection>
+    <url>http://hg.nuxeo.org/sandbox/nuxeo-osgi/</url>
+  </scm>
+
+  <modules>
+    <module>../build-parent</module>
+    <module>../target-platforms</module>
+    <module>../ide/build</module>
+    <module>../plugins</module>
+    <module>../configs/build</module>
+    <module>../products/build</module>
+  </modules>
+
+
+</project>
