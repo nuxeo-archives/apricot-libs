@@ -17,7 +17,7 @@
  * $Id$
  */
 
-package org.nuxeo.ide.project.utils;
+package org.nuxeo.osgi.ide.project.generator;
 
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;

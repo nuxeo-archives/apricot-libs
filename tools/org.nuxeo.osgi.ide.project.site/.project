@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.nuxeo.ide.project.site</name>
+	<name>org.nuxeo.osgi.ide.project.site</name>
 	<comment></comment>
 	<projects>
 	</projects>

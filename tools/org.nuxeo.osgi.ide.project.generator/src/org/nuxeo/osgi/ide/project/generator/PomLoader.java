@@ -14,7 +14,7 @@
  * Contributors:
  *     bstefanescu
  */
-package org.nuxeo.ide.project;
+package org.nuxeo.osgi.ide.project.generator;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -25,8 +25,6 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.eclipse.core.runtime.IPath;
-import org.eclipse.core.runtime.Path;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -59,18 +57,6 @@ public class PomLoader {
             }
         }
 
-    }
-
-    public List<IPath> getModulePaths() {
-        List<File> files = getModuleFiles();
-        if (files == null) {
-            return null;
-        }
-        ArrayList<IPath> paths = new ArrayList<IPath>();
-        for (File file : files) {
-            paths.add(new Path(file.getAbsolutePath()));
-        }
-        return paths;
     }
 
     public List<File> getModuleFiles() {
@@ -110,37 +96,72 @@ public class PomLoader {
 
     public String getGroupId() {
         Element el = getFirstElement(doc.getDocumentElement(), "groupId");
-        return el != null ? el.getTextContent().trim() : null;
+        return getText(el);
     }
+
+	protected String getText(Element el) {
+		return el != null ? el.getTextContent().trim() : "";
+	}
 
     public String getArtifactId() {
         Element el = getFirstElement(doc.getDocumentElement(), "artifactId");
-        return el != null ? el.getTextContent().trim() : null;
+        return getText(el);
     }
 
     public String getVersion() {
         Element el = getFirstElement(doc.getDocumentElement(), "version");
-        return el != null ? el.getTextContent().trim() : null;
+        if (el != null) {
+        	return el.getTextContent().trim();
+        }
+        return getParentVersion();
     }
 
+    protected Element getParentElement() {
+    	Element el = getFirstElement(doc.getDocumentElement(), "parent");
+    	if (el == null) {
+    		throw new Error("No parent in " + file.getPath());
+    	}
+    	return el;
+    }
+    
+    public String getParentVersion() {
+    	Element el = getParentElement();
+    	el = getFirstElement(el, "version");
+    	if (el == null) {
+    		throw new Error("No parent version defined in "+ file.getPath());
+    	}
+    	return el.getTextContent().trim();
+    }
+    
+	public String getParentGroupId() {
+		Element el = getParentElement();
+		el = getFirstElement(el, "groupId");
+    	if (el == null) {
+    		throw new Error("No group version defined in "+ file.getPath());
+    	}
+    	return el.getTextContent().trim();
+	}
+	
     public String getPackaging() {
         Element el = getFirstElement(doc.getDocumentElement(), "packaging");
-        return el != null ? el.getTextContent().trim() : null;
+        return getText(el);
     }
 
     public String getProjectName() {
         Element el = getFirstElement(doc.getDocumentElement(), "name");
-        return el != null ? el.getTextContent().trim() : null;
+        return getText(el);
     }
 
     public String getProjectDescription() {
         Element el = getFirstElement(doc.getDocumentElement(), "description");
-        return el != null ? el.getTextContent().trim() : null;
+        return getText(el);
     }
 
     public Element getModules() {
         return getFirstElement(doc.getDocumentElement(), "modules");
     }
+
+
 
 
 }

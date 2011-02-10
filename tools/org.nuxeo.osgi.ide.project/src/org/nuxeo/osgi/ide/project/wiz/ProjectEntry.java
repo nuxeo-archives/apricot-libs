@@ -14,7 +14,7 @@
  * Contributors:
  *     bstefanescu
  */
-package org.nuxeo.ide.project.wiz;
+package org.nuxeo.osgi.ide.project.wiz;
 
 import java.io.File;
 

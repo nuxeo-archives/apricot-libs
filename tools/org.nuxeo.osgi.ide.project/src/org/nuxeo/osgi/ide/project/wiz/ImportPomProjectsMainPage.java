@@ -14,7 +14,7 @@
  * Contributors:
  *     bstefanescu
  */
-package org.nuxeo.ide.project.wiz;
+package org.nuxeo.osgi.ide.project.wiz;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkingSet;
 import org.eclipse.ui.dialogs.WorkingSetGroup;
-import org.nuxeo.ide.project.PomLoader;
+import org.nuxeo.osgi.ide.project.generator.PomLoader;
 
 /**
  * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
