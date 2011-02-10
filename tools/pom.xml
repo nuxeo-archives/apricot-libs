@@ -19,9 +19,7 @@
     <module>org.nuxeo.osgi.ide.project.generator</module>
     <module>org.nuxeo.osgi.ide.project</module>
     <module>org.nuxeo.osgi.ide.project.feature</module>
-    <!-- project feature unresolved
-    <module>org.nuxeo.ide.project.site</module>
-    -->
+    <module>org.nuxeo.osgi.ide.project.site</module>
   </modules>
 
 </project>
