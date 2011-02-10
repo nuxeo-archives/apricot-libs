@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nuxeo-core-convert-osgi</name>
+	<name>org.nuxeo.ecm.core.convert</name>
 	<comment></comment>
 	<projects>
 	</projects>

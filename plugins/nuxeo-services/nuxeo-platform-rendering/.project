@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nuxeo-platform-rendering-osgi</name>
+	<name>org.nuxeo.ecm.platform.rendering</name>
 	<comment></comment>
 	<projects>
 	</projects>

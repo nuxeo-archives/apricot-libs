@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/org.nuxeo.osgi.ide.project.generator/src/org/nuxeo/osgi/ide/project/generator/ProjectGenerator.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.nuxeo.osgi.ide.project.generator.ProjectGenerator"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-clean ../ plugins/pom.xml plugins"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.nuxeo.osgi.ide.project.generator"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${project_loc:org.nuxeo.osgi.ide.project.generator}/../.."/>
+</launchConfiguration>

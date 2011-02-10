@@ -14,14 +14,17 @@
  * Contributors:
  *     bstefanescu
  */
-package org.nuxeo.build.osgi.gen;
+package org.nuxeo.osgi.ide.project.generator;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.jar.Attributes;
+import java.util.jar.Manifest;
 
 /**
  * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
@@ -48,8 +51,7 @@ public class ProjectGenerator {
     public String pathToSrc; // path in the form ../../..
 
     public PomLoader loader;
-
-
+    
     public ProjectGenerator(File nuxeoRoot, File parentPom, File osgiRoot, File root) throws Exception {
         this.osgiRoot = osgiRoot.getCanonicalFile();
         this.root = root.getCanonicalFile();
@@ -122,6 +124,17 @@ public class ProjectGenerator {
     public File getManifest() throws IOException {
         return new File(root, "META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
     }
+    
+    public String getSymbolicName(File f) throws Exception {
+    	Manifest mf = new Manifest();
+    	mf.read(new FileInputStream(f));
+    	Attributes a = mf.getMainAttributes();
+    	String v = a.getValue("Bundle-SymbolicName");
+    	if (v == null) {
+    		throw new Exception("No symbolic name for " + f.getCanonicalPath());
+    	}
+    	return v.split(";")[0];
+    }
 
     public void generate(Map<String,String> parentVars, boolean clean) {
         try {
@@ -140,12 +153,12 @@ public class ProjectGenerator {
         Map<String,String> vars = new HashMap<String, String>(parentVars);
         String artifactId = loader.getArtifactId();
         String version = loader.getVersion();
-        if (version == null) {
+        if (version.isEmpty()) {
             version = parentVars.get("parentVersion");
         }
         String groupId = loader.getGroupId();
-        if (groupId == null) {
-            groupId = parentVars.get("parentGroupId");
+        if (groupId.isEmpty()) {
+            groupId = loader.getParentGroupId();
         }
         vars.put("artifactId", artifactId);
         vars.put("groupId", groupId);
@@ -156,6 +169,11 @@ public class ProjectGenerator {
         vars.put("pathToSrc", pathToSrc);
 
         vars.put("projectName", artifactId+PROJECT_NAME_SUFFIX);
+        try {
+        	vars.put("projectName", getSymbolicName(getSourceManifest()));
+        } catch (IOException e) {
+        	;
+        }
         if (version.endsWith("-SNAPSHOT")) {
             version = version.substring(0, version.length()-"-SNAPSHOT".length()).concat(".qualifier");
         }
@@ -171,17 +189,17 @@ public class ProjectGenerator {
         vars.put("resourcesLink", prefix+"src"+File.separator+"main"+File.separator+"resources");
         // all vars are setup -> start copying and processing templates
 
-        copyTemplate(root, "/templates/.project", ".project", vars);
-        copyTemplate(root, "/templates/.classpath", ".classpath", vars);
-        copyTemplate(root, "/templates/build.properties", "build.properties", vars);
-        copyTemplate(root, "/templates/pom.xml", "pom.xml", vars);
+        copyTemplate(root, "templates/.project", ".project", vars);
+        copyTemplate(root, "templates/.classpath", ".classpath", vars);
+        copyTemplate(root, "templates/build.properties", "build.properties", vars);
+        copyTemplate(root, "templates/pom.xml", "pom.xml", vars);
         copyManifest(getSourceManifest(), getManifest(), version);
     }
 
     protected static void copyTemplate(File dir, String path, String filePath, Map<String,String> vars) throws IOException {
         URL url = ProjectGenerator.class.getResource(path);
         if (url == null) {
-            throw new IllegalArgumentException("Resource nout found: "+path);
+            throw new Error("Resource not found: "+path);
         }
         copyTemplate(url, new File(dir, filePath), vars);
     }

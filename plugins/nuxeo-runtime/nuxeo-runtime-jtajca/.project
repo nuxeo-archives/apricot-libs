@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nuxeo-runtime-jtajca-osgi</name>
+	<name>org.nuxeo.runtime.jtajca</name>
 	<comment></comment>
 	<projects>
 	</projects>

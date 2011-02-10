@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nuxeo-core-storage-sql-extensions-osgi</name>
+	<name>org.nuxeo.ecm.core.storage.sql.extensions</name>
 	<comment></comment>
 	<projects>
 	</projects>

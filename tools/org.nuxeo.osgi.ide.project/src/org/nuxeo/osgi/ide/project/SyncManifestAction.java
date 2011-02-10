@@ -1,4 +1,4 @@
-package org.nuxeo.ide.project;
+package org.nuxeo.osgi.ide.project;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -12,8 +12,8 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
-import org.nuxeo.ide.project.utils.FileUtils;
-import org.nuxeo.ide.project.utils.StringUtils;
+import org.nuxeo.osgi.ide.project.utils.FileUtils;
+import org.nuxeo.osgi.ide.project.utils.StringUtils;
 
 /**
  * Our sample action implements workbench action delegate.

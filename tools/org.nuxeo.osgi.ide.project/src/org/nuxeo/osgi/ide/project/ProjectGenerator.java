@@ -14,7 +14,7 @@
  * Contributors:
  *     bstefanescu
  */
-package org.nuxeo.ide.project;
+package org.nuxeo.osgi.ide.project;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,9 +24,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.nuxeo.ide.project.utils.FileUtils;
-import org.nuxeo.ide.project.utils.StringUtils;
-import org.nuxeo.ide.project.wiz.ProjectEntry;
+import org.nuxeo.osgi.ide.project.wiz.ProjectEntry;
+import org.nuxeo.osgi.ide.project.generator.PomLoader;
+import org.nuxeo.osgi.ide.project.utils.FileUtils;
+import org.nuxeo.osgi.ide.project.utils.StringUtils;
 
 /**
  * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>

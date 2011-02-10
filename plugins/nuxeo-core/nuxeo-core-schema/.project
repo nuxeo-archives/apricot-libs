@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nuxeo-core-schema-osgi</name>
+	<name>org.nuxeo.ecm.core.schema</name>
 	<comment></comment>
 	<projects>
 	</projects>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nuxeo-core-event-osgi</name>
+	<name>org.nuxeo.ecm.core.event</name>
 	<comment></comment>
 	<projects>
 	</projects>
