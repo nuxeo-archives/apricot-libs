@@ -213,13 +213,13 @@ public class ProjectGenerator {
         copyTemplate(pluginsRoot, "templates/plugin/dot-classpath", ".classpath", vars);
         copyTemplate(pluginsRoot, "templates/plugin/build.properties", "build.properties", vars);
         copyTemplate(pluginsRoot, "templates/plugin/pom.xml", "pom.xml", vars);
-        copyManifest(pluginsRoot, "templates/plugin/MANIFEST.MF", "META-INF/MANIFEST.MF", getSourceMainManifest(), vars);
+        copyManifest(pluginsRoot, "templates/plugin/template.mf", "META-INF/MANIFEST.MF", getSourceMainManifest(), vars);
         
         copyTemplate(testsRoot, "templates/test/dot-project", ".project", vars);
         copyTemplate(testsRoot, "templates/test/dot-classpath", ".classpath", vars);
         copyTemplate(testsRoot, "templates/test/build.properties", "build.properties", vars);
         copyTemplate(testsRoot, "templates/test/pom.xml", "pom.xml", vars);
-        copyManifest(testsRoot, "templates/test/MANIFEST.MF", "META-INF/MANIFEST.MF", getSourceTestManifest(), vars);
+        copyManifest(testsRoot, "templates/test/template.mf", "META-INF/MANIFEST.MF", getSourceTestManifest(), vars);
     }
 
     protected static void copyTemplate(File dir, String templatePath, String filePath, Map<String,String> vars) throws IOException {

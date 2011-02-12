@@ -7,4 +7,5 @@ Bundle-Description: OSGi integration of JAX-RS using Jersey as backend. (Test)
 Bundle-License: http://www.gnu.org/copyleft/lesser.txt
 Bundle-DocURL: http://doc.nuxeo.org
 Bundle-SymbolicName: org.nuxeo.ecm.webengine.jaxrs.test
+Fragment-Host: org.nuxeo.ecm.webengine.jaxrs
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -7,4 +7,5 @@ Bundle-Description: Nuxeo Common: utilities. (Test)
 Bundle-License: http://www.gnu.org/copyleft/lesser.txt
 Bundle-DocURL: http://doc.nuxeo.org
 Bundle-SymbolicName: org.nuxeo.common.test
+Fragment-Host: org.nuxeo.common
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -7,4 +7,5 @@ Bundle-Description: Nuxeo Core: SQL Storage DB Extensions. (Test)
 Bundle-License: http://www.gnu.org/copyleft/lesser.txt
 Bundle-DocURL: http://doc.nuxeo.org
 Bundle-SymbolicName: org.nuxeo.ecm.core.storage.sql.extensions.test
+Fragment-Host: org.nuxeo.ecm.core.storage.sql.extensions
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

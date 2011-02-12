@@ -7,4 +7,5 @@ Bundle-Description: Core Events model and implementation (Test)
 Bundle-License: http://www.gnu.org/copyleft/lesser.txt
 Bundle-DocURL: http://doc.nuxeo.org
 Bundle-SymbolicName: org.nuxeo.ecm.core.event.test
+Fragment-Host: org.nuxeo.ecm.core.event
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
