@@ -255,7 +255,7 @@ public class ProjectGenerator {
         vars.put("parentVersion", loader.getVersion());
         vars.put("parentArtifactId", loader.getArtifactId());
         vars.put("parentGroupId", loader.getGroupId());
-        for (String pluginPath : loader.getModulesPath()) {
+        for (String pluginPath : loader.getModulePaths()) {
             System.out.println("Generating " + pluginPath);
             new ProjectGenerator(javaRoot, osgiRoot, pom, pluginPath).generate(vars, clean);
         }

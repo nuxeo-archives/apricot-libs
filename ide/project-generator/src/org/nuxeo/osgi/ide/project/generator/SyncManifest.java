@@ -34,7 +34,7 @@ public class SyncManifest {
         File osgiRoot = new File(args[2]).getCanonicalFile();
 
         PomLoader loader = new PomLoader(pom);
-        for (String path : loader.getModulesPath()) {
+        for (String path : loader.getModulePaths()) {
             ProjectGenerator gen = new ProjectGenerator(nuxeoRoot, osgiRoot, pom, path);
             File mf = gen.getPluginManifest();
             File mf2sync = gen.getSourceMainManifest();

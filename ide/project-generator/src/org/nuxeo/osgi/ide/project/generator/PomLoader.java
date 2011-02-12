@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -59,13 +60,24 @@ public class PomLoader {
 
     }
 
+    public List<File> getModuleFiles() {
+    	List<String> paths = getModulePaths();
+    	List<File> files = new ArrayList<File>(paths.size());
+    	for (String path:paths) {
+    		files.add(new File(file, path));
+    	}
+    	return files;
+    }
     
-    public List<String> getModulesPath() {
+    public List<String> getModulePaths() {
     	Element modules = getModules();
-        return modules != null ? readModulesPath(modules) : null;
+        if (modules == null) {
+        	return Collections.emptyList();
+        }
+        return readModulePaths(modules);
     }
 
-    protected List<String> readModulesPath(Element root) {
+    protected List<String> readModulePaths(Element root) {
         File dir = file.getParentFile();
         ArrayList<String> modules = new ArrayList<String>();
         Node node = root.getFirstChild();
