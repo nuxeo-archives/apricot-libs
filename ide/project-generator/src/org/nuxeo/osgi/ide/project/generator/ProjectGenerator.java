@@ -36,6 +36,8 @@ public class ProjectGenerator {
 
     public File pluginRoot;
     
+    public File testsRoot;
+    
     /**
      * Source project root
      */
@@ -54,6 +56,7 @@ public class ProjectGenerator {
         this.osgiRoot = osgiRoot.getCanonicalFile();
         this.parentPom = parentPom.getCanonicalFile();
         this.pluginRoot = new File (osgiRoot, "plugins" + File.separator + path);
+        this.testsRoot = new File(osgiRoot, "tests" + File.separator + path);
         this.src = new File(javaRoot, path).getCanonicalFile();
         String pathToNuxeo = getDescendingRelativePath(javaRoot, pluginRoot);
         this.pathToSrc = pathToNuxeo+File.separator+path;
@@ -113,12 +116,20 @@ public class ProjectGenerator {
         return "PARENT-"+ar.length+"-PROJECT_LOC"+path+File.separator;
     }
 
-    public File getSourceManifest() throws IOException {
+    public File getSourceMainManifest() throws IOException {
         return new File(src, "src"+File.separator+"main"+File.separator+"resources"+File.separator+"META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
     }
 
-    public File getManifest() throws IOException {
+    public File getSourceTestManifest() throws IOException {
+        return new File(src, "src"+File.separator+"test"+File.separator+"resources"+File.separator+"META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
+    }
+    
+    public File getPluginManifest() throws IOException {
         return new File(pluginRoot, "META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
+    }
+    
+    public File getTestsManifest() throws IOException {
+        return new File(testsRoot, "META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
     }
     
     public String getSymbolicName(File f) throws Exception {
@@ -166,7 +177,7 @@ public class ProjectGenerator {
 
         vars.put("projectName", artifactId);
         try {
-        	vars.put("projectName", getSymbolicName(getSourceManifest()));
+        	vars.put("projectName", getSymbolicName(getSourceMainManifest()));
         } catch (IOException e) {
         	;
         }
@@ -189,13 +200,13 @@ public class ProjectGenerator {
         copyTemplate(pluginRoot, "templates/plugin/.classpath", ".classpath", vars);
         copyTemplate(pluginRoot, "templates/plugin/build.properties", "build.properties", vars);
         copyTemplate(pluginRoot, "templates/plugin/pom.xml", "pom.xml", vars);
-        copyManifest(getSourceManifest(), getManifest(), version);
+        copyManifest(getSourceMainManifest(), getPluginManifest(), version);
         
-        copyTemplate(pluginRoot, "templates/tests/.project", ".project", vars);
-        copyTemplate(pluginRoot, "templates/tests/.classpath", ".classpath", vars);
-        copyTemplate(pluginRoot, "templates/tests/build.properties", "build.properties", vars);
-        copyTemplate(pluginRoot, "templates/tests/pom.xml", "pom.xml", vars);
-        
+        copyTemplate(testsRoot, "templates/tests/.project", ".project", vars);
+        copyTemplate(testsRoot, "templates/tests/.classpath", ".classpath", vars);
+        copyTemplate(testsRoot, "templates/tests/build.properties", "build.properties", vars);
+        copyTemplate(testsRoot, "templates/tests/pom.xml", "pom.xml", vars);
+        copyManifest(getSourceTestManifest(), getTestsManifest(), version);
     }
 
     protected static void copyTemplate(File dir, String path, String filePath, Map<String,String> vars) throws IOException {
@@ -208,6 +219,9 @@ public class ProjectGenerator {
 
     protected void copyManifest(File src, File mf, String v) throws IOException {
         mf.getParentFile().mkdirs();
+        if (!src.exists()) {
+        	return;
+        }
         String content = FileUtils.readFile(src);
         FileUtils.writeFile(mf, content.replace("0.0.0.SNAPSHOT", v));
     }
@@ -263,12 +277,12 @@ public class ProjectGenerator {
             }
             clean = true;
             nuxeoRoot = args[1];
-            pom = args[2];
-            osgiRoot = args[3];
+            osgiRoot = args[2];
+            pom = args[3];
         } else {
             nuxeoRoot = args[0];
-            pom = args[1];
-            osgiRoot = args[2];
+            osgiRoot = args[1];
+            pom = args[2];
         }
 
         generate(new File(nuxeoRoot), new File(pom), new File(osgiRoot), clean);

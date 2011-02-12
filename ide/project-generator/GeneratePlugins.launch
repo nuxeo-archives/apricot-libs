@@ -7,7 +7,7 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.nuxeo.osgi.ide.project.generator.ProjectGenerator"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-clean ../ plugins/pom.xml ."/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-clean ../ . plugins/pom.xml"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.nuxeo.osgi.ide.project.generator"/>
 <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${project_loc:org.nuxeo.osgi.ide.project.generator}/../.."/>
 </launchConfiguration>

@@ -8,6 +8,6 @@ JAR=${GEN_DIR}/target/${GEN_NAME}-*.jar
 
 echo "Generating plugins ..."
 
-java $JAVA_OPTS -cp ${JAR} org.nuxeo.osgi.ide.project.generator.ProjectGenerator "-clean" ".." "plugins/pom.xml" "plugins"
+java $JAVA_OPTS -cp ${JAR} org.nuxeo.osgi.ide.project.generator.ProjectGenerator -clean ../ . plugins/pom.xml
 
 echo "Done."

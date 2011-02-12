@@ -36,8 +36,8 @@ public class SyncManifest {
         PomLoader loader = new PomLoader(pom);
         for (String path : loader.getModulesPath()) {
             ProjectGenerator gen = new ProjectGenerator(nuxeoRoot, osgiRoot, pom, path);
-            File mf = gen.getManifest();
-            File mf2sync = gen.getSourceManifest();
+            File mf = gen.getPluginManifest();
+            File mf2sync = gen.getSourceMainManifest();
             System.out.println(mf + " -> " + mf2sync);
             FileUtils.copy(mf, mf2sync);
         }
