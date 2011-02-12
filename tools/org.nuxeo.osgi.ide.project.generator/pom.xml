@@ -15,17 +15,4 @@
     <relativePath>../../nuxeo-osgi-parent/pom.xml</relativePath>
   </parent>
 
-  <build>
-    <plugins>
-	<plugin>
-          <groupId>org.sonatype.tycho</groupId>
-          <artifactId>tycho-maven-plugin</artifactId>
-	</plugin>
-	<plugin>
-          <groupId>org.sonatype.tycho</groupId>
-          <artifactId>target-platform-configuration</artifactId>
-	</plugin>
-    </plugins>
-  </build>
-
 </project>

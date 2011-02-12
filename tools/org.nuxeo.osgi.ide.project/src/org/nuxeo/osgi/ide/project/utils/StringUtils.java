@@ -17,7 +17,7 @@
  * $Id: StringUtils.java 28482 2008-01-04 15:33:39Z sfermigier $
  */
 
-package org.nuxeo.build.osgi.gen;
+package org.nuxeo.osgi.ide.project.utils;
 
 import java.util.ArrayList;
 import java.util.List;

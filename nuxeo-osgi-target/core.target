@@ -53,6 +53,7 @@
 <unit id="org.eclipse.rcp.sdk.id" version="3.6.0.M20100909-0800"/>
 <repository location="http://download.eclipse.org/releases/helios"/>
 </location>
+<location path="${eclipse_home}" type="Profile"/>
 </locations>
 <launcherArgs>
 <vmArgs>-Dosgi.requiredJavaVersion=1.6 -XX:MaxPermSize=256m -Xms40m -Xmx512m</vmArgs>

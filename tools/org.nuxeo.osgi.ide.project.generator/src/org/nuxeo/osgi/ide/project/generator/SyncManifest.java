@@ -14,7 +14,7 @@
  * Contributors:
  *     bstefanescu
  */
-package org.nuxeo.build.osgi.gen;
+package org.nuxeo.osgi.ide.project.generator;
 
 import java.io.File;
 

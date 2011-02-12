@@ -14,7 +14,7 @@
  * Contributors:
  *     bstefanescu
  */
-package org.nuxeo.ide.project;
+package org.nuxeo.osgi.ide.project;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,8 +27,8 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.pde.core.plugin.IPluginModelBase;
 import org.eclipse.pde.launching.EquinoxLaunchConfiguration;
-import org.nuxeo.ide.project.utils.FileUtils;
-import org.nuxeo.ide.project.utils.StringUtils;
+import org.nuxeo.osgi.ide.project.utils.FileUtils;
+import org.nuxeo.osgi.ide.project.utils.StringUtils;
 
 /**
  * @author <a href="mailto:bs@nuxeo.com">Bogdan Stefanescu</a>
