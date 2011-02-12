@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>nuxeo-automation-core-pde</name>
+	<name>org.nuxeo.ecm.automation.core</name>
 	<comment></comment>
 	<projects>
 	</projects>

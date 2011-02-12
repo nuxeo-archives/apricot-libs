@@ -1,10 +1,12 @@
 ^.metadata
 ^.settings
+/target/
+/addons/
 ^Servers
 ^External Plug-in Libraries
-.*/target
 bin
 .*~
-.~.bak
-.*.orig
-.*.reject
+.bak
+.orig
+.reject
+.releaseBackup

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< local
-	<name>nuxeo-platform-dublincore-pde</name>
-=======
 	<name>org.nuxeo.ecm.platform.dublincore</name>
->>>>>>> other
 	<comment></comment>
 	<projects>
 	</projects>
