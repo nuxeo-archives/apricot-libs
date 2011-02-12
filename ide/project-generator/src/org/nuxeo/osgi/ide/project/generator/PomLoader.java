@@ -59,20 +59,21 @@ public class PomLoader {
 
     }
 
-    public List<File> getModuleFiles() {
-        Element modules = getModules();
-        return modules != null ? readModules(modules) : null;
+    
+    public List<String> getModulesPath() {
+    	Element modules = getModules();
+        return modules != null ? readModulesPath(modules) : null;
     }
 
-    protected List<File> readModules(Element root) {
+    protected List<String> readModulesPath(Element root) {
         File dir = file.getParentFile();
-        ArrayList<File> modules = new ArrayList<File>();
+        ArrayList<String> modules = new ArrayList<String>();
         Node node = root.getFirstChild();
         while (node != null) {
             if (node.getNodeType() == Node.ELEMENT_NODE) {
                 if ("module".equals(node.getNodeName())) {
                     String path = node.getTextContent().trim();
-                    modules.add(new File(dir, path));
+                    modules.add(path);
                 }
             }
             node = node.getNextSibling();

@@ -34,10 +34,8 @@ public class ProjectGenerator {
 
     public static final String PROJECT_NAME_SUFFIX = "-osgi";
 
-    public File root;
-
-    public File pom;
-
+    public File pluginRoot;
+    
     /**
      * Source project root
      */
@@ -52,16 +50,14 @@ public class ProjectGenerator {
 
     public PomLoader loader;
     
-    public ProjectGenerator(File nuxeoRoot, File parentPom, File osgiRoot, File root) throws Exception {
+    public ProjectGenerator(File javaRoot, File osgiRoot, File parentPom, String path) throws Exception {
         this.osgiRoot = osgiRoot.getCanonicalFile();
-        this.root = root.getCanonicalFile();
-        this.pom = new File(root, "pom.xml");
         this.parentPom = parentPom.getCanonicalFile();
-        String rpath = getRelativePath(osgiRoot, root);
-        this.src = new File(nuxeoRoot, rpath).getCanonicalFile();
-        String pathToNuxeo = getDescendingRelativePath(nuxeoRoot, root);
-        this.pathToSrc = pathToNuxeo+File.separator+rpath;
-        this.pathToParentPom = getDescendingRelativePath(this.parentPom.getParentFile().getCanonicalFile(), root)+File.separator+parentPom.getName();
+        this.pluginRoot = new File (osgiRoot, "plugins" + File.separator + path);
+        this.src = new File(javaRoot, path).getCanonicalFile();
+        String pathToNuxeo = getDescendingRelativePath(javaRoot, pluginRoot);
+        this.pathToSrc = pathToNuxeo+File.separator+path;
+        this.pathToParentPom = getDescendingRelativePath(this.parentPom.getParentFile().getCanonicalFile(), pluginRoot)+File.separator+parentPom.getName();
         loader = new PomLoader(new File(src, "pom.xml"));
     }
 
@@ -122,7 +118,7 @@ public class ProjectGenerator {
     }
 
     public File getManifest() throws IOException {
-        return new File(root, "META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
+        return new File(pluginRoot, "META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
     }
     
     public String getSymbolicName(File f) throws Exception {
@@ -138,18 +134,18 @@ public class ProjectGenerator {
 
     public void generate(Map<String,String> parentVars, boolean clean) {
         try {
-            if (clean && root.isDirectory()) {
-                FileUtils.deleteTree(root);
+            if (clean && pluginRoot.isDirectory()) {
+                FileUtils.deleteTree(pluginRoot);
             }
             doGenerate(parentVars);
         } catch (Throwable t) {
             t.printStackTrace();
-            System.out.println("Failed to generate project: "+root);
+            System.out.println("Failed to generate project: "+pluginRoot);
         }
     }
 
     public void doGenerate(Map<String,String> parentVars) throws Exception {
-        root.mkdirs();
+        pluginRoot.mkdirs();
         Map<String,String> vars = new HashMap<String, String>(parentVars);
         String artifactId = loader.getArtifactId() + PROJECT_NAME_SUFFIX;
         String version = loader.getVersion();
@@ -189,11 +185,17 @@ public class ProjectGenerator {
         vars.put("resourcesLink", prefix+"src"+File.separator+"main"+File.separator+"resources");
         // all vars are setup -> start copying and processing templates
 
-        copyTemplate(root, "templates/.project", ".project", vars);
-        copyTemplate(root, "templates/.classpath", ".classpath", vars);
-        copyTemplate(root, "templates/build.properties", "build.properties", vars);
-        copyTemplate(root, "templates/pom.xml", "pom.xml", vars);
+        copyTemplate(pluginRoot, "templates/plugin/.project", ".project", vars);
+        copyTemplate(pluginRoot, "templates/plugin/.classpath", ".classpath", vars);
+        copyTemplate(pluginRoot, "templates/plugin/build.properties", "build.properties", vars);
+        copyTemplate(pluginRoot, "templates/plugin/pom.xml", "pom.xml", vars);
         copyManifest(getSourceManifest(), getManifest(), version);
+        
+        copyTemplate(pluginRoot, "templates/tests/.project", ".project", vars);
+        copyTemplate(pluginRoot, "templates/tests/.classpath", ".classpath", vars);
+        copyTemplate(pluginRoot, "templates/tests/build.properties", "build.properties", vars);
+        copyTemplate(pluginRoot, "templates/tests/pom.xml", "pom.xml", vars);
+        
     }
 
     protected static void copyTemplate(File dir, String path, String filePath, Map<String,String> vars) throws IOException {
@@ -225,23 +227,23 @@ public class ProjectGenerator {
         }
     }
 
-    public static void generate(File nuxeoRoot, File pom, File osgiRoot, boolean clean) throws Exception {
-        nuxeoRoot = nuxeoRoot.getCanonicalFile();
+    public static void generate(File javaRoot, File pom, File osgiRoot,  boolean clean) throws Exception {
+        javaRoot = javaRoot.getCanonicalFile();
         pom = pom.getCanonicalFile();
         osgiRoot = osgiRoot.getCanonicalFile();
         System.out.println("====== Generate PDE projects ======");
-        System.out.println("Nuxeo Root: "+nuxeoRoot);
+        System.out.println("Nuxeo Java Root: "+javaRoot);
         System.out.println("Parent POM: "+pom);
-        System.out.println("PDE Projects Root: "+osgiRoot);
+        System.out.println("Nuxeo OSGi Root: "+osgiRoot);
         System.out.println("===================================");
         PomLoader loader = new PomLoader(pom);
         HashMap<String, String> vars = new HashMap<String, String>();
         vars.put("parentVersion", loader.getVersion());
         vars.put("parentArtifactId", loader.getArtifactId());
         vars.put("parentGroupId", loader.getGroupId());
-        for (File root : loader.getModuleFiles()) {
-            System.out.println("Generating " + root);
-            new ProjectGenerator(nuxeoRoot, pom, osgiRoot, root).generate(vars, clean);
+        for (String pluginPath : loader.getModulesPath()) {
+            System.out.println("Generating " + pluginPath);
+            new ProjectGenerator(javaRoot, osgiRoot, pom, pluginPath).generate(vars, clean);
         }
     }
 
@@ -252,11 +254,11 @@ public class ProjectGenerator {
         }
         boolean clean = false;
         String nuxeoRoot = null;
-        String pom = null;
         String osgiRoot = null;
+        String pom = null;
         if (args.length == 4) {
             if (!"-clean".equals(args[0])) {
-                System.err.println("Usage: ProjectGenerator [-clean] nuxeoRoot pom osgiRoot");
+                System.err.println("Usage: ProjectGenerator [-clean] nuxeoRoot pom");
                 return;
             }
             clean = true;
