@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-storage-sql-extensions-osgi</artifactId>
+  <artifactId>nuxeo-core-storage-sql-extensions-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Core SQL Storage DB Extensions</name>
-  <description>Nuxeo Core: SQL Storage DB Extensions.</description>
+  <name>Nuxeo Core SQL Storage DB Extensions Test</name>
+  <description>Nuxeo Core: SQL Storage DB Extensions. (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

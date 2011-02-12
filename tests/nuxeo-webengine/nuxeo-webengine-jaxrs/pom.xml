@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.webengine</groupId>
-  <artifactId>nuxeo-webengine-jaxrs-osgi</artifactId>
+  <artifactId>nuxeo-webengine-jaxrs-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo WebEngine JAX-RS</name>
-  <description>OSGi integration of JAX-RS using Jersey as backend.</description>
+  <name>Nuxeo WebEngine JAX-RS Test</name>
+  <description>OSGi integration of JAX-RS using Jersey as backend. (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

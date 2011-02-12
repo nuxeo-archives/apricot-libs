@@ -18,6 +18,7 @@ package org.nuxeo.osgi.ide.project.generator;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -34,7 +35,7 @@ public class ProjectGenerator {
 
     public static final String PROJECT_NAME_SUFFIX = "-osgi";
 
-    public File pluginRoot;
+    public File pluginsRoot;
     
     public File testsRoot;
     
@@ -55,12 +56,12 @@ public class ProjectGenerator {
     public ProjectGenerator(File javaRoot, File osgiRoot, File parentPom, String path) throws Exception {
         this.osgiRoot = osgiRoot.getCanonicalFile();
         this.parentPom = parentPom.getCanonicalFile();
-        this.pluginRoot = new File (osgiRoot, "plugins" + File.separator + path);
+        this.pluginsRoot = new File (osgiRoot, "plugins" + File.separator + path);
         this.testsRoot = new File(osgiRoot, "tests" + File.separator + path);
         this.src = new File(javaRoot, path).getCanonicalFile();
-        String pathToNuxeo = getDescendingRelativePath(javaRoot, pluginRoot);
+        String pathToNuxeo = getDescendingRelativePath(javaRoot, pluginsRoot);
         this.pathToSrc = pathToNuxeo+File.separator+path;
-        this.pathToParentPom = getDescendingRelativePath(this.parentPom.getParentFile().getCanonicalFile(), pluginRoot)+File.separator+parentPom.getName();
+        this.pathToParentPom = getDescendingRelativePath(this.parentPom.getParentFile().getCanonicalFile(), pluginsRoot)+File.separator+parentPom.getName();
         loader = new PomLoader(new File(src, "pom.xml"));
     }
 
@@ -105,15 +106,15 @@ public class ProjectGenerator {
         return buf.toString();
     }
 
-    public String getEclipseLinkPrefix() {
+    public String getEclipseLinkPrefix(String path) {
         int p = pathToSrc.lastIndexOf("..");
         if (p == -1) {
             throw new IllegalArgumentException("BUG? invalid pathToSrc: "+pathToSrc);
         }
-        String prefix = pathToSrc.substring(0, p+2);
-        String path = pathToSrc.substring(p+2);
+        String prefix = path.substring(0, p+2);
+        String name = path.substring(p+2);
         String[] ar = StringUtils.split(prefix, File.separatorChar, false);
-        return "PARENT-"+ar.length+"-PROJECT_LOC"+path+File.separator;
+        return "PARENT-"+ar.length+"-PROJECT_LOC"+name+File.separator;
     }
 
     public File getSourceMainManifest() throws IOException {
@@ -125,40 +126,49 @@ public class ProjectGenerator {
     }
     
     public File getPluginManifest() throws IOException {
-        return new File(pluginRoot, "META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
+        return new File(pluginsRoot, "META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
     }
     
-    public File getTestsManifest() throws IOException {
+    public File getTestManifest() throws IOException {
         return new File(testsRoot, "META-INF"+File.separator+"MANIFEST.MF").getCanonicalFile();
     }
     
-    public String getSymbolicName(File f) throws Exception {
+    public String getSymbolicName(File f) {
     	Manifest mf = new Manifest();
-    	mf.read(new FileInputStream(f));
+    	if (!f.exists()) {
+    		return "";
+    	}
+    	try {
+			mf.read(new FileInputStream(f));
+		} catch (Exception e) {
+			throw new Error("Cannot read manifest " + f.getPath());
+		}
     	Attributes a = mf.getMainAttributes();
     	String v = a.getValue("Bundle-SymbolicName");
     	if (v == null) {
-    		throw new Exception("No symbolic name for " + f.getCanonicalPath());
+    		throw new Error("No symbolic name for " + f.getPath());
     	}
     	return v.split(";")[0];
     }
 
     public void generate(Map<String,String> parentVars, boolean clean) {
         try {
-            if (clean && pluginRoot.isDirectory()) {
-                FileUtils.deleteTree(pluginRoot);
+            if (clean && pluginsRoot.isDirectory()) {
+                FileUtils.deleteTree(pluginsRoot);
             }
             doGenerate(parentVars);
         } catch (Throwable t) {
             t.printStackTrace();
-            System.out.println("Failed to generate project: "+pluginRoot);
+            System.out.println("Failed to generate project: "+pluginsRoot);
         }
     }
 
     public void doGenerate(Map<String,String> parentVars) throws Exception {
-        pluginRoot.mkdirs();
+        pluginsRoot.mkdirs();
         Map<String,String> vars = new HashMap<String, String>(parentVars);
         String artifactId = loader.getArtifactId() + PROJECT_NAME_SUFFIX;
+        String symbolicName = getSymbolicName(getSourceMainManifest());
+        
         String version = loader.getVersion();
         if (version.isEmpty()) {
             version = parentVars.get("parentVersion");
@@ -174,13 +184,13 @@ public class ProjectGenerator {
         vars.put("description", loader.getProjectDescription());
         vars.put("pathToParentPom", pathToParentPom);
         vars.put("pathToSrc", pathToSrc);
+        vars.put("symbolicName", symbolicName);
 
         vars.put("projectName", artifactId);
-        try {
-        	vars.put("projectName", getSymbolicName(getSourceMainManifest()));
-        } catch (IOException e) {
-        	;
+        if (!symbolicName.isEmpty()) {
+        	vars.put("projectName", symbolicName);
         }
+        
         if (version.endsWith("-SNAPSHOT")) {
             version = version.substring(0, version.length()-"-SNAPSHOT".length()).concat(".qualifier");
         }
@@ -190,46 +200,64 @@ public class ProjectGenerator {
 
         vars.put("javaPath", pathToSrcFile("src", "main", "java"));
         vars.put("resourcesPath", pathToSrcFile("src", "main", "resources"));
+        vars.put("testPath", pathToSrcFile("src", "test"));
 
-        String prefix = getEclipseLinkPrefix();
-        vars.put("javaLink", prefix+"src"+File.separator+"main"+File.separator+"java");
-        vars.put("resourcesLink", prefix+"src"+File.separator+"main"+File.separator+"resources");
+        String prefix = getEclipseLinkPrefix(pathToSrc);
+        final String srcPrefixPath = prefix+"src"+File.separator;
+        vars.put("mainLink", srcPrefixPath+"main");
+        vars.put("testLink", srcPrefixPath+"test");
+        
         // all vars are setup -> start copying and processing templates
 
-        copyTemplate(pluginRoot, "templates/plugin/.project", ".project", vars);
-        copyTemplate(pluginRoot, "templates/plugin/.classpath", ".classpath", vars);
-        copyTemplate(pluginRoot, "templates/plugin/build.properties", "build.properties", vars);
-        copyTemplate(pluginRoot, "templates/plugin/pom.xml", "pom.xml", vars);
-        copyManifest(getSourceMainManifest(), getPluginManifest(), version);
+        copyTemplate(pluginsRoot, "templates/plugin/dot-project", ".project", vars);
+        copyTemplate(pluginsRoot, "templates/plugin/dot-classpath", ".classpath", vars);
+        copyTemplate(pluginsRoot, "templates/plugin/build.properties", "build.properties", vars);
+        copyTemplate(pluginsRoot, "templates/plugin/pom.xml", "pom.xml", vars);
+        copyManifest(pluginsRoot, "templates/plugin/MANIFEST.MF", "META-INF/MANIFEST.MF", getSourceMainManifest(), vars);
         
-        copyTemplate(testsRoot, "templates/tests/.project", ".project", vars);
-        copyTemplate(testsRoot, "templates/tests/.classpath", ".classpath", vars);
-        copyTemplate(testsRoot, "templates/tests/build.properties", "build.properties", vars);
-        copyTemplate(testsRoot, "templates/tests/pom.xml", "pom.xml", vars);
-        copyManifest(getSourceTestManifest(), getTestsManifest(), version);
+        copyTemplate(testsRoot, "templates/test/dot-project", ".project", vars);
+        copyTemplate(testsRoot, "templates/test/dot-classpath", ".classpath", vars);
+        copyTemplate(testsRoot, "templates/test/build.properties", "build.properties", vars);
+        copyTemplate(testsRoot, "templates/test/pom.xml", "pom.xml", vars);
+        copyManifest(testsRoot, "templates/test/MANIFEST.MF", "META-INF/MANIFEST.MF", getSourceTestManifest(), vars);
     }
 
-    protected static void copyTemplate(File dir, String path, String filePath, Map<String,String> vars) throws IOException {
-        URL url = ProjectGenerator.class.getResource(path);
-        if (url == null) {
-            throw new Error("Resource not found: "+path);
-        }
+    protected static void copyTemplate(File dir, String templatePath, String filePath, Map<String,String> vars) throws IOException {
+        URL url = getTemplate(templatePath);
         copyTemplate(url, new File(dir, filePath), vars);
     }
 
-    protected void copyManifest(File src, File mf, String v) throws IOException {
-        mf.getParentFile().mkdirs();
-        if (!src.exists()) {
-        	return;
+	protected static URL getTemplate(String templatePath) throws Error {
+		URL url = ProjectGenerator.class.getResource(templatePath);
+        if (url == null) {
+            throw new Error("Template not found: "+templatePath);
         }
-        String content = FileUtils.readFile(src);
-        FileUtils.writeFile(mf, content.replace("0.0.0.SNAPSHOT", v));
+		return url;
+	}
+	
+
+    protected void copyManifest(File dir, String templatePath, String toPath, File src, Map<String,String> vars) throws IOException {
+        URL url = src.toURI().toURL();
+    	if (!src.exists()) {
+        	url = getTemplate(templatePath);
+        }
+        copyManifest(url, new File(dir, toPath), vars);
     }
+    
+    protected void copyManifest(URL url, File toFile, Map<String,String> vars) throws IOException {
+        toFile.getParentFile().mkdirs();
+        InputStream in = url.openStream();
+        try {
+            String content = FileUtils.read(in);
+            content = StringUtils.expandVars(content, vars);
+            content = content.replace("0.0.0.SNAPSHOT", vars.get("bundleVersion"));
+            FileUtils.writeFile(toFile, content);
+        } finally {
+            in.close();
+        }
+     }
 
     protected static void copyTemplate(URL url, File toFile, Map<String,String> vars) throws IOException {
-        if (url == null) {
-            throw new IllegalArgumentException("Null url");
-        }
         toFile.getParentFile().mkdirs();
         InputStream in = url.openStream();
         try {
@@ -261,9 +289,11 @@ public class ProjectGenerator {
         }
     }
 
+    final static String USAGE = "Usage: ProjectGenerator [-clean] nuxeoRoot osgiRoot pom";
+
     public static void main(String[] args) throws Exception {
         if (args.length < 3 && args.length > 4) {
-            System.err.println("Usage: ProjectGenerator [-clean] nuxeoRoot pom osgiRoot");
+			System.err.println(USAGE);
             return;
         }
         boolean clean = false;
@@ -272,7 +302,7 @@ public class ProjectGenerator {
         String pom = null;
         if (args.length == 4) {
             if (!"-clean".equals(args[0])) {
-                System.err.println("Usage: ProjectGenerator [-clean] nuxeoRoot pom");
+                System.err.println(USAGE);
                 return;
             }
             clean = true;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.nuxeo.ecm.automation.core</name>
+	<name>org.nuxeo.ecm.automation.core.test</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -29,12 +29,12 @@
 		<link>
 			<name>java</name>
 			<type>2</type>
-			<locationURI>PARENT-5-PROJECT_LOC/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/java</locationURI>
+			<locationURI>PARENT-5-PROJECT_LOC/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/test/java</locationURI>
 		</link>
 		<link>
 			<name>resources</name>
 			<type>2</type>
-			<locationURI>PARENT-5-PROJECT_LOC/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/main/resources</locationURI>
+			<locationURI>PARENT-5-PROJECT_LOC/nuxeo-features/nuxeo-automation/nuxeo-automation-core/src/test/resources</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

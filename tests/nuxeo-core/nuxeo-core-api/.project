@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.nuxeo.ecm.core.api</name>
+	<name>org.nuxeo.ecm.core.api.test</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -29,12 +29,12 @@
 		<link>
 			<name>java</name>
 			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-core/nuxeo-core-api/src/main/java</locationURI>
+			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-core/nuxeo-core-api/src/test/java</locationURI>
 		</link>
 		<link>
 			<name>resources</name>
 			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-core/nuxeo-core-api/src/main/resources</locationURI>
+			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-core/nuxeo-core-api/src/test/resources</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.automation</groupId>
-  <artifactId>nuxeo-automation-core-osgi</artifactId>
+  <artifactId>nuxeo-automation-core-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Automation Core</name>
-  <description>Automation Framework and Core Operations</description>
+  <name>Nuxeo Automation Core Test</name>
+  <description>Automation Framework and Core Operations (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

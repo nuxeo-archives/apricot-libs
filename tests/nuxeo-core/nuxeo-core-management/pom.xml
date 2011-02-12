@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-management-osgi</artifactId>
+  <artifactId>nuxeo-core-management-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Core Management</name>
-  <description>Nuxeo Core Management</description>
+  <name>Nuxeo Core Management Test</name>
+  <description>Nuxeo Core Management (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

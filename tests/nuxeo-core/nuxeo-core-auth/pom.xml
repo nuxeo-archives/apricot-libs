@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-auth-osgi</artifactId>
+  <artifactId>nuxeo-core-auth-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Core Authentication Support</name>
-  <description>Nuxeo Core authentication support. Provides helper for authenticating against the core.</description>
+  <name>Nuxeo Core Authentication Support Test</name>
+  <description>Nuxeo Core authentication support. Provides helper for authenticating against the core. (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

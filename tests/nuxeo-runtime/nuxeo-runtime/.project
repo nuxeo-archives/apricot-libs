@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.nuxeo.runtime</name>
+	<name>org.nuxeo.runtime.test</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -29,12 +29,12 @@
 		<link>
 			<name>java</name>
 			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-runtime/nuxeo-runtime/src/main/java</locationURI>
+			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-runtime/nuxeo-runtime/src/test/java</locationURI>
 		</link>
 		<link>
 			<name>resources</name>
 			<type>2</type>
-			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-runtime/nuxeo-runtime/src/main/resources</locationURI>
+			<locationURI>PARENT-4-PROJECT_LOC/nuxeo-runtime/nuxeo-runtime/src/test/resources</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

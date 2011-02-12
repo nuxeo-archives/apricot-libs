@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.runtime</groupId>
-  <artifactId>nuxeo-runtime-jetty-adapter-osgi</artifactId>
+  <artifactId>nuxeo-runtime-jetty-adapter-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Runtime Jetty Adapter</name>
-  <description>Emebeds Jetty in Nuxeo</description>
+  <name>Nuxeo Runtime Jetty Adapter Test</name>
+  <description>Emebeds Jetty in Nuxeo (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

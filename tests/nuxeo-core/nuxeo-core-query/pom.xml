@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-query-osgi</artifactId>
+  <artifactId>nuxeo-core-query-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Core Query</name>
-  <description>Nuxeo Core: Query.</description>
+  <name>Nuxeo Core Query Test</name>
+  <description>Nuxeo Core: Query. (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

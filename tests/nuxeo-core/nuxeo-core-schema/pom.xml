@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-schema-osgi</artifactId>
+  <artifactId>nuxeo-core-schema-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Core Schema</name>
-  <description>Nuxeo Core: Schema.</description>
+  <name>Nuxeo Core Schema Test</name>
+  <description>Nuxeo Core: Schema. (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

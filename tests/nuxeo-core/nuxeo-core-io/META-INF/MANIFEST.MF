@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-Name: Nuxeo Core IO (Test)
+Bundle-Vendor: Nuxeo SAS
+Bundle-Version: 5.4.1.qualifier
+Bundle-ManifestVersion: 2
+Bundle-Description: Nuxeo Core IO. (Test)
+Bundle-License: http://www.gnu.org/copyleft/lesser.txt
+Bundle-DocURL: http://doc.nuxeo.org
+Bundle-SymbolicName: org.nuxeo.ecm.core.io.test
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

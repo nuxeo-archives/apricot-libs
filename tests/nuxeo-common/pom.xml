@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.common</groupId>
-  <artifactId>nuxeo-common-osgi</artifactId>
+  <artifactId>nuxeo-common-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Common</name>
-  <description>Nuxeo Common: utilities.</description>
+  <name>Nuxeo Common Test</name>
+  <description>Nuxeo Common: utilities. (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

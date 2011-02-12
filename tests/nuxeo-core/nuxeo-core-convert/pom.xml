@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-convert-osgi</artifactId>
+  <artifactId>nuxeo-core-convert-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Core Converter Service</name>
-  <description>Nuxeo Core Blob conversion service</description>
+  <name>Nuxeo Core Converter Service Test</name>
+  <description>Nuxeo Core Blob conversion service (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 

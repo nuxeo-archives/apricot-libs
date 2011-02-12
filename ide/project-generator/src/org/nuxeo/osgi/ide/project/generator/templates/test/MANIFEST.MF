@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-Name: ${name} (Test)
+Bundle-Vendor: Nuxeo SAS
+Bundle-Version: ${bundleVersion}
+Bundle-ManifestVersion: 2
+Bundle-Description: ${description} (Test)
+Bundle-License: http://www.gnu.org/copyleft/lesser.txt
+Bundle-DocURL: http://doc.nuxeo.org
+Bundle-SymbolicName: ${symbolicName}.test
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

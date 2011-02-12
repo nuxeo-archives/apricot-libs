@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.runtime</groupId>
-  <artifactId>nuxeo-runtime-management-osgi</artifactId>
+  <artifactId>nuxeo-runtime-management-osgi-test</artifactId>
   <version>5.4.1-SNAPSHOT</version>
-  <name>Nuxeo Runtime Management</name>
-  <description></description>
+  <name>Nuxeo Runtime Management Test</name>
+  <description> (Test)</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-plugin</packaging>
 
