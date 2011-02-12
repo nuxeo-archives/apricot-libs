@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.webengine</groupId>
-  <artifactId>nuxeo-webengine-jaxrs</artifactId>
+  <artifactId>nuxeo-webengine-jaxrs-osgi</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo WebEngine JAX-RS</name>
   <description>OSGi integration of JAX-RS using Jersey as backend.</description>

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-event</artifactId>
+  <artifactId>nuxeo-core-event-osgi</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Core Event</name>
   <description>Core Events model and implementation</description>

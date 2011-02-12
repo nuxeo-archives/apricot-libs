@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.platform</groupId>
-  <artifactId>nuxeo-platform-dublincore</artifactId>
+  <artifactId>nuxeo-platform-dublincore-osgi</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Dublin Core Support</name>
   <description>Nuxeo Enterprise Platform: simple implementation of the

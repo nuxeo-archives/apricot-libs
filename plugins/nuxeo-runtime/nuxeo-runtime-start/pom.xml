@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.runtime</groupId>
-  <artifactId>nuxeo-runtime-start</artifactId>
+  <artifactId>nuxeo-runtime-start-osgi</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Runtime Start</name>
   <description>Notify the Nuxeo Application startup. To be used in a virgo container using startlevel facility.</description>

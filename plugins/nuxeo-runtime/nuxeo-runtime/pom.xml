@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.runtime</groupId>
-  <artifactId>nuxeo-runtime</artifactId>
+  <artifactId>nuxeo-runtime-osgi</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Runtime</name>
   <description>Nuxeo Runtime: The Nuxeo Runtime.</description>

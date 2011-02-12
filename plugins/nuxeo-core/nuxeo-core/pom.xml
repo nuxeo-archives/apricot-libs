@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core</artifactId>
+  <artifactId>nuxeo-core-osgi</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Core</name>
   <description>Nuxeo Core: The Core.</description>

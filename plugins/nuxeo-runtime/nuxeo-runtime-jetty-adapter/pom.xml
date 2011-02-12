@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.runtime</groupId>
-  <artifactId>nuxeo-runtime-jetty-adapter</artifactId>
+  <artifactId>nuxeo-runtime-jetty-adapter-osgi</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Runtime Jetty Adapter</name>
   <description>Emebeds Jetty in Nuxeo</description>

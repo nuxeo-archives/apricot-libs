@@ -151,7 +151,7 @@ public class ProjectGenerator {
     public void doGenerate(Map<String,String> parentVars) throws Exception {
         root.mkdirs();
         Map<String,String> vars = new HashMap<String, String>(parentVars);
-        String artifactId = loader.getArtifactId();
+        String artifactId = loader.getArtifactId() + PROJECT_NAME_SUFFIX;
         String version = loader.getVersion();
         if (version.isEmpty()) {
             version = parentVars.get("parentVersion");
@@ -168,7 +168,7 @@ public class ProjectGenerator {
         vars.put("pathToParentPom", pathToParentPom);
         vars.put("pathToSrc", pathToSrc);
 
-        vars.put("projectName", artifactId+PROJECT_NAME_SUFFIX);
+        vars.put("projectName", artifactId);
         try {
         	vars.put("projectName", getSymbolicName(getSourceManifest()));
         } catch (IOException e) {
