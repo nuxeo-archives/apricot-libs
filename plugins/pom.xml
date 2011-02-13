@@ -49,6 +49,7 @@
 
     <module>nuxeo-services/nuxeo-platform-dublincore</module>
     <module>nuxeo-features/nuxeo-automation/nuxeo-automation-core</module>
+    <module>nuxeo-features/nuxeo-automation/nuxeo-automation-server</module>
 
     <!-- jax-rs integration -->
     <module>nuxeo-webengine/nuxeo-webengine-jaxrs</module>

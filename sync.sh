@@ -1,8 +1,9 @@
 #!/bin/sh
 
-GEN_NAME=org.nuxeo.osgi.ide.project.generator
-GEN_DIR=tools/${GEN_NAME}
-JAR=${GEN_DIR}/target/${GEN_NAME}-*.jar
+GEN_NAME=org.nuxeo.osgi.ide.project.generator                                                                                                               
+GEN_DIR=ide/project-generator                                                                                                                               
+JAR=${GEN_DIR}/target/${GEN_NAME}-*.jar                                                                                                                     
+
 
 #JAVA_OPTS="$JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=y"
 
@@ -13,8 +14,8 @@ if [ ! -f $JAR ]; then
     popd;
 fi
 
-echo "Synchornizing manifests ..."
+echo "Synchronizing manifests ..."
 
-java $JAVA_OPTS -cp ${JAR} org.nuxeo.build.osgi.gen.SyncManifest "../" "plugins/pom.xml" "plugins"
+java $JAVA_OPTS -cp ${JAR} org.nuxeo.osgi.ide.project.generator.SyncManifest "../" "plugins/pom.xml" "plugins"
 
 echo "Done."
