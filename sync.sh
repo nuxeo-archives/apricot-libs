@@ -16,6 +16,6 @@ fi
 
 echo "Synchronizing manifests ..."
 
-java $JAVA_OPTS -cp ${JAR} org.nuxeo.osgi.ide.project.generator.SyncManifest "../" "plugins/pom.xml" "plugins"
+java $JAVA_OPTS -cp ${JAR} org.nuxeo.osgi.ide.project.generator.SyncManifest "../" "plugins/pom.xml" "."
 
 echo "Done."
