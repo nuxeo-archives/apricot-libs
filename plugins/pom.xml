@@ -33,7 +33,7 @@
     <module>nuxeo-common</module>
     <module>nuxeo-runtime/nuxeo-runtime</module>
     <module>nuxeo-runtime/nuxeo-runtime-jtajca</module>
-    <module>nuxeo-runtime/nuxeo-runtime-jetty-adapter</module>
+    <!--module>nuxeo-runtime/nuxeo-runtime-jetty-adapter</module-->
     <module>nuxeo-runtime/nuxeo-runtime-start</module>
     <module>nuxeo-core/nuxeo-core-schema</module>
     <module>nuxeo-core/nuxeo-core-query</module>
