@@ -6,18 +6,26 @@
   @author Bogdan Stefanescu (bs@nuxeo.com)
   </documentation>
 
-  <extension target="org.nuxeo.runtime.server" point="filter">
-    <filter context="/nuxeo" path="/*" class="org.nuxeo.ecm.webengine.jaxrs.login.AuthenticationFilter" />
-    <filter context="/nuxeo" path="/*" class="org.nuxeo.ecm.webengine.jaxrs.tx.TransactionFilter" />
-    <filter context="/nuxeo" path="/*" class="org.nuxeo.ecm.webengine.jaxrs.session.SessionCleanupFilter" />
-    <filter context="/nuxeo" path="/*" class="org.nuxeo.ecm.webengine.jaxrs.context.RequestContextFilter" />
+  <extension target="org.nuxeo.ecm.webengine.jaxrs.servlet.config.ServletRegistryComponent" point="servlets">
+    <servlet path="/nuxeo/test" class="org.nuxeo.ecm.webengine.jaxrs.servlet.FilteringServlet">
+       <param name="servlet">org.nuxeo.ecm.webengine.jaxrs.TestServlet</param>
+       <param name="filters">
+         org.nuxeo.ecm.webengine.jaxrs.login.AuthenticationFilter,
+         org.nuxeo.ecm.webengine.jaxrs.tx.TransactionFilter,
+         org.nuxeo.ecm.webengine.jaxrs.session.SessionCleanupFilter,
+         org.nuxeo.ecm.webengine.jaxrs.context.RequestContextFilter       
+       </param>
+    </servlet>
+    <servlet path="/nuxeo/site" class="org.nuxeo.ecm.webengine.jaxrs.servlet.FilteringServlet">
+      <param name="servlet">org.nuxeo.ecm.webengine.jaxrs.servlet.JerseyServlet</param>
+      <param name="filters">
+         org.nuxeo.ecm.webengine.jaxrs.login.AuthenticationFilter,
+         org.nuxeo.ecm.webengine.jaxrs.tx.TransactionFilter,
+         org.nuxeo.ecm.webengine.jaxrs.session.SessionCleanupFilter,
+         org.nuxeo.ecm.webengine.jaxrs.context.RequestContextFilter
+      </param>
+    </servlet>  
   </extension>
-
-  <extension target="org.nuxeo.runtime.server" point="servlet">
-    <servlet context="/nuxeo" path="/test" class="org.nuxeo.ecm.webengine.jaxrs.TestServlet" />
-    <servlet context="/nuxeo" path="/site/*" class="org.nuxeo.ecm.webengine.jaxrs.servlet.JerseyServlet" />
-  </extension>
-
 
 </component>
 
