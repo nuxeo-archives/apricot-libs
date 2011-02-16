@@ -55,6 +55,11 @@
 <unit id="org.nuxeo.org.slf4j.api" version="1.6.0"/>
 <repository location="http://osgi.nuxeo.org/repository/third-parties"/>
 </location>
+<location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
+<unit id="org.eclipse.jetty.bundles.f.feature.group" version="7.3.0.v20110203"/>
+<unit id="org.eclipse.jetty.bundles.f.source.feature.group" version="7.3.0.v20110203"/>
+<repository location="http://download.eclipse.org/jetty/updates/jetty-bundles-7.x"/>
+</location>
 </locations>
 <launcherArgs>
 <vmArgs>-Dosgi.requiredJavaVersion=1.6 -XX:MaxPermSize=256m -Xms40m -Xmx512m</vmArgs>

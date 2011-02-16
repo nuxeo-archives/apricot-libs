@@ -17,6 +17,7 @@
 
   <modules>
     <module>../core-server-thirdparties-feature</module>
+    <module>../core-server-equinox-feature</module>
     <module>../core-server-feature</module>
     <module>../core-server-application</module>
     <module>../core-server-product</module>
