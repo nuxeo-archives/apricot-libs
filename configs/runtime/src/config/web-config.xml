@@ -2,7 +2,7 @@
 
 <component name="org.nuxeo.ecm.platform.webConfig" version="1.0" bundle="org.nuxeo.ecm.webengine.jaxrs">
   <documentation>
-  Login modules used on JBoss
+  Web configuration.
   @author Bogdan Stefanescu (bs@nuxeo.com)
   </documentation>
 
