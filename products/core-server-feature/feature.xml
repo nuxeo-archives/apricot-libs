@@ -142,13 +142,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.runtime.jetty"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.nuxeo.ecm.platform.rendering"
          download-size="0"
          install-size="0"
