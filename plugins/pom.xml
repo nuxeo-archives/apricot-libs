@@ -33,7 +33,6 @@
     <module>nuxeo-common</module>
     <module>nuxeo-runtime/nuxeo-runtime</module>
     <module>nuxeo-runtime/nuxeo-runtime-jtajca</module>
-    <!--module>nuxeo-runtime/nuxeo-runtime-jetty-adapter</module-->
     <module>nuxeo-runtime/nuxeo-runtime-start</module>
     <module>nuxeo-core/nuxeo-core-schema</module>
     <module>nuxeo-core/nuxeo-core-query</module>
@@ -64,6 +63,9 @@
     <!-- used by jaxrs integration if you need ftl views support -->
     <module>nuxeo-services/nuxeo-platform-rendering</module>
 
+    <!-- chemistry nuxeo bindings -->
+    <module>nuxeo-chemistry/nuxeo-opencmis-bindings</module>
+    <module>nuxeo-chemistry/nuxeo-opencmis-impl</module>
   </modules>
 
 </project>

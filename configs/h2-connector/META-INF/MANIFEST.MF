@@ -7,3 +7,4 @@ Bundler-Vendor: Nuxeo
 Require-Bundle: org.nuxeo.com.h2database.h2
 Import-Package: org.apache.geronimo.transaction.manager
 Fragment-Host: org.nuxeo.ecm.core.storage.sql.ra
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
