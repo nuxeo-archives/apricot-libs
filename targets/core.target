@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="Nuxeo OSGI Core Platform" sequenceNumber="21">
+<locations>
+<location path="/var/www/p2/mirrors/eclipse/updates/3.6/R-3.6.1-201009090800" type="Directory"/>
+<location path="/usr/local/src/org.nuxeo.osgi/nuxeo-osgi/mirrors/orbit/S20110124210048" type="Directory"/>
+<location path="/var/www/p2/mirrors/eclipse/jetty/7.1.6.v20100715/repository" type="Directory"/>
+</locations>
+<launcherArgs>
+<vmArgs>-Dosgi.requiredJavaVersion=1.6 -XX:MaxPermSize=256m -Xms40m -Xmx512m</vmArgs>
+</launcherArgs>
+</target>

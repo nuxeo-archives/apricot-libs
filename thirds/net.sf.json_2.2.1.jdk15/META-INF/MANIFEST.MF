@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JSON Lib
+Bundle-SymbolicName: net.sf.json
+Bundle-Version: 2.2.1.qualifier
+Bundle-ClassPath: json-lib-2.2.1-jdk15.jar
+Bundle-Vendor: Nuxeo
+Export-Package: net.sf.json,
+ net.sf.json.filters,
+ net.sf.json.groovy,
+ net.sf.json.processors,
+ net.sf.json.regexp,
+ net.sf.json.test,
+ net.sf.json.util,
+ net.sf.json.xml
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.apache.commons.lang.exception; version="2.4.0",
+ org.apache.commons.collections.map; version="3.2.0",
+ org.apache.commons.beanutils; version="1.7.0",
+ org.apache.commons.lang; version="2.4.0",
+ junit.framework; version="4.8.1",
+ org.apache.oro.text.regex; version="2.0.8",
+ org.apache.commons.logging,
+ org.apache.commons.lang.builder; version="2.4.0"

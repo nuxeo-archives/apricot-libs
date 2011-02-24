@@ -17,7 +17,7 @@ Nuxeo-Component: OSGI-INF/EventService.xml,
 Import-Package: javax.naming,
  javax.script,
  javax.security.auth.login,
- javax.transaction;version="1.1",
+ javax.transaction,
  org.apache.commons.logging,
  org.nuxeo.common.collections,
  org.nuxeo.common.utils,
@@ -33,5 +33,5 @@ Import-Package: javax.naming,
  org.nuxeo.runtime.management,
  org.nuxeo.runtime.model,
  org.nuxeo.runtime.transaction,
- org.osgi.framework;version="1.4"
+ org.osgi.framework
 Bundle-SymbolicName: org.nuxeo.ecm.core.event;singleton:=true
