@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-Name: Nuxeo Audit Service - API (Test)
+Bundle-Vendor: Nuxeo SAS
+Bundle-Version: 5.4.1.qualifier
+Bundle-ManifestVersion: 2
+Bundle-Description: Nuxeo Enterprise Platform: Audit Service API. (Test)
+Bundle-License: http://www.gnu.org/copyleft/lesser.txt
+Bundle-DocURL: http://doc.nuxeo.org
+Bundle-SymbolicName: org.nuxeo.ecm.platform.audit.api.test
+Fragment-Host: org.nuxeo.ecm.platform.audit.api
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

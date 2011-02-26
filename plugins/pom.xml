@@ -66,6 +66,7 @@
     <!-- chemistry nuxeo bindings -->
     <module>nuxeo-chemistry/nuxeo-opencmis-bindings</module>
     <module>nuxeo-chemistry/nuxeo-opencmis-impl</module>
+    <module>nuxeo-features/nuxeo-platform-audit/nuxeo-platform-audit-api</module>
   </modules>
 
 </project>
