@@ -53,20 +53,23 @@
     <!-- jax-rs integration -->
     <module>nuxeo-webengine/nuxeo-webengine-jaxrs</module>
 
-    <!-- ================= optional bundles ================ -->
-    <module>nuxeo-core/nuxeo-core-io</module>
-    <!-- TODO: management should be optional - but I think it will not work if we remove it -->
-    <module>nuxeo-runtime/nuxeo-runtime-management</module>
-    <module>nuxeo-runtime/nuxeo-runtime-management-metrics</module>
-    <module>nuxeo-core/nuxeo-core-management</module>
-
-    <!-- used by jaxrs integration if you need ftl views support -->
-    <module>nuxeo-services/nuxeo-platform-rendering</module>
-
     <!-- chemistry nuxeo bindings -->
     <module>nuxeo-chemistry/nuxeo-opencmis-bindings</module>
     <module>nuxeo-chemistry/nuxeo-opencmis-impl</module>
     <module>nuxeo-features/nuxeo-platform-audit/nuxeo-platform-audit-api</module>
+
+    <!-- ================= optional bundles ================ -->
+    <module>nuxeo-core/nuxeo-core-io</module>
+
+    <!-- used by jaxrs integration if you need ftl views support -->
+    <module>nuxeo-services/nuxeo-platform-rendering</module>
+
+    <!-- management bundles -->
+    <module>nuxeo-runtime/nuxeo-runtime-management</module>
+    <module>nuxeo-runtime/nuxeo-runtime-management-metrics</module>
+    <module>nuxeo-core/nuxeo-core-management</module>
+    <module>nuxeo-core/nuxeo-core-storage-sql/nuxeo-core-storage-sql-management</module>
+
   </modules>
 
 </project>
