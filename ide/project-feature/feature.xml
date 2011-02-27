@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.ide.project.feature"
+      id="org.nuxeo.ide.project"
       label="Nuxeo OSGi Launcher Feature"
       version="5.4.1.qualifier">
 

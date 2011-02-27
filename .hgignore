@@ -2,6 +2,9 @@
 ^.settings
 /target/
 /addons/
+-test
+-testlib
+mirrors
 ^Servers
 ^External Plug-in Libraries
 bin

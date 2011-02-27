@@ -11,9 +11,9 @@
 
   <parent>
     <groupId>org.nuxeo.osgi</groupId>
-    <artifactId>nuxeo-osgi-build-parent</artifactId>
+    <artifactId>nuxeo-osgi-tycho</artifactId>
     <version>5.4.1-SNAPSHOT</version>
-    <relativePath>../../build-parent/pom.xml</relativePath>
+    <relativePath>../../tycho/pom.xml</relativePath>
   </parent>
 
 </project>

@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>${build-parentGroupId}</groupId>
-    <artifactId>${build-parentArtifactId}</artifactId>
-    <version>${build-parentVersion}</version>
+    <groupId>${tychoGroupId}</groupId>
+    <artifactId>${tychoArtifactId}</artifactId>
+    <version>${tychoVersion}</version>
     <relativePath>${relativePath}</relativePath>
   </parent>
 
