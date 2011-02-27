@@ -14,12 +14,12 @@ Export-Package: org.apache.geronimo.connector,
  org.apache.geronimo.connector.work,
  org.apache.geronimo.connector.work.pool
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Import-Package: org.slf4j; version="1.6.1",
+Import-Package: org.slf4j,
  org.apache.geronimo.transaction.manager,
  javax.resource.spi,
  javax.resource.spi.endpoint,
  javax.resource.spi.work,
- javax.transaction; version="1.1.0",
+ javax.transaction,
  javax.resource,
  javax.security.auth,
- javax.transaction.xa; version="1.1.0"
+ javax.transaction.xa

@@ -3,5 +3,5 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Config
 Bundle-SymbolicName: org.nuxeo.osgi.log4j.config
 Bundle-Version: 5.4.1.qualifier
-Fragment-Host: org.apache.log4j
+Fragment-Host: org.slf4j.log4j;bundle-version="1.6.1.v20100831-0715"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -14,13 +14,13 @@ Export-Package: com.sun.xml.xsom,
  com.sun.xml.xsom.util,
  com.sun.xml.xsom.visitor
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Import-Package: javax.swing.border,
- org.xml.sax; version="2.0.2",
- javax.xml.transform.sax; version="1.3.0",
- javax.xml.transform.dom; version="1.3.0",
- javax.xml.parsers; version="1.3.0",
- javax.swing,
+Import-Package: javax.swing,
+ javax.swing.border,
  javax.swing.tree,
- org.xml.sax.helpers; version="2.0.2",
- org.w3c.dom; version="3.0.0",
- javax.xml.transform; version="1.3.0"
+ javax.xml.parsers,
+ javax.xml.transform,
+ javax.xml.transform.dom,
+ javax.xml.transform.sax,
+ org.w3c.dom,
+ org.xml.sax,
+ org.xml.sax.helpers

@@ -13,5 +13,5 @@ Export-Package: org.apache.commons.jexl,
  org.apache.commons.jexl.util,
  org.apache.commons.jexl.util.introspection
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Import-Package: junit.framework; version="4.8.1",
+Import-Package: junit.framework,
  org.apache.commons.logging
