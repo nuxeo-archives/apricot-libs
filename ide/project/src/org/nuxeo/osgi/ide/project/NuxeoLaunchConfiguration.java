@@ -167,7 +167,7 @@ public class NuxeoLaunchConfiguration extends EquinoxLaunchConfiguration {
                 suffix = a.substring(i);
                 a = a.substring(0, i);
             }
-            if (!a.endsWith(".jar") && !a.endsWith("/bin")) {
+            if (!a.contains("org.eclipse.pde.core/.bundle_pool") && !a.endsWith(".jar") && !a.endsWith("/bin")) {
                 a = a.concat("/bin");
             }
             if (suffix != null) {

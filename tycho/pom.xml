@@ -20,13 +20,15 @@
 
   <properties>
     <tycho-version>0.10.0</tycho-version>
-    <orbit-version>S20110124210048-nuxeo</orbit-version>
+    <orbit-version>current</orbit-version>
     <eclipse-version>current</eclipse-version>
-    <jetty-version>current</jetty-version>
-    <eclipse-mirror-url>http://localhost/p2/mirrors</eclipse-mirror-url>
-    <equinox-site>${eclipse-mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
-    <orbit-site>${eclipse-mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
-    <jetty-site>${eclipse-mirror-url}/eclipse/jetty/${jetty-version}</jetty-site>
+    <nuxeo-version>current</nuxeo-version>
+    <mirror-url>http://localhost/p2/mirrors</mirror-url>
+    <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
+    <core-orbit-site>${mirror-url}/nuxeo/${nuxeo-version}/core/orbit</core-orbit-site>
+    <core-thirds-site>${mirror-url}/nuxeo/${nuxeo-version}/core/thirds</core-thirds-site>
+    <core-h2-site>${mirror-url}/nuxeo/${nuxeo-version}/core/h2</core-h2-site>
+    <orbit-site>${mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
   </properties>
 
   <repositories>
@@ -34,11 +36,6 @@
       <id>equinox-site</id>
       <layout>p2</layout>
       <url>${equinox-site}</url>
-    </repository>
-    <repository>
-      <id>orbit-site</id>
-      <layout>p2</layout>
-      <url>${orbit-site}</url>
     </repository>
   </repositories>
 
@@ -102,42 +99,88 @@
     </pluginRepository>
   </pluginRepositories>
 
-  <modules>
-    <module>../targets</module>
-    <module>../ide/project</module>
-    <module>../ide/project-generator</module>
-    <module>../ide/project-feature</module>
-    <module>../ide/project-site</module>
-    <!--module>../plugins</module-->
-    <module>../thirds/com.sun.jersey.core</module>
-    <module>../thirds/com.sun.jersey.server</module>
-    <module>../thirds/com.sun.xml.relaxng</module>
-    <module>../thirds/com.sun.xml.xsom</module>
-    <module>../thirds/com.thoughtworks.xstream</module>
-    <module>../thirds/net.sf.ezmorph</module>
-    <module>../thirds/net.sf.json</module>
-    <module>../thirds/org.apache.commons.jexl</module>
-    <module>../thirds/org.apache.geronimo.components.connector</module>
-    <module>../thirds/org.apache.geronimo.components.transaction</module>
-    <module>../thirds/org.apache.geronimo.specs.geronimo_j2ee_connector</module>
-    <module>../thirds/org.codehaus.groovy</module>
-    <module>../thirds/org.dom4j</module>
-    <module>../thirds/org.freemarker</module>
-    <module>../thirds/org.javasimon</module>
-    <module>../thirds/org.joda.time</module>
-    <module>../thirds/org.mvel2</module>
-    <module>../thirds/org.wikimodel.wem</module>
-    <module>../thirds/features/orbit</module>
-    <module>../thirds/features/nuxeo</module>
-    <module>../plugins</module>
-    <module>../extensions/h2/connector</module>
-    <module>../extensions/h2/functions</module>
-    <module>../extensions/h2/feature</module>
-    <module>../products/core-server-application</module>
-    <module>../products/core-server-config</module>
-    <module>../products/core-server-equinox-feature</module>
-    <module>../products/core-server-feature</module>
-    <module>../products/core-server-product</module>
-  </modules>
+  
+  <profiles>
+
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+	<repository>
+	  <id>core-orbit-site</id>
+	  <layout>p2</layout>
+	  <url>${core-orbit-site}</url>
+	</repository>
+	<repository>
+	  <id>core-thirds-site</id>
+	  <layout>p2</layout>
+	  <url>${core-thirds-site}</url>
+	</repository>
+	<repository>
+	  <id>core-h2-site</id>
+	  <layout>p2</layout>
+	  <url>${core-h2-site}</url>
+	</repository>
+      </repositories>
+      <modules>
+	<module>../targets</module>
+	<module>../ide/project</module>
+	<module>../ide/project-generator</module>
+	<module>../ide/project-feature</module>
+	<module>../ide/project-site</module>
+	<module>../plugins</module>
+	<module>../plugins/h2/connector</module>
+	<module>../plugins/h2/functions</module>
+	<module>../products/core-server-application</module>
+	<module>../products/core-server-config</module>
+	<module>../products/core-server-equinox-feature</module>
+	<module>../products/core-server-feature</module>
+	<module>../products/core-server-h2-feature</module>
+	<module>../products/core-server-thirds-feature</module>
+	<module>../products/core-server-orbit-feature</module>
+	<module>../products/core-server</module>
+	<module>../products/core-server-h2</module>
+      </modules>
+    </profile>
+
+    <profile>
+      <id>bootstrap</id>
+      <repositories>
+	<repository>
+	  <id>orbit-site</id>
+	  <layout>p2</layout>
+	  <url>${orbit-site}</url>
+	</repository>
+      </repositories>
+      <modules>
+	<module>../plugins/thirds/core/jersey-core</module>
+	<module>../plugins/thirds/core/jersey-server</module>
+	<module>../plugins/thirds/core/relaxng</module>
+	<module>../plugins/thirds/core/xsom</module>
+	<module>../plugins/thirds/core/xstream</module>
+	<module>../plugins/thirds/core/ezmorph</module>
+	<module>../plugins/thirds/core/json</module>
+	<module>../plugins/thirds/core/jexl</module>
+	<module>../plugins/thirds/core/geronimo-components-connector</module>
+	<module>../plugins/thirds/core/geronimo-components-transaction</module>
+	<module>../plugins/thirds/core/geronimo-specs-connector</module>
+	<module>../plugins/thirds/core/groovy</module>
+	<module>../plugins/thirds/core/dom4j</module>
+	<module>../plugins/thirds/core/freemarker</module>
+	<module>../plugins/thirds/core/javasimon</module>
+	<module>../plugins/thirds/core/joda-time</module>
+	<module>../plugins/thirds/core/mvel2</module>
+	<module>../plugins/thirds/core/jcl-over-slf4j</module>
+	<module>../plugins/thirds/core/wem</module>
+	<module>../products/core-server-thirds-feature</module>
+	<module>../products/core-server-orbit-feature</module>
+	<module>../products/core-server-thirds</module>
+	<module>../products/core-server-orbit</module>
+      </modules>
+    </profile>
+
+  </profiles>
 
 </project>

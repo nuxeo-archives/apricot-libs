@@ -1,12 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Nuxeo Runtime Configuration
-Bundle-SymbolicName: org.nuxeo.osgi.config
+Bundle-SymbolicName: org.nuxeo.osgi.core.server.config
 Bundle-Version: 5.4.1.qualifier
 Fragment-Host: org.nuxeo.runtime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Nuxeo-Component: config/default-repository-config.xml,
- config/login-config.xml,
- config/platform-config.xml,
- config/web-config.xml,
- config/auth/users.xml

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Nuxeo OSGI SDK Platform" sequenceNumber="77">
+<target name="Nuxeo OSGI SDK Platform" sequenceNumber="91">
 <locations>
+<location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.platform.sdk" version="3.6.1.M20100909-0800"/>
+<unit id="org.eclipse.pde.feature.group" version="3.6.1.r361_v20100727-7b7mFL-FET3dhESDgE5_bkJ"/>
+<unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.6.0.v20100503-9I7VGAeG8tz-BY6jz0w2HLRYr"/>
+<repository location="http://localhost/p2/mirrors/eclipse/updates/3.6/R-3.6.1-201009090800"/>
+</location>
 <location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="javax.xml.stream" version="1.0.1.v201004272200"/>
 <unit id="javax.ws.rs" version="1.1.1.v20101004-1200"/>
@@ -21,7 +27,6 @@
 <unit id="javax.servlet.jsp" version="1.2.0.v200806031606"/>
 <unit id="org.apache.ant" version="1.8.2.v20110117-1200"/>
 <unit id="org.junit" version="4.8.1.v4_8_1_v20100427-1100"/>
-<unit id="org.apache.commons.logging" version="1.1.1.v201101211721"/>
 <unit id="org.apache.oro" version="2.0.8.v201005080400"/>
 <unit id="org.apache.commons.beanutils" version="1.7.0.v200902170505"/>
 <unit id="org.slf4j.api" version="1.6.1.v20100831-0715"/>
@@ -51,10 +56,8 @@
 <repository location="http://localhost/p2/mirrors/eclipse/orbit/S20110124210048/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.sdk" version="3.6.1.M20100909-0800"/>
-<unit id="org.eclipse.pde.feature.group" version="3.6.1.r361_v20100727-7b7mFL-FET3dhESDgE5_bkJ"/>
-<unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.6.0.v20100503-9I7VGAeG8tz-BY6jz0w2HLRYr"/>
-<repository location="http://localhost/p2/mirrors/eclipse/updates/3.6/R-3.6.1-201009090800"/>
+<unit id="org.nuxeo.osgi.core.server.thirds" version="5.4.1.201103010255"/>
+<repository location="http://localhost/p2/mirrors/nuxeo/current/core/thirds/"/>
 </location>
 </locations>
 <launcherArgs>
