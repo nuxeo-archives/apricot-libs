@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Jersey Core Sources
+Bundle-SymbolicName: com.sun.jersey.core.source
+Bundle-Version: 1.1.5.qualifier
+Bundle-ClassPath: jersey-core-1.1.5-sources.jar
+Bundle-Vendor: Nuxeo
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

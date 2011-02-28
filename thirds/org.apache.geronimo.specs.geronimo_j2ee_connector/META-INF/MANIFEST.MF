@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Geronimo J2EE Connector Specs
+Bundle-SymbolicName: org.apache.geronimo.specs.geronimo_j2ee_connector
+Bundle-Version: 1.5.0.qualifier
+Bundle-ClassPath: geronimo-j2ee-connector_1.5_spec-2.0.0.jar
+Bundle-Vendor: Nuxeo
+Export-Package: javax.resource,
+ javax.resource.cci,
+ javax.resource.spi,
+ javax.resource.spi.endpoint,
+ javax.resource.spi.security,
+ javax.resource.spi.work
+Import-Package: javax.naming,
+ javax.security.auth;
+ javax.transaction.xa,
+ org.osgi.framework
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

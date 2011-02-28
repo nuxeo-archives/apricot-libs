@@ -18,21 +18,15 @@
     <url>http://hg.nuxeo.org/nuxeo/</url>
   </scm>
 
-  <modules>
-    <module>../targets</module>
-    <module>../ide/build</module>
-    <module>../plugins</module>
-    <module>../configs/build</module>
-    <module>../products/build</module>
-  </modules>
-
   <properties>
     <tycho-version>0.10.0</tycho-version>
-    <orbit-version>S20110124210048</orbit-version>
-    <eclipse-version>3.6/R-3.6.1-201009090800</eclipse-version>
+    <orbit-version>S20110124210048-nuxeo</orbit-version>
+    <eclipse-version>current</eclipse-version>
+    <jetty-version>current</jetty-version>
     <eclipse-mirror-url>http://localhost/p2/mirrors</eclipse-mirror-url>
     <equinox-site>${eclipse-mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
-    <orbit-site>${eclipse-mirror-url}/orbit/${orbit-version}</orbit-site>
+    <orbit-site>${eclipse-mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
+    <jetty-site>${eclipse-mirror-url}/eclipse/jetty/${jetty-version}</jetty-site>
   </properties>
 
   <repositories>
@@ -88,5 +82,62 @@
     </plugins>
 
   </build>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>tycho-snapshots</id>
+      <!--url>http://repository.sonatype.org/content/repositories/snapshots/</url-->
+      <url>http://intalio.org/public/maven2</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </pluginRepository>
+    <pluginRepository>
+      <id>ibib</id>
+      <!--url>http://repository.sonatype.org/content/repositories/snapshots/</url-->
+      <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <modules>
+    <module>../targets</module>
+    <module>../ide/project</module>
+    <module>../ide/project-generator</module>
+    <module>../ide/project-feature</module>
+    <module>../ide/project-site</module>
+    <!--module>../plugins</module-->
+    <module>../thirds/com.sun.jersey.core</module>
+    <module>../thirds/com.sun.jersey.server</module>
+    <module>../thirds/com.sun.xml.relaxng</module>
+    <module>../thirds/com.sun.xml.xsom</module>
+    <module>../thirds/com.thoughtworks.xstream</module>
+    <module>../thirds/net.sf.ezmorph</module>
+    <module>../thirds/net.sf.json</module>
+    <module>../thirds/org.apache.commons.jexl</module>
+    <module>../thirds/org.apache.geronimo.components.connector</module>
+    <module>../thirds/org.apache.geronimo.components.transaction</module>
+    <module>../thirds/org.apache.geronimo.specs.geronimo_j2ee_connector</module>
+    <module>../thirds/org.codehaus.groovy</module>
+    <module>../thirds/org.dom4j</module>
+    <module>../thirds/org.freemarker</module>
+    <module>../thirds/org.javasimon</module>
+    <module>../thirds/org.joda.time</module>
+    <module>../thirds/org.mvel2</module>
+    <module>../thirds/org.wikimodel.wem</module>
+    <module>../thirds/features/orbit</module>
+    <module>../thirds/features/nuxeo</module>
+    <module>../plugins</module>
+    <module>../extensions/h2/connector</module>
+    <module>../extensions/h2/functions</module>
+    <module>../extensions/h2/feature</module>
+    <module>../products/core-server-application</module>
+    <module>../products/core-server-config</module>
+    <module>../products/core-server-equinox-feature</module>
+    <module>../products/core-server-feature</module>
+    <module>../products/core-server-product</module>
+  </modules>
 
 </project>

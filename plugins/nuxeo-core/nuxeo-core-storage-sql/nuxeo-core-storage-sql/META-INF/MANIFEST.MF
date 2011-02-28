@@ -76,3 +76,4 @@ Import-Package: javax.resource,
  org.osgi.framework
 Bundle-SymbolicName: org.nuxeo.ecm.core.storage.sql;singleton:=true
 Bundle-Activator: org.nuxeo.ecm.core.storage.sql.Activator
+Require-Bundle: javax.servlet;bundle-version="2.5.0"

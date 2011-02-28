@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.osgi.core.server.feature"
+      id="org.nuxeo.osgi.core.server"
       label="Nuxeo Core Server Feature"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
@@ -18,25 +18,12 @@
    </license>
 
    <requires>
-      <import feature="org.nuxeo.osgi.core.server.thirdparties.feature" version="5.4.1.qualifier"/>
+      <import feature="org.nuxeo.osgi.core.server.thirds" version="5.4.1.qualifier"/>
+      <import feature="org.nuxeo.osgi.core.server.thirds.orbit" version="5.4.1.qualifier"/>
    </requires>
 
    <plugin
          id="org.nuxeo.ecm.core.storage.sql.ra"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.xml-apis"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.runtime.management.metrics"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -78,21 +65,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.runtime.management"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.nuxeo.ecm.core.convert.api"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.ecm.core.management"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -110,14 +83,6 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.runtime.config"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
          unpack="false"/>
 
    <plugin
@@ -184,52 +149,14 @@
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.h2"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.runtime.start"
+         id="org.nuxeo.ecm.automation.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.h2.extensions"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.osgi.log4j.config"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.http.jetty"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.equinox.http.servlet"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.osgi.services"
+         id="org.nuxeo.ecm.automation.server"
          download-size="0"
          install-size="0"
          version="0.0.0"

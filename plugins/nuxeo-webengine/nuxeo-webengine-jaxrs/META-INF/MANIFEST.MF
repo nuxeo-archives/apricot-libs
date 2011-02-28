@@ -18,8 +18,9 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Version: 5.4.1.qualifier
 Bundle-ManifestVersion: 2
 Require-Bundle: org.nuxeo.ecm.core,
- javax.ws.rs;bundle-version="1.1.1"
+ javax.servlet;bundle-version="2.5.0"
 Import-Package: com.sun.jersey.core.spi.factory,
+ com.sun.jersey.server.impl.container,
  com.sun.jersey.server.impl.provider,
  com.sun.jersey.spi.container.servlet,
  freemarker.core;resolution:=optional,
