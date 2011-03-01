@@ -2,17 +2,17 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>nuxeo-core-server-orbit-repository</artifactId>
-  <name>Nuxeo OSGi Core Server Extended Orbit Repository</name>
+  <artifactId>nuxeo-extended-orbit-repository</artifactId>
+  <name>Nuxeo OSGi Extended Orbit Repository</name>
   <description>Assemble the Nuxeo OSGi core server exended orbit repository.</description>
   <url>http://www.nuxeo.org/</url>
   <packaging>eclipse-repository</packaging>
 
   <parent>
-    <groupId>org.nuxeo.osgi.thirds</groupId>
-    <artifactId>nuxeo-osgi-thirds-tycho</artifactId>
+    <groupId>org.nuxeo.osgi.extended-orbit</groupId>
+    <artifactId>nuxeo-osgi-extended-orbit-tycho</artifactId>
     <version>5.4.1-SNAPSHOT</version>
-    <relativePath>../pom.xml</relativePath>
+    <relativePath>../build/pom.xml</relativePath>
   </parent>
 
   <build>

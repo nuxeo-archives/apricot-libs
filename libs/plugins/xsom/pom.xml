@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.nuxeo.osgi.extended-orbit.extended-orbit</groupId>
+  <artifactId>com.sun.xml.xsom</artifactId>
+  <version>0.0.20060306-SNAPSHOT</version>
+  <packaging>eclipse-plugin</packaging>
+  <name>Nuxeo Core Server Thirds - XSOM</name>
+
+  <parent>
+    <groupId>org.nuxeo.osgi.extended-orbit</groupId>
+    <artifactId>nuxeo-osgi-extended-orbit-tycho</artifactId>
+    <version>5.4.1-SNAPSHOT</version>
+    <relativePath>../../build/pom.xml</relativePath>
+  </parent>
+
+</project>

@@ -4,8 +4,8 @@
 	 xsi:schemaLocation="http:/maven.apache.org/POM/4.0.0 http:/maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.nuxeo.osgi.thirds</groupId>
-  <artifactId>nuxeo-osgi-thirds-tycho</artifactId>
+  <groupId>org.nuxeo.osgi.extended-orbit</groupId>
+  <artifactId>nuxeo-osgi-extended-orbit-tycho</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -21,8 +21,8 @@
     <eclipse-version>current</eclipse-version>
     <nuxeo-version>current</nuxeo-version>
     <mirror-url>http://localhost/p2/mirrors</mirror-url>
-    <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
-    <orbit-site>${mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
+    <equinox-site>${mirror-url}/updates/${eclipse-version}</equinox-site>
+    <orbit-site>${mirror-url}/orbit/${orbit-version}</orbit-site>
   </properties>
 
   <repositories>
@@ -39,27 +39,27 @@
   </repositories>
   
   <modules>
-    <module>../core-server/plugins/jersey-core</module>
-    <module>../core-server/plugins/jersey-server</module>
-    <module>../core-server/plugins/relaxng</module>
-    <module>../core-server/plugins/xsom</module>
-    <module>../core-server/plugins/xstream</module>
-    <module>../core-server/plugins/ezmorph</module>
-    <module>../core-server/plugins/json</module>
-    <module>../core-server/plugins/jexl</module>
-    <module>../core-server/plugins/geronimo-components-connector</module>
-    <module>../core-server/plugins/geronimo-components-transaction</module>
-    <module>../core-server/plugins/geronimo-specs-connector</module>
-    <module>../core-server/plugins/groovy</module>
-    <module>../core-server/plugins/dom4j</module>
-    <module>../core-server/plugins/freemarker</module>
-    <module>../core-server/plugins/javasimon</module>
-    <module>../core-server/plugins/joda-time</module>
-    <module>../core-server/plugins/mvel2</module>
-    <module>../core-server/plugins/jcl-over-slf4j</module>
-    <module>../core-server/plugins/wem</module>
-    <module>../core-server/features/orbit</module>
-    <module>../core-server/features/nuxeo</module>
+    <module>../plugins/jersey-core</module>
+    <module>../plugins/jersey-server</module>
+    <module>../plugins/relaxng</module>
+    <module>../plugins/xsom</module>
+    <module>../plugins/xstream</module>
+    <module>../plugins/ezmorph</module>
+    <module>../plugins/json</module>
+    <module>../plugins/jexl</module>
+    <module>../plugins/geronimo-components-connector</module>
+    <module>../plugins/geronimo-components-transaction</module>
+    <module>../plugins/geronimo-specs-connector</module>
+    <module>../plugins/groovy</module>
+    <module>../plugins/dom4j</module>
+    <module>../plugins/freemarker</module>
+    <module>../plugins/javasimon</module>
+    <module>../plugins/joda-time</module>
+    <module>../plugins/mvel2</module>
+    <module>../plugins/jcl-over-slf4j</module>
+    <module>../plugins/wem</module>
+    <module>../features/orbit</module>
+    <module>../features/nuxeo</module>
     <module>../product</module>
   </modules>
 
