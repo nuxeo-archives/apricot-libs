@@ -21,12 +21,11 @@
     <module>../plugins</module>
     <module>../plugins/h2/connector</module>
     <module>../plugins/h2/functions</module>
-    <module>../libs/features/orbit</module>
-    <module>../libs/features/nuxeo</module>
     <module>../products/core-server/config</module>
     <module>../products/core-server/features/equinox</module>
     <module>../products/core-server/features/core</module>
     <module>../products/core-server/features/h2</module>
+    <module>../products/core-server/features/libs</module>
     <module>../products/core-server/product</module>
   </modules>
 
