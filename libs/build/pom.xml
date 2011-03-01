@@ -22,7 +22,7 @@
     <nuxeo-version>current</nuxeo-version>
     <mirror-url>http://osgi.nuxeo.org/p2/mirrors</mirror-url>
     <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
-    <orbit-site>${mirror-url}/orbit/${orbit-version}</orbit-site>
+    <orbit-site>${mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
   </properties>
 
   <repositories>
