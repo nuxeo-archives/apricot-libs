@@ -7,25 +7,18 @@
   </documentation>
 
   <extension target="org.nuxeo.ecm.webengine.jaxrs.servlet.config.ServletRegistryComponent" point="servlets">
-    <servlet path="/nuxeo/test" class="org.nuxeo.ecm.webengine.jaxrs.servlet.FilteringServlet">
-       <param name="servlet">org.nuxeo.ecm.webengine.jaxrs.TestServlet</param>
-       <param name="filters">
-         org.nuxeo.ecm.webengine.jaxrs.login.AuthenticationFilter,
-         org.nuxeo.ecm.webengine.jaxrs.tx.TransactionFilter,
-         org.nuxeo.ecm.webengine.jaxrs.session.SessionCleanupFilter,
-         org.nuxeo.ecm.webengine.jaxrs.context.RequestContextFilter       
-       </param>
-    </servlet>
-    <servlet path="/nuxeo/site" class="org.nuxeo.ecm.webengine.jaxrs.servlet.FilteringServlet">
-      <param name="servlet">org.nuxeo.ecm.webengine.jaxrs.servlet.JerseyServlet</param>
-      <param name="filters">
-         org.nuxeo.ecm.webengine.jaxrs.login.AuthenticationFilter,
-         org.nuxeo.ecm.webengine.jaxrs.tx.TransactionFilter,
-         org.nuxeo.ecm.webengine.jaxrs.session.SessionCleanupFilter,
-         org.nuxeo.ecm.webengine.jaxrs.context.RequestContextFilter
-      </param>
+    <servlet name="jaxrs" path="/nuxeo/site" class="org.nuxeo.ecm.webengine.jaxrs.servlet.JerseyServlet">
+      <filters pathInfo="/**/skin/*">
+        <!-- no filters defined for paths matching this pattern -->
+      </filters>
+      <filters>
+        <filter class="org.nuxeo.ecm.webengine.jaxrs.login.AuthenticationFilter" />
+        <filter class="org.nuxeo.ecm.webengine.jaxrs.tx.TransactionFilter" />
+        <filter class="org.nuxeo.ecm.webengine.jaxrs.session.SessionCleanupFilter" />
+        <filter class="org.nuxeo.ecm.webengine.jaxrs.context.RequestContextFilter" />
+      </filters>
     </servlet>  
   </extension>
-
+  
 </component>
 

@@ -7,17 +7,18 @@
   </documentation>
 
   <extension target="org.nuxeo.ecm.webengine.jaxrs.servlet.config.ServletRegistryComponent" point="servlets">
-    <servlet name="nuxeo.opencmis.atompub" path="/nuxeo/atom/cmis" 
-        class="org.nuxeo.ecm.webengine.jaxrs.servlet.FilteringServlet">
-      <param name="servlet">org.nuxeo.ecm.core.opencmis.bindings:org.apache.chemistry.opencmis.server.impl.atompub.CmisAtomPubServlet</param>
-      <param name="listeners">
-         org.nuxeo.ecm.core.opencmis.bindings:org.nuxeo.ecm.core.opencmis.bindings.NuxeoCmisContextListener
-      </param>
-      <param name="filters">
-         org.nuxeo.ecm.webengine.jaxrs.login.AuthenticationFilter,
-         org.nuxeo.ecm.webengine.jaxrs.tx.TransactionFilter,
-      </param>
-      <param name="callContextHandler">org.nuxeo.ecm.core.opencmis.bindings.NuxeoAuthCallContextHandler</param>      
+    <servlet name="opencmis" path="/nuxeo/atom/cmis" 
+        class="org.nuxeo.ecm.core.opencmis.bindings:org.apache.chemistry.opencmis.server.impl.atompub.CmisAtomPubServlet">
+      <listeners>
+         <listener class="org.nuxeo.ecm.core.opencmis.bindings:org.nuxeo.ecm.core.opencmis.bindings.NuxeoCmisContextListener" />
+      </listeners>
+      <filters>
+        <filter class="org.nuxeo.ecm.webengine.jaxrs.login.AuthenticationFilter" />
+        <filter class="org.nuxeo.ecm.webengine.jaxrs.tx.TransactionFilter" />
+      </filters>      
+      <properties>
+        <property name="callContextHandler">org.nuxeo.ecm.core.opencmis.bindings.NuxeoAuthCallContextHandler</property>
+      </properties>
     </servlet>  
   </extension>
 
