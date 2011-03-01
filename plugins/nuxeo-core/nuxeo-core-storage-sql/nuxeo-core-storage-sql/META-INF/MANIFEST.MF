@@ -20,13 +20,12 @@ Nuxeo-Component: OSGI-INF/listener-contrib.xml,
   OSGI-INF/querymaker-contrib.xml,
   OSGI-INF/reload-contrib.xml
 Bundle-ManifestVersion: 2
-Import-Package: org.osgi.framework, 
- javax.resource;version="2.0.0",
- javax.resource.cci;version="2.0.0",
- javax.sql, 
+Import-Package: javax.resource,
+ javax.resource.cci,
  javax.servlet,
  javax.servlet.http,
- javax.transaction.xa;version="1.1.1",
+ javax.sql,
+ javax.transaction.xa,
  org.apache.commons.beanutils,
  org.apache.commons.collections.map,
  org.apache.commons.httpclient,
@@ -73,6 +72,8 @@ Import-Package: org.osgi.framework,
  org.nuxeo.runtime.api,
  org.nuxeo.runtime.model,
  org.nuxeo.runtime.services.event,
- org.nuxeo.runtime.services.streaming
+ org.nuxeo.runtime.services.streaming,
+ org.osgi.framework
 Bundle-SymbolicName: org.nuxeo.ecm.core.storage.sql;singleton:=true
 Bundle-Activator: org.nuxeo.ecm.core.storage.sql.Activator
+Require-Bundle: javax.servlet;bundle-version="2.5.0"

@@ -1,31 +1,118 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.nuxeo.osgi</groupId>
-  <artifactId>nuxeo-osgi-build</artifactId>
+  <artifactId>nuxeo-osgi-tycho</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Nuxeo OSGi Build</name>
-  <description>Build Nuxeo OSGI Core Distribution and related components.</description>
+  <name>Nuxeo OSGi Tycho</name>
+  <description>Provide common OSGi tycho build directives.</description>
+
+  <modules>
+    <module>../targets</module>
+    <module>../ide/project</module>
+    <module>../ide/project-generator</module>
+    <module>../ide/project-feature</module>
+    <module>../ide/project-site</module>
+    <module>../plugins</module>
+    <module>../plugins/h2/connector</module>
+    <module>../plugins/h2/functions</module>
+    <module>../libs/features/orbit</module>
+    <module>../libs/features/nuxeo</module>
+    <module>../products/core-server/config</module>
+    <module>../products/core-server/features/equinox</module>
+    <module>../products/core-server/features/core</module>
+    <module>../products/core-server/features/h2</module>
+    <module>../products/core-server/product</module>
+  </modules>
 
   <scm>
     <connection>scm:hg:http://hg.nuxeo.org/sandbox/nuxeo-osgi</connection>
     <developerConnection>scm:hg:https://hg.nuxeo.org/sandbox/nuxeo-osgi</developerConnection>
-    <url>http://hg.nuxeo.org/sandbox/nuxeo-osgi/</url>
+    <url>http://hg.nuxeo.org/nuxeo/</url>
   </scm>
 
-  <modules>
-    <module>../build-parent</module>
-    <module>../target-platforms</module>
-    <module>../ide/build</module>
-    <module>../plugins</module>
-    <module>../configs/build</module>
-    <module>../products/build</module>
-  </modules>
+  <properties>
+    <tycho-version>0.10.0</tycho-version>
+    <orbit-version>current</orbit-version>
+    <eclipse-version>current</eclipse-version>
+    <nuxeo-version>current</nuxeo-version>
+    <mirror-url>http://localhost/p2/mirrors</mirror-url>
+    <equinox-site>${mirror-url}/updates/${eclipse-version}</equinox-site>
+    <orbit-site>${mirror-url}/orbit/${orbit-version}</orbit-site>
+    <extended-orbit-site>${mirror-url}/extended-orbit/${nuxeo-version}/repository</extended-orbit-site>
+  </properties>
 
+  <repositories>
+    <repository>
+      <id>equinox-site</id>
+      <layout>p2</layout>
+      <url>${equinox-site}</url>
+    </repository>
+    <repository>
+      <id>core-orbit-site</id>
+      <layout>p2</layout>
+      <url>${extended-orbit-site}</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <directory>${project.basedir}/target</directory>
+
+    <plugins>
+      <plugin>
+    	<groupId>org.codehaus.mojo</groupId>
+    	<artifactId>build-helper-maven-plugin</artifactId>
+    	<version>1.3</version>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+    	<version>${tycho-version}</version>
+        <configuration>
+          <resolver>p2</resolver>
+    	  <ignoreTychoRepositories>true</ignoreTychoRepositories>
+    	  <environments>
+    	    <environment>
+    	      <os>linux</os>
+    	      <ws>gtk</ws>
+    	      <arch>x86</arch>
+    	      <nl>en_US</nl>
+    	    </environment>
+    	  </environments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+
+  </build>
+  
+  <pluginRepositories>
+    <pluginRepository>
+      <id>tycho-snapshots</id>
+      <!--url>http://repository.sonatype.org/content/repositories/snapshots/</url-->
+      <url>http://intalio.org/public/maven2</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+    </pluginRepository>
+    <pluginRepository>
+      <id>ibib</id>
+      <!--url>http://repository.sonatype.org/content/repositories/snapshots/</url-->
+      <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
 
 </project>
