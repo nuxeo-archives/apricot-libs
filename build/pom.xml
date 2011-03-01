@@ -41,10 +41,11 @@
     <orbit-version>current</orbit-version>
     <eclipse-version>current</eclipse-version>
     <nuxeo-version>current</nuxeo-version>
-    <mirror-url>http://localhost/p2/mirrors</mirror-url>
-    <equinox-site>${mirror-url}/updates/${eclipse-version}</equinox-site>
-    <orbit-site>${mirror-url}/orbit/${orbit-version}</orbit-site>
-    <extended-orbit-site>${mirror-url}/extended-orbit/${nuxeo-version}/repository</extended-orbit-site>
+    <nuxeo-osgi-url>http://osgi.nuxeo.org/p2</nuxeo-osgi-url>
+    <mirror-url>http://osgi.nuxeo.org/p2/mirrors</mirror-url>
+    <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
+    <orbit-site>${mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
+    <libs-site>${nuxeo-osgi-url}/libs/${nuxeo-version}/repository</libs-site>
   </properties>
 
   <repositories>
@@ -54,9 +55,9 @@
       <url>${equinox-site}</url>
     </repository>
     <repository>
-      <id>core-orbit-site</id>
+      <id>libs-site</id>
       <layout>p2</layout>
-      <url>${extended-orbit-site}</url>
+      <url>${libs-site}</url>
     </repository>
   </repositories>
 
