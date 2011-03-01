@@ -7,7 +7,7 @@
 <unit id="org.eclipse.platform.sdk" version="3.6.1.M20100909-0800"/>
 <unit id="org.eclipse.pde.feature.group" version="3.6.1.r361_v20100727-7b7mFL-FET3dhESDgE5_bkJ"/>
 <unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.6.0.v20100503-9I7VGAeG8tz-BY6jz0w2HLRYr"/>
-<repository location="http://localhost/p2/mirrors/updates/3.6/R-3.6.1-201009090800"/>
+<repository location="http://osgi.nuxeo.org/p2/mirrors/eclipse/updates/3.6/R-3.6.1-201009090800"/>
 </location>
 <location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="javax.xml.stream" version="1.0.1.v201004272200"/>
@@ -53,10 +53,10 @@
 <unit id="ch.qos.logback.classic" version="0.9.24.v20100831-0715"/>
 <unit id="ch.qos.logback.core" version="0.9.24.v20100831-0715"/>
 <unit id="org.slf4j.api" version="1.6.1.v20100831-0715"/>
-<repository location="http://localhost/p2/mirrors/eclipse/orbit/S20110124210048/"/>
+<repository location="http://osgi.nuxeo.org/p2/mirrors/eclipse/orbit/S20110124210048/"/>
 </location>
 <location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<repository location="http://localhost/p2/mirrors/extended-orbit/current/repository"/>
+<repository location="http://osgi.nuxeo.org/p2/libs/current/repository"/>
 </location>
 </locations>
 <launcherArgs>
