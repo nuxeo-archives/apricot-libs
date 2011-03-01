@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.osgi.core.server.libs_nuxeo"
-      label="Nuxeo OSGi Core Server Nuxeo Provisioned Thirds"
+      id="org.nuxeo.osgi.libs.nuxeo"
+      label="Nuxeo OSGi Orbit Extension"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 

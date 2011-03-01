@@ -46,7 +46,7 @@
 	<configuration>
 	  <products>
 	    <product>
-	      <id>org.nuxeo.osgi.extended_orbit</id>
+	      <id>org.nuxeo.osgi.libs</id>
 	    </product>
 	  </products>
 	</configuration>

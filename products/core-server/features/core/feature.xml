@@ -18,8 +18,8 @@
    </license>
 
    <requires>
-      <import feature="org.nuxeo.osgi.core.server.libs_nuxeo" version="5.4.1.qualifier"/>
-      <import feature="org.nuxeo.osgi.core.server.libs_orbit" version="5.4.1.qualifier"/>
+      <import feature="org.nuxeo.osgi.libs.nuxeo" version="5.4.1.qualifier"/>
+      <import feature="org.nuxeo.osgi.libs.orbit" version="5.4.1.qualifier"/>
    </requires>
 
    <plugin
