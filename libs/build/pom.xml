@@ -50,7 +50,7 @@
     <module>../plugins/geronimo-components-connector</module>
     <module>../plugins/geronimo-components-transaction</module>
     <module>../plugins/geronimo-specs-connector</module>
-    <module>../plugins/groovy</module>
+    <module>../plugins/groovy-all</module>
     <module>../plugins/dom4j</module>
     <module>../plugins/freemarker</module>
     <module>../plugins/javasimon</module>

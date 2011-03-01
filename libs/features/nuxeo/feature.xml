@@ -104,7 +104,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.codehaus.groovy"
+         id="org.codehaus.groovy_all"
          download-size="0"
          install-size="0"
          version="0.0.0"
