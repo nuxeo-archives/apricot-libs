@@ -19,3 +19,4 @@ org.eclipse.jdt.core.prefs
 libs/plugins/dom4j/org
 libs/plugins/ezmorph/net
 libs/plugins/freemarker/freemarker
+libs/plugins/geronimo-components-connector/org

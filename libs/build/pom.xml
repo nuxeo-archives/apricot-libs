@@ -9,35 +9,6 @@
   <version>5.4.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <scm>
-    <connection>scm:hg:http://hg.nuxeo.org/sandbox/nuxeo-osgi</connection>
-    <developerConnection>scm:hg:https://hg.nuxeo.org/sandbox/nuxeo-osgi</developerConnection>
-    <url>http://hg.nuxeo.org/nuxeo/</url>
-  </scm>
-
-  <properties>
-    <tycho-version>0.10.0</tycho-version>
-    <orbit-version>current</orbit-version>
-    <eclipse-version>current</eclipse-version>
-    <nuxeo-version>current</nuxeo-version>
-    <mirror-url>http://osgi.nuxeo.org/p2/mirrors</mirror-url>
-    <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
-    <orbit-site>${mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
-  </properties>
-
-  <repositories>
-    <repository>
-      <id>equinox-site</id>
-      <layout>p2</layout>
-      <url>${equinox-site}</url>
-    </repository>
-    <repository>
-      <id>orbit-site</id>
-      <layout>p2</layout>
-      <url>${orbit-site}</url>
-    </repository>
-  </repositories>
-
   <modules>
     <module>../plugins/jersey-core</module>
     <module>../plugins/jersey-server</module>
@@ -61,6 +32,82 @@
     <module>../features/maven</module>
     <module>../product</module>
   </modules>
+
+  <scm>
+    <connection>scm:hg:http://hg.nuxeo.org/sandbox/nuxeo-osgi</connection>
+    <developerConnection>scm:hg:https://hg.nuxeo.org/sandbox/nuxeo-osgi</developerConnection>
+    <url>http://hg.nuxeo.org/nuxeo/</url>
+  </scm>
+
+  <properties>
+    <tycho-version>0.10.0</tycho-version>
+    <orbit-version>current</orbit-version>
+    <eclipse-version>current</eclipse-version>
+    <nuxeo-version>current</nuxeo-version>
+    <mirror-url>http://osgi.nuxeo.org/p2/mirrors</mirror-url>
+    <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
+    <orbit-site>${mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>public</id>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>public-snapshot</id>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>equinox-site</id>
+      <layout>p2</layout>
+      <url>${equinox-site}</url>
+    </repository>
+    <repository>
+      <id>orbit-site</id>
+      <layout>p2</layout>
+      <url>${orbit-site}</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>public</id>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public</url>
+      <name>Nuxeo virtual release repository</name>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>public-snapshot</id>
+      <url>http://maven.nuxeo.org/nexus/content/groups/public-snapshot</url>
+      <name>Nuxeo virtual snapshot repository</name>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
 
   <dependencies>
       <dependency>
