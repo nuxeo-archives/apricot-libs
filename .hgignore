@@ -31,4 +31,5 @@ glob:libs/plugins/jersey-*/META-INF/services
 glob:libs/plugins/jersey-*/com
 glob:libs/plugins/jexl/org
 glob:libs/plugins/joda-time/org
+glob:libs/plugins/json/net
 
