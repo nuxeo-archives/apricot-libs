@@ -21,3 +21,4 @@ libs/plugins/ezmorph/net
 libs/plugins/freemarker/freemarker
 libs/plugins/geronimo-components-connector/org
 libs/plugins/geronimo-components-transaction/org
+libs/plugins/geronimo-specs-connector/javax

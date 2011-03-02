@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Geronimo J2EE Connector Specs
 Bundle-SymbolicName: org.apache.geronimo.specs.geronimo_j2ee_connector
-Bundle-Version: 1.5.0.qualifier
+Bundle-Version: 2.0.0.qualifier
 Bundle-Vendor: Nuxeo
 Bundle-Classpath: .
 Export-Package: javax.resource,
