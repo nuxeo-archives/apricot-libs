@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.osgi.extended-orbit.extended-orbit</groupId>
-  <artifactId>com.sun.jersey.core</artifactId>
+  <artifactId>jersey-core</artifactId>
   <name>Nuxeo OSGi Thirds Jersey Core</name>
   <version>1.1.5-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>

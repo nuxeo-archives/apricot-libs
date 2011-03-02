@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.osgi.extended-orbit.extended-orbit</groupId>
-  <artifactId>com.sun.jersey.server</artifactId>
+  <artifactId>jersey-server</artifactId>
   <name>Nuxeo OSGi Thirds Jersey Server</name>
   <version>1.1.5-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
@@ -14,5 +14,37 @@
     <version>5.4.1-SNAPSHOT</version>
     <relativePath>../../build/pom.xml</relativePath>
   </parent>
+
+  <build>
+     <plugins>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-dependency-plugin</artifactId>
+         <executions>
+           <execution>
+             <id>unpack</id>
+             <phase>compile</phase>
+             <goals>
+               <goal>unpack</goal>
+             </goals>
+             <configuration>
+               <artifactItems>
+                 <artifactItem>
+		   <groupId>com.sun.jersey</groupId>
+		   <artifactId>jersey-server</artifactId>
+                   <version>1.1.5</version>
+                   <type>jar</type>
+                   <overWrite>false</overWrite>
+                   <outputDirectory>${project.basedir}</outputDirectory>
+		   <includes>**/*</includes>
+		   <excludes>META-INF/MANIFEST.MF</excludes>
+                 </artifactItem>
+               </artifactItems>
+             </configuration>
+	   </execution>
+	 </executions>
+       </plugin>
+     </plugins>
+  </build>
 
 </project>

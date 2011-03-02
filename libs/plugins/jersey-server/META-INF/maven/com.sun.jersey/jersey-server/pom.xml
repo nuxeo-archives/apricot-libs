@@ -178,7 +178,7 @@
                 </executions>
             </plugin>
         </plugins>
-   ../../build>
+    </build>
 
     <repositories>
         <repository>
