@@ -18,7 +18,39 @@
    </license>
 
    <requires>
-      <import feature="org.nuxeo.osgi.core.server.libs" version="0.0.0"/>
+      <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.apache.geronimo.specs.geronimo_j2ee_connector"/>
+      <import plugin="org.apache.geronimo.components.transaction"/>
+      <import plugin="org.apache.xerces"/>
+      <import plugin="com.sun.xml.xsom"/>
+      <import plugin="org.apache.commons.beanutils"/>
+      <import plugin="org.apache.geronimo.components.connector"/>
+      <import plugin="org.apache.commons.collections"/>
+      <import plugin="javax.annotation"/>
+      <import plugin="org.apache.lucene" version="2.9.1" match="greaterOrEqual"/>
+      <import plugin="org.apache.lucene.analysis" version="2.9.1" match="greaterOrEqual"/>
+      <import plugin="org.h2"/>
+      <import plugin="org.dom4j"/>
+      <import plugin="java_cup.runtime"/>
+      <import plugin="org.joda.time"/>
+      <import plugin="org.freemarker"/>
+      <import plugin="org.wikimodel.wem"/>
+      <import plugin="org.apache.commons.lang"/>
+      <import plugin="javax.servlet" version="2.5.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.commons.httpclient"/>
+      <import plugin="org.apache.commons.io"/>
+      <import plugin="org.mortbay.jetty.util"/>
+      <import plugin="org.mortbay.jetty.server"/>
+      <import plugin="org.apache.commons.jexl"/>
+      <import plugin="com.sun.jersey.server" version="1.1.5" match="greaterOrEqual"/>
+      <import plugin="com.sun.jersey.core" version="1.1.5" match="greaterOrEqual"/>
+      <import plugin="javax.ws.rs"/>
+      <import plugin="org.eclipse.osgi.services"/>
+      <import plugin="javax.mail"/>
+      <import plugin="net.sf.json"/>
+      <import plugin="org.mvel2"/>
+      <import plugin="org.eclipse.equinox.http.jetty"/>
+      <import plugin="org.codehaus.groovy_all"/>
    </requires>
 
    <plugin

@@ -9,7 +9,7 @@
 <stringAttribute key="bootstrap" value=""/>
 <stringAttribute key="checked" value="[NONE]"/>
 <booleanAttribute key="clearConfig" value="true"/>
-<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/core-server"/>
+<stringAttribute key="configLocation" value="${workspace_loc:org.nuxeo.osgi.core.server/config}"/>
 <booleanAttribute key="default" value="false"/>
 <booleanAttribute key="default_auto_start" value="false"/>
 <intAttribute key="default_start_level" value="4"/>
@@ -22,12 +22,15 @@
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dnuxeo.home=${env_var:HOME}/.nxserver-osgi -Dh2.baseDir=/${env_var:HOME}/.nxserver-osgi/data/h2 -Djetty.logs=${env_var:HOME}/.nxserver-osgi/log -Dorg.eclipse.equinox.http.jetty.http.port=8080"/>
 <stringAttribute key="pde.version" value="3.3"/>
-<setAttribute key="selected_features"/>
+<setAttribute key="selected_features">
+<setEntry value="org.nuxeo.osgi.core.server.equinox:default"/>
+<setEntry value="org.nuxeo.osgi.core.server.h2:default"/>
+</setAttribute>
 <booleanAttribute key="show_selected_only" value="false"/>
 <stringAttribute key="target_bundles" value="org.eclipse.osgi.services@default:default,org.eclipse.equinox.http.jetty@default:default,org.eclipse.equinox.http.servlet@default:default,org.eclipse.osgi@-1:true"/>
-<stringAttribute key="timestamp" value="1298947353194"/>
+<stringAttribute key="timestamp" value="1299065107036"/>
 <booleanAttribute key="tracing" value="false"/>
 <booleanAttribute key="useCustomFeatures" value="true"/>
-<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<booleanAttribute key="useDefaultConfigArea" value="false"/>
 <stringAttribute key="workspace_bundles" value="org.nuxeo.ecm.core.event@default:default,org.nuxeo.runtime.start@5:true,org.nuxeo.ecm.platform.rendering@default:default,org.nuxeo.ecm.automation.core@default:default,org.nuxeo.ecm.core.convert@default:default,org.nuxeo.ecm.core.io@default:default,org.nuxeo.runtime.jtajca@default:default,org.nuxeo.runtime.config@default:false,org.nuxeo.ecm.core@default:default,org.nuxeo.ecm.core.storage.sql.extensions@default:default,org.nuxeo.ecm.core.api@default:default,org.nuxeo.ecm.core.convert.api@default:default,org.nuxeo.ecm.core.h2.extensions@default:false,org.nuxeo.ecm.webengine.jaxrs@default:default,org.nuxeo.ecm.core.query@default:default,org.nuxeo.common@default:default,org.nuxeo.runtime.management.metrics@default:default,org.nuxeo.ecm.automation.server@default:default,org.nuxeo.ecm.core.h2@default:false,org.nuxeo.ecm.core.storage.sql@default:default,org.nuxeo.ecm.core.schema@default:default,org.nuxeo.ecm.core.auth@default:default,org.nuxeo.ecm.core.storage.sql.ra@default:default,org.nuxeo.ecm.platform.dublincore@default:default,org.nuxeo.runtime@default:true,org.nuxeo.ecm.core.management@default:default,org.nuxeo.osgi.log4j.config@default:false,org.nuxeo.runtime.management@default:default"/>
 </launchConfiguration>

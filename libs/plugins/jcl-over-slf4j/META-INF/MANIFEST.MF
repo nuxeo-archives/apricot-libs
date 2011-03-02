@@ -5,8 +5,8 @@ Bundle-SymbolicName: org.slf4j.jcl-over-slf4j
 Bundle-Version: 1.6.1.qualifier
 Bundle-ClassPath: jcl-over-slf4j-1.6.1.jar
 Bundle-Vendor: Nuxeo
-Export-Package: org.apache.commons.logging,
- org.apache.commons.logging.impl
+Export-Package: org.apache.commons.logging;version="1.1.0",
+ org.apache.commons.logging.impl;version="1.1.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: org.slf4j; version="1.6.1",
  org.slf4j.spi; version="1.6.1"

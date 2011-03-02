@@ -56,7 +56,7 @@
 <repository location="http://osgi.nuxeo.org/p2/mirrors/eclipse/updates/current"/>
 </location>
 <location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
-<unit id="org.nuxeo.osgi.libs" version="5.4.1.201103012313"/>
+<unit id="org.nuxeo.osgi.libs" version="5.4.1.201103020034"/>
 <repository location="http://osgi.nuxeo.org/p2/libs/current/repository/"/>
 </location>
 </locations>

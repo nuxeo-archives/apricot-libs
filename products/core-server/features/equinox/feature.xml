@@ -17,6 +17,12 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import plugin="javax.servlet"/>
+      <import plugin="org.mortbay.jetty.util"/>
+      <import plugin="org.mortbay.jetty.server"/>
+   </requires>
+
    <plugin
          id="org.eclipse.equinox.http.jetty"
          download-size="0"

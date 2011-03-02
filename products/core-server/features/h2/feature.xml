@@ -17,6 +17,12 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import plugin="org.h2"/>
+      <import plugin="org.nuxeo.ecm.core.storage.sql.ra"/>
+      <import plugin="org.slf4j.jcl-over-slf4j"/>
+   </requires>
+
    <plugin
          id="org.nuxeo.osgi.h2.connector"
          download-size="0"

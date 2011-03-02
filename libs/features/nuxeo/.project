@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.nuxeo.osgi.extended_orbit.nuxeo</name>
+	<name>org.nuxeo.osgi.libs.nuxeo</name>
 	<comment></comment>
 	<projects>
 	</projects>
