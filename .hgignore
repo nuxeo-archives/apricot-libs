@@ -16,3 +16,4 @@ bin
 org.eclipse.pde.core.prefs
 org.eclipse.jdt.core.prefs
 .metadata
+lib/plugins/dom4j/org

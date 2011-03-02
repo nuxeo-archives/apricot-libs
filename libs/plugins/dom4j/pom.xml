@@ -2,8 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.dom4j</groupId>
-  <artifactId>com.thoughtworks.xstream</artifactId>
+  <groupId>org.nuxeo.osgi.extended-orbit.extended-orbit</groupId>
+  <artifactId>dom4j</artifactId>
+  <name>Nuxeo OSGi Dom4j</name>
   <version>1.6.1-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 
@@ -14,4 +15,35 @@
     <relativePath>../../build/pom.xml</relativePath>
   </parent>
 
+  <build>
+     <plugins>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-dependency-plugin</artifactId>
+         <executions>
+           <execution>
+             <id>unpack</id>
+             <phase>compile</phase>
+             <goals>
+               <goal>unpack</goal>
+             </goals>
+             <configuration>
+               <artifactItems>
+                 <artifactItem>
+                   <groupId>dom4j</groupId>
+                   <artifactId>dom4j</artifactId>
+                   <version>1.6.1</version>
+                   <type>jar</type>
+                   <overWrite>false</overWrite>
+                   <outputDirectory>${project.basedir}/lib</outputDirectory>
+		   <includes>**/*</includes>
+		   <excludes>META-INF/MANIFEST.MF</excludes>
+                 </artifactItem>
+               </artifactItems>
+             </configuration>
+	   </execution>
+	 </executions>
+       </plugin>
+     </plugins>
+  </build>
 </project>
