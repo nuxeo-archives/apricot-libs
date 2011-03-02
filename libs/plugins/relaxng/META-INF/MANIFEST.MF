@@ -4,7 +4,7 @@ Bundle-Name: Relaxng
 Bundle-SymbolicName: com.sun.xml.relaxng
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Nuxeo
-Bundle-Classpath: .
+Bundle-Classpath: relaxngDatatype-1.0.jar
 Export-Package: org.relaxng.datatype,
  org.relaxng.datatype.helpers
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
