@@ -34,4 +34,5 @@ glob:libs/plugins/joda-time/org
 glob:libs/plugins/json/net
 glob:libs/plugins/mvel2/org
 glob:libs/plugins/relaxng/*.jar
+glob:libs/plugins/wem/org
 
