@@ -14,4 +14,36 @@
     <relativePath>../../build/pom.xml</relativePath>
   </parent>
 
+  <build>
+     <plugins>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-dependency-plugin</artifactId>
+         <executions>
+           <execution>
+             <id>unpack</id>
+             <phase>compile</phase>
+             <goals>
+               <goal>unpack</goal>
+             </goals>
+             <configuration>
+               <artifactItems>
+                 <artifactItem>
+                   <groupId>net.sf.ezmorph</groupId>
+                   <artifactId>ezmorph</artifactId>
+                   <version>1.0.4</version>
+                   <type>jar</type>
+                   <overWrite>false</overWrite>
+                   <outputDirectory>${project.basedir}</outputDirectory>
+		   <includes>**/*</includes>
+		   <excludes>META-INF/MANIFEST.MF</excludes>
+                 </artifactItem>
+               </artifactItems>
+             </configuration>
+	   </execution>
+	 </executions>
+       </plugin>
+     </plugins>
+  </build>
+
 </project>
