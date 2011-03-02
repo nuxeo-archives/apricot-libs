@@ -35,4 +35,5 @@ glob:libs/plugins/json/net
 glob:libs/plugins/mvel2/org
 glob:libs/plugins/relaxng/*.jar
 glob:libs/plugins/wem/org
+glob:libs/plugins/xsom/com
 
