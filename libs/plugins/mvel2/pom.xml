@@ -2,8 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.nuxeo.osgi.extended-orbit.extended-orbit</groupId>
-  <artifactId>org.mvel2</artifactId>
+  <artifactId>mvel2</artifactId>
   <version>2.0.16-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 
@@ -13,5 +12,36 @@
     <version>5.4.1-SNAPSHOT</version>
     <relativePath>../../build/pom.xml</relativePath>
   </parent>
+
+  <build>
+     <plugins>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-dependency-plugin</artifactId>
+         <executions>
+           <execution>
+             <id>unpack</id>
+             <phase>compile</phase>
+             <goals>
+               <goal>unpack</goal>
+             </goals>
+             <configuration>
+               <artifactItems>
+                 <artifactItem>
+		   <groupId>org.mvel</groupId>
+		   <artifactId>mvel2</artifactId>
+		   <version>2.0.16</version>
+                   <overWrite>false</overWrite>
+                   <outputDirectory>${project.basedir}</outputDirectory>
+		   <includes>**/*</includes>
+		   <excludes>META-INF/MANIFEST.MF</excludes>
+                 </artifactItem>
+               </artifactItems>
+             </configuration>
+	   </execution>
+	 </executions>
+       </plugin>
+     </plugins>
+  </build>
 
 </project>
