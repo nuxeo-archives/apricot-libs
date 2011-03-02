@@ -18,3 +18,4 @@ org.eclipse.jdt.core.prefs
 .metadata
 libs/plugins/dom4j/org
 libs/plugins/ezmorph/net
+libs/plugins/freemarker/freemarker
