@@ -23,3 +23,4 @@ libs/plugins/geronimo-components-connector/org
 libs/plugins/geronimo-components-transaction/org
 libs/plugins/geronimo-specs-connector/javax
 libs/plugins/javasimon/org
+libs/plugins/jcl-over-slf4j/*.jar
