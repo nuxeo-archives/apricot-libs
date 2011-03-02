@@ -30,4 +30,5 @@ glob:libs/plugins/geronimo-components-*/META-INF/maven/org.apache.geronimo.compo
 glob:libs/plugins/jersey-*/META-INF/services
 glob:libs/plugins/jersey-*/com
 glob:libs/plugins/jexl/org
+glob:libs/plugins/joda-time/org
 
