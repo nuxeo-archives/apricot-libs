@@ -28,4 +28,5 @@ glob:libs/plugins/jcl-over-slf4j/*.jar
 glob:libs/plugins/jcl-over-slf4j/META-INF/maven/org.slf4j
 glob:libs/plugins/geronimo-components-*/META-INF/maven/org.apache.geronimo.components
 glob:libs/plugins/jersey-*/META-INF/services
+glob:libs/plugins/jersey-*/com
 
