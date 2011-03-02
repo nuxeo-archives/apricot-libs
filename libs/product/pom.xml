@@ -9,8 +9,8 @@
   <packaging>eclipse-repository</packaging>
 
   <parent>
-    <groupId>org.nuxeo.osgi.extended-orbit</groupId>
-    <artifactId>nuxeo-osgi-extended-orbit-tycho</artifactId>
+    <groupId>org.nuxeo.osgi.libs</groupId>
+    <artifactId>nuxeo-osgi-libs-tycho</artifactId>
     <version>5.4.1-SNAPSHOT</version>
     <relativePath>../build/pom.xml</relativePath>
   </parent>

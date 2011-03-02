@@ -3,13 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
 
 
-  <artifactId>nuxeo-osgi-core-server-orbit-feature</artifactId>
-  <name>Nuxeo OSGi Core Server Orbit Feature</name>
+  <artifactId>nuxeo-osgi-libs-orbit</artifactId>
+  <name>Nuxeo OSGi Libraries from Orbit</name>
   <packaging>eclipse-feature</packaging>
 
   <parent>
-    <groupId>org.nuxeo.osgi.extended-orbit</groupId>
-    <artifactId>nuxeo-osgi-extended-orbit-tycho</artifactId>
+    <groupId>org.nuxeo.osgi.libs</groupId>
+    <artifactId>nuxeo-osgi-libs-tycho</artifactId>
     <version>5.4.1-SNAPSHOT</version>
     <relativePath>../../build/pom.xml</relativePath>
   </parent>
