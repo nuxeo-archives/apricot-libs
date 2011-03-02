@@ -20,3 +20,4 @@ libs/plugins/dom4j/org
 libs/plugins/ezmorph/net
 libs/plugins/freemarker/freemarker
 libs/plugins/geronimo-components-connector/org
+libs/plugins/geronimo-components-transaction/org
