@@ -43,5 +43,5 @@
 				<inherited>true</inherited>
 			</plugin>
 		</plugins>
-../../build>
+	</build>
 </project>

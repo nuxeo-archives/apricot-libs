@@ -35,7 +35,7 @@
                    <version>1.6.1</version>
                    <type>jar</type>
                    <overWrite>false</overWrite>
-                   <outputDirectory>${project.basedir}/lib</outputDirectory>
+                   <outputDirectory>${project.basedir}</outputDirectory>
 		   <includes>**/*</includes>
 		   <excludes>META-INF/MANIFEST.MF</excludes>
                  </artifactItem>
