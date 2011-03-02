@@ -37,20 +37,18 @@
       <url>${orbit-site}</url>
     </repository>
   </repositories>
-  
+
   <modules>
     <module>../plugins/jersey-core</module>
     <module>../plugins/jersey-server</module>
     <module>../plugins/relaxng</module>
     <module>../plugins/xsom</module>
-    <module>../plugins/xstream</module>
     <module>../plugins/ezmorph</module>
     <module>../plugins/json</module>
     <module>../plugins/jexl</module>
     <module>../plugins/geronimo-components-connector</module>
     <module>../plugins/geronimo-components-transaction</module>
     <module>../plugins/geronimo-specs-connector</module>
-    <module>../plugins/groovy-all</module>
     <module>../plugins/dom4j</module>
     <module>../plugins/freemarker</module>
     <module>../plugins/javasimon</module>
@@ -60,8 +58,24 @@
     <module>../plugins/wem</module>
     <module>../features/orbit</module>
     <module>../features/nuxeo</module>
+    <module>../features/maven</module>
     <module>../product</module>
   </modules>
+
+  <dependencies>
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.4</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.groovy</groupId>
+        <artifactId>groovy-all</artifactId>
+        <version>1.5.7</version>
+        <scope>provided</scope>
+      </dependency>
+  </dependencies>
 
   <build>
     <directory>${project.basedir}/target</directory>
@@ -78,6 +92,7 @@
     	<version>${tycho-version}</version>
         <configuration>
           <resolver>p2</resolver>
+          <pomDependencies>consider</pomDependencies>
     	  <ignoreTychoRepositories>true</ignoreTychoRepositories>
     	  <environments>
     	    <environment>

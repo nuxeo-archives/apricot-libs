@@ -9,6 +9,7 @@
    <features>
       <feature id="org.nuxeo.osgi.libs.nuxeo" version="5.4.1.qualifier"/>
       <feature id="org.nuxeo.osgi.libs.orbit" version="5.4.1.qualifier"/>
+      <feature id="org.nuxeo.osgi.libs.maven" version="5.4.1.qualifier"/>
    </features>
 
 
