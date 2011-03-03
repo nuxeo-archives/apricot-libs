@@ -38,7 +38,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.servicemix.bundles.xstream"
+         id="com.thoughtworks.xstream"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -157,13 +157,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.commons.collections.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.servlet"
          download-size="0"
          install-size="0"
@@ -263,55 +256,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.commons.io.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="ch.qos.logback.core.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.ws.rs.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.servlet.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.commons.lang.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.hamcrest.core.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.slf4j.api.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.commons.beanutils"
          download-size="0"
          install-size="0"
@@ -326,21 +270,7 @@
          unpack="false"/>
 
    <plugin
-         id="java_cup.runtime.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.annotation"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.annotation.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -361,28 +291,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.lucene.analysis.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.apache.lucene.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.lucene.core.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.lucene.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -396,21 +305,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.h2.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.persistence"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.persistence.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -424,13 +319,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.oro.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.el"
          download-size="0"
          install-size="0"
@@ -438,21 +326,7 @@
          unpack="false"/>
 
    <plugin
-         id="javax.el.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.jdom"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.jdom.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -480,13 +354,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.apache.commons.cli.source"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.slf4j.jcl-over-slf4j"
          download-size="0"
          install-size="0"
@@ -494,13 +361,6 @@
 
    <plugin
          id="ch.qos.logback.classic"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="ch.qos.logback.classic.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
