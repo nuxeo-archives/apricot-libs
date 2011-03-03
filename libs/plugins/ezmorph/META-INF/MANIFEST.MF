@@ -12,7 +12,6 @@ Export-Package: net.sf.ezmorph,
  net.sf.ezmorph.primitive,
  net.sf.ezmorph.test
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Import-Package: junit.framework;resolution:=optional,
- org.apache.commons.lang.builder,
+Import-Package: org.apache.commons.lang.builder,
  org.apache.commons.lang.exception,
  org.apache.commons.logging
