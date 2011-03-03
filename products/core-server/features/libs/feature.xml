@@ -38,7 +38,7 @@
          unpack="false"/>
 
    <plugin
-         id="com.thoughtworks.xstream"
+         id="org.apache.servicemix.bundles.xstream"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -74,13 +74,6 @@
 
    <plugin
          id="org.apache.geronimo.specs.geronimo_j2ee_connector"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="groovy_all"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -365,5 +358,11 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
+   <plugin
+         id="groovy-all"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
 
 </feature>
