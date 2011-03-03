@@ -26,7 +26,6 @@
     <module>../plugins/javasimon</module>
     <module>../plugins/joda-time</module>
     <module>../plugins/mvel2</module>
-    <module>../plugins/jcl-over-slf4j</module>
     <module>../plugins/wem</module>
     <module>../features/orbit</module>
     <module>../features/nuxeo</module>
