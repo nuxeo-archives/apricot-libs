@@ -27,6 +27,7 @@
     <module>../plugins/joda-time</module>
     <module>../plugins/mvel2</module>
     <module>../plugins/wem</module>
+    <module>../features/equinox</module>
     <module>../features/orbit</module>
     <module>../features/nuxeo</module>
     <module>../features/maven</module>
