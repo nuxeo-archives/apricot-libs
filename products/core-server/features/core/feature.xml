@@ -50,7 +50,7 @@
       <import plugin="net.sf.json"/>
       <import plugin="org.mvel2"/>
       <import plugin="org.eclipse.equinox.http.jetty"/>
-      <import plugin="org.codehaus.groovy_all"/>
+      <import plugin="groovy-all"/>
    </requires>
 
    <plugin
