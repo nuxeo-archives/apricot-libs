@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.nuxeo.osgi.core.server.equinox"
-      label="Nuxeo Core Server Equinox Feature"
+      label="Nuxeo OSGi Core Equinox Framework"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
@@ -46,6 +46,20 @@
 
    <plugin
          id="org.eclipse.osgi"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.mortbay.jetty.server"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.mortbay.jetty.util"
          download-size="0"
          install-size="0"
          version="0.0.0"

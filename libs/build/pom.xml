@@ -115,13 +115,11 @@
         <groupId>commons-codec</groupId>
         <artifactId>commons-codec</artifactId>
         <version>1.4</version>
-        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.codehaus.groovy</groupId>
         <artifactId>groovy-all</artifactId>
         <version>1.5.7</version>
-        <scope>provided</scope>
       </dependency>
   </dependencies>
 

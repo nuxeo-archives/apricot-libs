@@ -1,3 +1,4 @@
+
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -13,7 +14,6 @@
   <description>Provide common OSGi tycho build directives.</description>
 
   <modules>
-    <module>../targets</module>
     <module>../ide/project</module>
     <module>../ide/project-generator</module>
     <module>../ide/project-feature</module>
@@ -25,7 +25,6 @@
     <module>../products/core-server/features/equinox</module>
     <module>../products/core-server/features/core</module>
     <module>../products/core-server/features/h2</module>
-    <module>../products/core-server/features/libs</module>
     <module>../products/core-server/product</module>
   </modules>
 
@@ -41,9 +40,8 @@
     <eclipse-version>current</eclipse-version>
     <nuxeo-version>current</nuxeo-version>
     <nuxeo-osgi-url>http://osgi.nuxeo.org/p2</nuxeo-osgi-url>
-    <mirror-url>http://osgi.nuxeo.org/p2/mirrors</mirror-url>
-    <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
-    <orbit-site>${mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
+    <equinox-site>${nuxeo-osgi-url}/mirrors/eclipse/updates/${eclipse-version}</equinox-site>
+    <orbit-site>${nuxeo-osgi-url}/mirrors/eclipse/orbit/${orbit-version}</orbit-site>
     <libs-site>${nuxeo-osgi-url}/libs/${nuxeo-version}/repository</libs-site>
   </properties>
 

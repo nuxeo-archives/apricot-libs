@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Nuxeo OSGI SDK Platform" sequenceNumber="99">
+<target name="Nuxeo OSGI SDK Platform" sequenceNumber="94">
 <locations>
-<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.nuxeo.osgi.libs" version="5.4.1.201103032306"/>
-<repository location="http://osgi.nuxeo.org/p2/libs/current/repository/"/>
+<location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.platform.sdk" version="3.6.1.M20100909-0800"/>
+<unit id="org.eclipse.pde.feature.group" version="3.6.1.r361_v20100727-7b7mFL-FET3dhESDgE5_bkJ"/>
+<unit id="org.eclipse.equinox.p2.sdk.feature.group" version="3.6.0.v20100503-9I7VGAeG8tz-BY6jz0w2HLRYr"/>
+<repository location="http://osgi.nuxeo.org/p2/mirrors/eclipse/updates/current"/>
+</location>
+<location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
+<unit id="javax.xml.stream" version="1.0.1.v201004272200"/>
+<unit id="javax.ws.rs" version="1.1.1.v20101004-1200"/>
+<unit id="javax.xml.bind" version="2.2.0.v201005080402"/>
+<unit id="javax.annotation" version="1.0.0.v20101115-0725"/>
+<unit id="javax.mail" version="1.4.0.v201005080615"/>
+<unit id="org.objectweb.asm" version="3.3.1.v201101071600"/>
+<unit id="javax.persistence" version="1.0.0.v200905011740"/>
+<unit id="org.apache.commons.codec" version="1.3.0.v201101211617"/>
+<unit id="org.apache.commons.lang" version="2.4.0.v201005080502"/>
+<unit id="org.jdom" version="1.1.1.v201101151400"/>
+<unit id="org.apache.commons.lang.source" version="2.4.0.v201005080502"/>
+<unit id="org.apache.commons.lang" version="2.4.0.v201005080502"/>
+<unit id="org.apache.commons.collections" version="3.2.0.v201005080500"/>
+<unit id="javax.servlet" version="2.5.0.v201012071420"/>
+<unit id="javax.servlet.jsp" version="1.2.0.v200806031606"/>
+<unit id="org.apache.ant" version="1.8.2.v20110117-1200"/>
+<unit id="org.junit" version="4.8.1.v4_8_1_v20100427-1100"/>
+<unit id="org.apache.oro" version="2.0.8.v201005080400"/>
+<unit id="org.apache.commons.beanutils" version="1.7.0.v200902170505"/>
+<unit id="org.slf4j.api" version="1.6.1.v20100831-0715"/>
+<unit id="org.apache.bsf" version="2.4.0.v200903072044"/>
+<unit id="org.apache.commons.cli" version="1.2.0.v201011021000"/>
+<unit id="org.slf4j.log4j" version="1.6.1.v20100831-0715"/>
+<unit id="org.apache.commons.jxpath" version="1.3.0.v200911051830"/>
+<unit id="javax.el" version="2.1.0.v201004190952"/>
+<unit id="org.apache.xalan" version="2.7.1.v201005080400"/>
+<unit id="org.apache.xerces" version="2.9.0.v201101211617"/>
+<unit id="javax.transaction" version="1.1.1.v201004190952"/>
+<unit id="org.h2" version="1.1.117.v20091003-1000"/>
+<unit id="java_cup.runtime" version="0.10.0.v201005080400"/>
+<unit id="org.apache.commons.io" version="1.4.0.v20081110-1000"/>
+<unit id="org.apache.lucene" version="2.9.1.v201101211721"/>
+<unit id="org.apache.lucene.analysis" version="2.9.1.v201101211721"/>
+<unit id="org.apache.lucene.core" version="2.9.1.v201101211721"/>
+<unit id="org.apache.xml.serializer" version="2.7.1.v201005080400"/>
+<unit id="org.apache.xml.resolver" version="1.2.0.v201005080400"/>
+<unit id="javax.activation" version="1.1.0.v201005080500"/>
+<unit id="javax.xml" version="1.3.4.v201005080400"/>
+<unit id="org.hamcrest.core" version="1.1.0.v20090501071000"/>
+<unit id="ch.qos.logback.slf4j" version="0.9.24.v20100831-0715"/>
+<unit id="ch.qos.logback.classic" version="0.9.24.v20100831-0715"/>
+<unit id="ch.qos.logback.core" version="0.9.24.v20100831-0715"/>
+<unit id="org.slf4j.api" version="1.6.1.v20100831-0715"/>
+<repository location="http://osgi.nuxeo.org/p2/mirrors/eclipse/orbit/S20110124210048/"/>
 </location>
 </locations>
 <launcherArgs>

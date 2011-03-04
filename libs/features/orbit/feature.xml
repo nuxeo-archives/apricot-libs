@@ -18,9 +18,6 @@
    </license>
 
    <requires>
-      <import plugin="javax.xml" version="1.3.4" match="compatible"/>
-      <import plugin="org.apache.xml.resolver" version="1.2.0" match="compatible"/>
-      <import plugin="org.apache.xml.serializer" version="2.7.1" match="compatible"/>
       <import plugin="org.eclipse.osgi"/>
    </requires>
 
@@ -124,6 +121,34 @@
          unpack="false"/>
 
    <plugin
+         id="org.apache.commons.httpclient"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.httpclient.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.codec"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.codec.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
          id="org.slf4j.api"
          download-size="0"
          install-size="0"
@@ -138,7 +163,14 @@
          unpack="false"/>
 
    <plugin
-         id="ch.qos.logback.core"
+         id="org.slf4j.log4j"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.slf4j.jcl"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -153,6 +185,13 @@
 
    <plugin
          id="org.apache.commons.io.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="ch.qos.logback.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -371,6 +410,54 @@
 
    <plugin
          id="ch.qos.logback.slf4j.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.servlet.jsp"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.jasper"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.ant"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.apache.bsf"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.cli"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.jdom"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.objectweb.asm"
          download-size="0"
          install-size="0"
          version="0.0.0"

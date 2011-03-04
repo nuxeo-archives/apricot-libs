@@ -20,7 +20,8 @@ Bundle-ManifestVersion: 2
 Require-Bundle: org.nuxeo.ecm.core,
  javax.servlet;bundle-version="2.5.0",
  com.sun.jersey.server;bundle-version="1.1.5",
- com.sun.jersey.core;bundle-version="1.1.5"
+ com.sun.jersey.core;bundle-version="1.1.5",
+ org.apache.xerces;bundle-version="2.9.0"
 Import-Package: META-INF.services,
  freemarker.core;resolution:=optional,
  freemarker.template;resolution:=optional,
