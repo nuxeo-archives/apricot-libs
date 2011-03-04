@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.osgi.libs.equinox"
-      label="Nuxeo Core Server Libraries from Equinox"
+      id="org.nuxeo.osgi.core.server.http"
+      label="Nuxeo Core Server Http"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
@@ -17,20 +17,35 @@
       [Enter License Description here.]
    </license>
 
-   <requires>
-      <import plugin="org.apache.jasper"/>
-      <import plugin="javax.servlet.jsp"/>
-   </requires>
-
    <plugin
-         id="org.apache.commons.httpclient"
+         id="org.nuxeo.ecm.webengine.jaxrs"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.apache.commons.httpclient.source"
+         id="com.sun.jersey.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.sun.jersey.server"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.servlet"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="javax.ws.rs"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -59,27 +74,6 @@
 
    <plugin
          id="org.mortbay.jetty.util"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.osgi.services"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.osgi"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.servlet"
          download-size="0"
          install-size="0"
          version="0.0.0"

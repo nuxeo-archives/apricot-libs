@@ -17,6 +17,18 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.apache.ant"/>
+      <import plugin="org.apache.commons.lang"/>
+      <import plugin="org.apache.commons.cli"/>
+      <import plugin="org.apache.bsf"/>
+      <import plugin="javax.servlet.jsp"/>
+      <import plugin="javax.servlet"/>
+      <import plugin="com.thoughtworks.xstream"/>
+      <import plugin="org.slf4j.api"/>
+   </requires>
+
    <plugin
          id="org.apache.commons.codec"
          download-size="0"
@@ -25,12 +37,6 @@
 
    <plugin
          id="groovy-all"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
-
-   <plugin
-         id="org.slf4j.jcl-over-slf4j"
          download-size="0"
          install-size="0"
          version="0.0.0"/>

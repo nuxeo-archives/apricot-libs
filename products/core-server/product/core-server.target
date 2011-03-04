@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="Nuxeo OSGI Core Server Platform" sequenceNumber="130">
+<locations>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.nuxeo.osgi.core.server.http.feature.group" version="5.4.1.201103041123"/>
+<unit id="org.nuxeo.osgi.core.server.feature.group" version="5.4.1.201103041123"/>
+<unit id="org.nuxeo.osgi.core.server.equinox.feature.group" version="5.4.1.201103041123"/>
+<unit id="org.nuxeo.osgi.core.server.h2.feature.group" version="5.4.1.201103041123"/>
+<repository location="http://localhost/p2/core-server/current/repository"/>
+</location>
+</locations>
+<launcherArgs>
+<vmArgs>-Dosgi.requiredJavaVersion=1.6 -XX:MaxPermSize=256m -Xms40m -Xmx512m</vmArgs>
+</launcherArgs>
+</target>

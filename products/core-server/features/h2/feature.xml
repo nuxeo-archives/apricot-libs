@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.nuxeo.osgi.core.server.h2"
-      label="Nuxeo OSGi H2"
+      label="Nuxeo OSGi Core H2 Connector"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
@@ -18,9 +18,7 @@
    </license>
 
    <requires>
-      <import plugin="org.h2"/>
       <import plugin="org.nuxeo.ecm.core.storage.sql.ra"/>
-      <import plugin="org.slf4j.jcl-over-slf4j"/>
    </requires>
 
    <plugin
@@ -37,6 +35,13 @@
          install-size="0"
          version="0.0.0"
          fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.h2"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product uid="org.nuxeo.osgi.core.server" id="nuxeo-core-server-application.NuxeoProduct" application="nuxeo-core-server-application.NuxeoApp" version="5.4.1.qualifier" useFeatures="true" includeLaunchers="false">
+<product name="Nuxeo OSGi Core Server" uid="org.nuxeo.osgi.core.server" id="nuxeo-core-server-application.NuxeoProduct" application="nuxeo-core-server-application.NuxeoApp" version="5.4.1.qualifier" useFeatures="true" includeLaunchers="false">
 
    <configIni use="default">
    </configIni>
@@ -28,9 +28,10 @@
    </plugins>
 
    <features>
+      <feature id="org.nuxeo.osgi.core.server" version="5.4.1.qualifier"/>
       <feature id="org.nuxeo.osgi.core.server.equinox" version="5.4.1.qualifier"/>
       <feature id="org.nuxeo.osgi.core.server.h2" version="5.4.1.qualifier"/>
-      <feature id="org.nuxeo.osgi.core.server" version="5.4.1.qualifier"/>
+      <feature id="org.nuxeo.osgi.core.server.http" version="5.4.1.qualifier"/>
    </features>
 
    <configurations>

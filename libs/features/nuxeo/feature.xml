@@ -17,29 +17,26 @@
       [Enter License Description here.]
    </license>
 
-   <!--requires>
+   <requires>
+      <import plugin="org.eclipse.osgi"/>
       <import plugin="javax.ws.rs"/>
       <import plugin="javax.mail"/>
       <import plugin="javax.annotation"/>
       <import plugin="javax.persistence"/>
-      <import plugin="javax.servlet"/>
       <import plugin="javax.servlet.jsp"/>
       <import plugin="org.apache.ant"/>
       <import plugin="org.objectweb.asm"/>
+      <import plugin="javax.servlet"/>
       <import plugin="org.jdom"/>
-      <import plugin="org.junit"/>
-      <import plugin="org.apache.commons.logging"/>
       <import plugin="org.apache.commons.lang"/>
       <import plugin="org.apache.commons.collections"/>
       <import plugin="org.apache.commons.beanutils"/>
       <import plugin="org.apache.oro"/>
       <import plugin="org.slf4j.api"/>
-      <import plugin="org.apache.bsf"/>
-      <import plugin="org.apache.commons.cli"/>
       <import plugin="javax.el"/>
       <import plugin="org.slf4j.log4j"/>
       <import plugin="org.apache.xalan"/>
-   </requires-->
+   </requires>
 
    <plugin
          id="com.sun.jersey.core"
