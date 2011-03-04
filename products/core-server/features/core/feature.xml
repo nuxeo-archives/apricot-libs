@@ -137,13 +137,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.webengine.jaxrs"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.nuxeo.ecm.automation.core"
          download-size="0"
          install-size="0"
@@ -159,19 +152,6 @@
 
    <plugin
          id="org.nuxeo.runtime.start"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.sun.jersey.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/>
-
-   <plugin
-         id="com.sun.jersey.server"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -290,25 +270,11 @@
          unpack="false"/>
 
    <plugin
-         id="javax.servlet"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="javax.transaction"
          download-size="0"
          install-size="0"
          version="0.0.0"
          fragment="true"
-         unpack="false"/>
-
-   <plugin
-         id="javax.ws.rs"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
          unpack="false"/>
 
    <plugin
