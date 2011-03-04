@@ -21,10 +21,12 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console -clean"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dnuxeo.home=${env_var:HOME}/.nxserver-osgi -Dh2.baseDir=/${env_var:HOME}/.nxserver-osgi/data/h2 -Djetty.logs=${env_var:HOME}/.nxserver-osgi/log -Dorg.eclipse.equinox.http.jetty.http.port=8080"/>
+<stringAttribute key="osgi_framework_id" value="org.nuxeo.ide.project.NuxeoEquinoxFramework"/>
 <stringAttribute key="pde.version" value="3.3"/>
 <setAttribute key="selected_features">
 <setEntry value="org.nuxeo.osgi.core.server.equinox:default"/>
 <setEntry value="org.nuxeo.osgi.core.server.h2:default"/>
+<setEntry value="org.nuxeo.osgi.core.server.http:default"/>
 <setEntry value="org.nuxeo.osgi.core.server:default"/>
 </setAttribute>
 <booleanAttribute key="show_selected_only" value="false"/>
