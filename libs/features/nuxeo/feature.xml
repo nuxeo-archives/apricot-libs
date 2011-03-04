@@ -17,7 +17,7 @@
       [Enter License Description here.]
    </license>
 
-   <requires>
+   <!--requires>
       <import plugin="javax.ws.rs"/>
       <import plugin="javax.mail"/>
       <import plugin="javax.annotation"/>
@@ -39,7 +39,7 @@
       <import plugin="javax.el"/>
       <import plugin="org.slf4j.log4j"/>
       <import plugin="org.apache.xalan"/>
-   </requires>
+   </requires-->
 
    <plugin
          id="com.sun.jersey.core"

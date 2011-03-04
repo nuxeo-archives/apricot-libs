@@ -10,7 +10,6 @@ Bundle-ClassPath: .
 Import-Package: javax.naming,
  javax.naming.spi,
  org.apache.commons.logging;version="1.0.4",
- org.apache.commons.logging.impl;version="1.0.4",
  org.eclipse.equinox.http.jetty,
  org.nuxeo.common.jndi,
  org.nuxeo.runtime.api,
