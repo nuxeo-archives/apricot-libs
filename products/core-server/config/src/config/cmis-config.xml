@@ -6,7 +6,7 @@
   @author Bogdan Stefanescu (bs@nuxeo.com)
   </documentation>
 
-  <extension target="org.nuxeo.ecm.webengine.jaxrs.servlet.config.ServletRegistryComponent" point="servlets">
+  <!-- extension target="org.nuxeo.ecm.webengine.jaxrs.servlet.config.ServletRegistryComponent" point="servlets">
     <servlet name="opencmis" path="/nuxeo/atom/cmis" 
         class="org.nuxeo.ecm.core.opencmis.bindings:org.apache.chemistry.opencmis.server.impl.atompub.CmisAtomPubServlet">
       <listeners>
@@ -20,7 +20,7 @@
         <property name="callContextHandler">org.nuxeo.ecm.core.opencmis.bindings.NuxeoAuthCallContextHandler</property>
       </properties>
     </servlet>  
-  </extension>
+  </extension-->
 
 
 </component>

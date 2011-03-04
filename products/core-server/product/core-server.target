@@ -4,7 +4,7 @@
 <target name="Nuxeo OSGI Core Server Platform">
 <locations>
 <location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
-<unit id="org.nuxeo.osgi.core.server" version="5.4.1.201103041152"/>
+<unit id="org.nuxeo.osgi.core.server" version="5.4.1.201103041228"/>
 <repository location="http://osgi.nuxeo.org/p2/core-server/current/repository"/>
 </location>
 </locations>
