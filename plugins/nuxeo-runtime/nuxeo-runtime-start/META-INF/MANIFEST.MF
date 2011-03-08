@@ -11,10 +11,12 @@ Import-Package: javax.naming,
  javax.naming.spi,
  org.apache.commons.logging;version="1.0.4",
  org.eclipse.equinox.http.jetty,
+ org.eclipse.equinox.http.servlet,
  org.nuxeo.common.jndi,
  org.nuxeo.runtime.api,
  org.nuxeo.runtime.jtajca,
  org.nuxeo.runtime.osgi,
- org.osgi.framework
+ org.osgi.framework,
+ org.osgi.service.http
 Bundle-Activator: org.nuxeo.runtime.start.StartApplication
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
