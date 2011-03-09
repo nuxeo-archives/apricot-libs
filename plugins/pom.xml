@@ -53,11 +53,10 @@
     <!-- jax-rs integration -->
     <module>nuxeo-webengine/nuxeo-webengine-jaxrs</module>
 
-    <!-- chemistry nuxeo bindings 
+    <!-- chemistry nuxeo bindings -->
     <module>nuxeo-chemistry/nuxeo-opencmis-bindings</module>
     <module>nuxeo-chemistry/nuxeo-opencmis-impl</module>
     <module>nuxeo-features/nuxeo-platform-audit/nuxeo-platform-audit-api</module>
-    -->
 
     <!-- ================= optional bundles ================ -->
     <module>nuxeo-core/nuxeo-core-io</module>

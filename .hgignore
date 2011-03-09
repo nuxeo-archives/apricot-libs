@@ -22,6 +22,7 @@ glob:libs/plugins/*/org
 glob:libs/plugins/*/net
 glob:libs/plugins/*/freemarker
 glob:libs/plugins/*/javax
+glob:libs/plugins/*/antlr
 glob:libs/plugins/*/*.jar
 glob:libs/plugins/jcl-over-slf4j/META-INF/maven/org.slf4j
 glob:libs/plugins/geronimo-components-*/META-INF/maven/org.apache.geronimo.components

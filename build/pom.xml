@@ -26,6 +26,7 @@
     <module>../products/core-server/features/core</module>
     <module>../products/core-server/features/h2</module>
     <module>../products/core-server/features/http</module>
+    <module>../products/core-server/features/opencmis</module>
     <module>../products/core-server/product</module>
   </modules>
 
@@ -94,7 +95,7 @@
     </plugins>
 
   </build>
-  
+
   <pluginRepositories>
     <pluginRepository>
       <id>tycho-snapshots</id>
