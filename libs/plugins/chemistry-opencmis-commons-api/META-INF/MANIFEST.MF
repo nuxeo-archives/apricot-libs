@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OpenCMIS Commons API
+Bundle-SymbolicName: org.apache.chemistry.opencmis.chemistry-opencmis-commons-api
+Bundle-Version: 0.2.0
+Bundle-ClassPath: .
+Bundle-Vendor: The Apache Software Foundation
+Export-Package: org.apache.chemistry.opencmis.commons,
+ org.apache.chemistry.opencmis.commons.data;uses:="org.apache.chemistry.opencmis.commons.enums,org.apache.chemistry.opencmis.commons.definitions",
+ org.apache.chemistry.opencmis.commons.definitions;uses:="org.apache.chemistry.opencmis.commons.enums,org.apache.chemistry.opencmis.commons.data",
+ org.apache.chemistry.opencmis.commons.enums,
+ org.apache.chemistry.opencmis.commons.exceptions,
+ org.apache.chemistry.opencmis.commons.server;uses:="org.apache.chemistry.opencmis.commons.enums,org.apache.chemistry.opencmis.commons.data,org.apache.chemistry.opencmis.commons.spi",
+ org.apache.chemistry.opencmis.commons.spi;uses:="org.apache.chemistry.opencmis.commons.enums,org.apache.chemistry.opencmis.commons.data,org.apache.chemistry.opencmis.commons.definitions"
+Bundle-Description: Apache Chemistry OpenCMIS is an open source implementation of the OASIS CMIS specification.
+Build-Jdk: 1.6.0_20
+Specification-Version: 0.2.0-incubating
+Implementation-Title: OpenCMIS Commons API
+Tool: Bnd-0.0.357
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Implementation-Vendor: The Apache Software Foundation
+Specification-Vendor: The Apache Software Foundation
+X-Compile-Target-JDK: 1.5
+X-Compile-Source-JDK: 1.5
+Bundle-DocURL: http://incubator.apache.org/chemistry/chemistry-opencmis-commons/chemistry-opencmis-commons-api
+Bnd-LastModified: 1294322324361
+Built-By: mindthegab
+Implementation-Vendor-Id: org.apache.chemistry.opencmis
+Created-By: 1.6.0_20 (Apple Inc.)
+Specification-Title: OpenCMIS Commons API
+Implementation-Version: 0.2.0-incubating
+Archiver-Version: Plexus Archiver

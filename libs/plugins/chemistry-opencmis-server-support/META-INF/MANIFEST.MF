@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OpenCMIS Server Support
+Bundle-SymbolicName: org.apache.chemistry.opencmis.chemistry-opencmis-server-support
+Bundle-Version: 0.2.0
+Bundle-ClassPath: .
+Export-Package: org.apache.chemistry.opencmis.server.support,
+ org.apache.chemistry.opencmis.server.support.query
+Implementation-Version: 0.2.0-incubating
+Specification-Version: 0.2.0-incubating
+Built-By: mindthegab
+Specification-Title: OpenCMIS Server Support
+Implementation-Vendor-Id: org.apache.chemistry.opencmis
+X-Compile-Source-JDK: 1.5
+Created-By: Apache Maven
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Title: OpenCMIS Server Support
+X-Compile-Target-JDK: 1.5
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Specification-Vendor: The Apache Software Foundation
+Build-Jdk: 1.6.0_20
+Archiver-Version: Plexus Archiver
+Import-Package: antlr.collections.impl;resolution:=optional,
+ org.antlr.runtime,
+ org.antlr.runtime.tree,
+ org.apache.chemistry.opencmis.commons,
+ org.apache.chemistry.opencmis.commons.data,
+ org.apache.chemistry.opencmis.commons.definitions,
+ org.apache.chemistry.opencmis.commons.enums,
+ org.apache.chemistry.opencmis.commons.exceptions,
+ org.apache.chemistry.opencmis.commons.server,
+ org.apache.chemistry.opencmis.commons.spi,
+ org.apache.commons.logging

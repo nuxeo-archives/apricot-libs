@@ -17,32 +17,13 @@
       [Enter License Description here.]
    </license>
 
-   <requires>
-      <import plugin="org.eclipse.osgi"/>
-      <import plugin="javax.ws.rs"/>
-      <import plugin="javax.mail"/>
-      <import plugin="javax.annotation"/>
-      <import plugin="javax.persistence"/>
-      <import plugin="javax.servlet.jsp"/>
-      <import plugin="org.apache.ant"/>
-      <import plugin="org.objectweb.asm"/>
-      <import plugin="javax.servlet"/>
-      <import plugin="org.jdom"/>
-      <import plugin="org.apache.commons.lang"/>
-      <import plugin="org.apache.commons.collections"/>
-      <import plugin="org.apache.commons.beanutils"/>
-      <import plugin="org.apache.oro"/>
-      <import plugin="org.slf4j.api"/>
-      <import plugin="javax.el"/>
-      <import plugin="org.slf4j.log4j"/>
-      <import plugin="org.apache.xalan"/>
-   </requires>
 
    <plugin
          id="com.sun.jersey.core"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
          id="com.sun.jersey.server"
@@ -157,9 +138,90 @@
          unpack="false"/>
 
    <plugin
-         id="org.slf4j.jcl-over-slf4j"
+         id="groovy-all"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="0.0.0"
+         unpack="false"/>
+
+   <!-- CMIS integration -->
+   <!-- this one is for now used only by CMIS bridge -->
+   <plugin
+         id="org.apache.commons.codec"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>   
+   
+   <plugin
+         id="antlr"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.antlr.runtime"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.chemistry.opencmis.chemistry-opencmis-client-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.chemistry.opencmis.chemistry-opencmis-client-bindings"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.chemistry.opencmis.chemistry-opencmis-client-impl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.chemistry.opencmis.chemistry-opencmis-commons-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.chemistry.opencmis.chemistry-opencmis-commons-impl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.chemistry.opencmis.chemistry-opencmis-server-support"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.chemistry.opencmis.chemistry-opencmis-server-bindings"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="jaxws-dev"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+   
 
 </feature>

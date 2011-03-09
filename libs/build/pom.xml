@@ -27,10 +27,22 @@
     <module>../plugins/joda-time</module>
     <module>../plugins/mvel2</module>
     <module>../plugins/wem</module>
+    <module>../plugins/xstream</module>
+    <!-- start OpenCMIS -->
+    <module>../plugins/antlr-runtime</module>
+    <module>../plugins/antlr</module>
+    <module>../plugins/jaxws-dev</module>
+    <module>../plugins/chemistry-opencmis-commons-api</module>
+    <module>../plugins/chemistry-opencmis-commons-impl</module>
+    <module>../plugins/chemistry-opencmis-client-api</module>
+    <module>../plugins/chemistry-opencmis-client-bindings</module>
+    <module>../plugins/chemistry-opencmis-client-impl</module>
+    <module>../plugins/chemistry-opencmis-server-support</module>
+    <module>../plugins/chemistry-opencmis-server-bindings</module>
+    <!-- end   OpenCMIS-->
     <module>../features/equinox</module>
     <module>../features/orbit</module>
     <module>../features/nuxeo</module>
-    <module>../features/maven</module>
     <module>../product</module>
   </modules>
 
@@ -121,6 +133,13 @@
         <artifactId>groovy-all</artifactId>
         <version>1.5.7</version>
       </dependency>
+      <!-- required only for developing opencmis bridge in PDE -->
+      <dependency>
+        <groupId>com.sun.xml.ws</groupId>
+        <artifactId>jaxws-rt</artifactId>
+        <version>2.2</version>
+      </dependency>
+
   </dependencies>
 
   <build>
