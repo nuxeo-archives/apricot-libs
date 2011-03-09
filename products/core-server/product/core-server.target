@@ -4,11 +4,7 @@
 <target name="Nuxeo OSGI Core Server Platform">
 <locations>
 <location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
-<unit id="org.nuxeo.osgi.core.server.http.feature.group" version="5.4.1.201103091711"/>
-<unit id="org.nuxeo.osgi.core.server.opencmis.feature.group" version="5.4.1.201103091711"/>
-<unit id="org.nuxeo.osgi.core.server.feature.group" version="5.4.1.201103091711"/>
-<unit id="org.nuxeo.osgi.core.server.equinox.feature.group" version="5.4.1.201103091711"/>
-<unit id="org.nuxeo.osgi.core.server.h2.feature.group" version="5.4.1.201103091711"/>
+<unit id="org.nuxeo.osgi.core.server" version="5.4.1.201103091814"/>
 <repository location="http://osgi.nuxeo.org/p2/core-server/current/repository"/>
 </location>
 </locations>

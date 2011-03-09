@@ -27,6 +27,7 @@
 <setEntry value="org.nuxeo.osgi.core.server.equinox:default"/>
 <setEntry value="org.nuxeo.osgi.core.server.h2:default"/>
 <setEntry value="org.nuxeo.osgi.core.server.http:default"/>
+<setEntry value="org.nuxeo.osgi.core.server.opencmis:default"/>
 <setEntry value="org.nuxeo.osgi.core.server:default"/>
 </setAttribute>
 <booleanAttribute key="show_selected_only" value="false"/>
