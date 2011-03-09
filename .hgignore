@@ -7,7 +7,7 @@
 mirrors
 ^Servers
 ^External Plug-in Libraries
-bin
+/bin/
 .*~
 .bak
 .orig
