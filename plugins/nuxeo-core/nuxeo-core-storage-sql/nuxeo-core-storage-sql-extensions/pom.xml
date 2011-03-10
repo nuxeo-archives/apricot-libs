@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-storage-sql-extensions-osgi</artifactId>
+  <artifactId>org.nuxeo.ecm.core.storage.sql.extensions</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Core SQL Storage DB Extensions</name>
   <description>Nuxeo Core: SQL Storage DB Extensions.</description>

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.automation</groupId>
-  <artifactId>nuxeo-automation-server-osgi</artifactId>
+  <artifactId>org.nuxeo.ecm.automation.server</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Automation Server</name>
   <description>Automation Server provides end points for jax-rs and web service access to automation framework.</description>

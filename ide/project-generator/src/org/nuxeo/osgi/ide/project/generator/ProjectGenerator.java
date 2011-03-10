@@ -33,8 +33,6 @@ import java.util.jar.Manifest;
  */
 public class ProjectGenerator {
 
-    public static final String PROJECT_NAME_SUFFIX = "-osgi";
-
     public File pluginsRoot;
     
     public File testsRoot;
@@ -166,8 +164,8 @@ public class ProjectGenerator {
     public void doGenerate(Map<String,String> parentVars) throws Exception {
         pluginsRoot.mkdirs();
         Map<String,String> vars = new HashMap<String, String>(parentVars);
-        String artifactId = loader.getArtifactId() + PROJECT_NAME_SUFFIX;
         String symbolicName = getSymbolicName(getSourceMainManifest());
+        String artifactId = symbolicName;
         
         String version = loader.getVersion();
         if (version.isEmpty()) {

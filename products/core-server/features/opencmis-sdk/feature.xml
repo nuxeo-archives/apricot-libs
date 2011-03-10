@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.osgi.core.server.opencmis"
-      label="Nuxeo Core Server Open CMIS"
+      id="org.nuxeo.osgi.core.server.opencmis.sdk"
+      label="Nuxeo Core Server Open CMIS SDK"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
@@ -17,29 +17,34 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import feature="org.nuxeo.osgi.core.server.opencmis" version="0.0.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="org.nuxeo.ecm.platform.audit.api.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.nuxeo.ecm.core.opencmis.bindings.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.nuxeo.ecm.core.opencmis.impl.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+<!--
    <plugin
          id="org.apache.commons.codec"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.ecm.platform.audit.api"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.ecm.core.opencmis.bindings"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.nuxeo.ecm.core.opencmis.impl"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -114,5 +119,6 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+ --> 
 
 </feature>

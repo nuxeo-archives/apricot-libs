@@ -23,11 +23,18 @@
     <module>../plugins/h2/functions</module>
     <module>../products/core-server/config</module>
     <module>../products/core-server/features/equinox</module>
+    <module>../products/core-server/features/equinox-sdk</module>
     <module>../products/core-server/features/core</module>
+    <module>../products/core-server/features/core-sdk</module>
     <module>../products/core-server/features/h2</module>
-    <module>../products/core-server/features/http</module>
+    <module>../products/core-server/features/h2-sdk</module>
+    <module>../products/core-server/features/web</module>
+    <module>../products/core-server/features/web-sdk</module>
     <module>../products/core-server/features/opencmis</module>
+    <module>../products/core-server/features/opencmis-sdk</module>
     <module>../products/core-server/product</module>
+    <module>../site</module>
+
   </modules>
 
   <scm>
@@ -47,6 +54,15 @@
     <libs-site>${nuxeo-osgi-url}/libs/${nuxeo-version}/repository</libs-site>
   </properties>
 
+  <profiles>
+    <profile>
+      <id>tycho-offline</id>
+      <properties>
+	<nuxeo-osgi-url>http://localhost/p2</nuxeo-osgi-url>
+      </properties>
+    </profile>
+  </profiles>
+
   <repositories>
     <repository>
       <id>equinox-site</id>
@@ -60,6 +76,46 @@
     </repository>
   </repositories>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.sonatype.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<resolver>p2</resolver>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.tycho</groupId>
+				<artifactId>maven-osgi-packaging-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<archiveSite>true</archiveSite>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.tycho</groupId>
+				<artifactId>maven-osgi-source-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>plugin-source</id>
+						<goals>
+							<goal>plugin-source</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+<!--
   <build>
     <directory>${project.basedir}/target</directory>
 
@@ -75,16 +131,15 @@
     	<version>${tycho-version}</version>
         <configuration>
           <resolver>p2</resolver>
-    	  <ignoreTychoRepositories>true</ignoreTychoRepositories>
-    	  <environments>
-    	    <environment>
-    	      <os>linux</os>
-    	      <ws>gtk</ws>
-    	      <arch>x86</arch>
-    	      <nl>en_US</nl>
-    	    </environment>
-    	  </environments>
         </configuration>
+      </plugin>
+      <plugin>
+	<groupId>org.sonatype.tycho</groupId>
+	<artifactId>maven-osgi-packaging-plugin</artifactId>
+	<version>${tycho-version}</version>
+	<configuration>
+	  <archiveSite>true</archiveSite>
+	</configuration>
       </plugin>
       <plugin>
         <groupId>org.sonatype.tycho</groupId>
@@ -92,27 +147,21 @@
         <version>${tycho-version}</version>
         <extensions>true</extensions>
       </plugin>
+      <plugin>
+	<groupId>org.sonatype.tycho</groupId>
+	<artifactId>maven-osgi-source-plugin</artifactId>
+	<version>${tycho-version}</version>
+	<executions>
+	  <execution>
+	    <id>plugin-source</id>
+	    <goals>
+	      <goal>plugin-source</goal>
+	    </goals>
+	  </execution>
+	</executions>
+      </plugin>
     </plugins>
 
   </build>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>tycho-snapshots</id>
-      <!--url>http://repository.sonatype.org/content/repositories/snapshots/</url-->
-      <url>http://intalio.org/public/maven2</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </pluginRepository>
-    <pluginRepository>
-      <id>ibib</id>
-      <!--url>http://repository.sonatype.org/content/repositories/snapshots/</url-->
-      <url>http://mirrors.ibiblio.org/pub/mirrors/maven2</url>
-    </pluginRepository>
-  </pluginRepositories>
-
+-->
 </project>

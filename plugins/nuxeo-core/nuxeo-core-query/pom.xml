@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-query-osgi</artifactId>
+  <artifactId>org.nuxeo.ecm.core.query</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Core Query</name>
   <description>Nuxeo Core: Query.</description>

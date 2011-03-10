@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.osgi.core.server.opencmis"
-      label="Nuxeo Core Server Open CMIS"
+      id="org.nuxeo.osgi.core.server.web.sdk"
+      label="Nuxeo Core Server Web SDK"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
@@ -17,102 +17,72 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import feature="org.nuxeo.osgi.core.server.web" version="0.0.0.qualifier"/>
+   </requires>
+
    <plugin
-         id="org.apache.commons.codec"
+         id="org.nuxeo.ecm.webengine.jaxrs.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+<!--
+   <plugin
+         id="com.sun.jersey.core"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.platform.audit.api"
+         id="com.sun.jersey.server"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.opencmis.bindings"
+         id="javax.servlet"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.opencmis.impl"
+         id="javax.ws.rs"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="antlr"
+         id="org.eclipse.equinox.http.jetty"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.antlr.runtime"
+         id="org.eclipse.equinox.http.servlet"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.apache.chemistry.opencmis.chemistry-opencmis-client-api"
+         id="org.mortbay.jetty.server"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.apache.chemistry.opencmis.chemistry-opencmis-client-bindings"
+         id="org.mortbay.jetty.util"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
-   <plugin
-         id="org.apache.chemistry.opencmis.chemistry-opencmis-client-impl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.chemistry.opencmis.chemistry-opencmis-commons-api"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.chemistry.opencmis.chemistry-opencmis-commons-impl"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.chemistry.opencmis.chemistry-opencmis-server-support"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.apache.chemistry.opencmis.chemistry-opencmis-server-bindings"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="jaxws-dev"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
+ -->
 </feature>

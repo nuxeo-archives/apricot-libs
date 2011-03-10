@@ -28,11 +28,11 @@
    </plugins>
 
    <features>
-      <feature id="org.nuxeo.osgi.core.server" version="5.4.1.qualifier"/>
-      <feature id="org.nuxeo.osgi.core.server.equinox" version="5.4.1.qualifier"/>
-      <feature id="org.nuxeo.osgi.core.server.h2" version="5.4.1.qualifier"/>
-      <feature id="org.nuxeo.osgi.core.server.http" version="5.4.1.qualifier"/>
-      <feature id="org.nuxeo.osgi.core.server.opencmis" version="5.4.1.qualifier"/>
+      <feature id="org.nuxeo.osgi.core.server" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.equinox" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.h2" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.web" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.opencmis" version="0.0.0"/>
    </features>
 
    <configurations>

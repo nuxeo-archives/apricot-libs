@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.nuxeo.osgi.core.server.h2.sdk"
+      label="Nuxeo OSGi Core H2 Connector"
+      version="5.4.1.qualifier"
+      provider-name="Nuxeo">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import feature="org.nuxeo.osgi.core.server.h2" version="0.0.0.qualifier"/>
+   </requires>
+
+   <plugin
+         id="org.nuxeo.osgi.h2.connector.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.nuxeo.osgi.h2.functions.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="org.h2.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

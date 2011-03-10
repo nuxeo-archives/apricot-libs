@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.nuxeo.core.server_0.0.0.jar" id="org.nuxeo.osgi.core.server" version="0.0.0">
+      <category name="org.nuxeo.osgi.core.server"/>
+   </feature>
+   <feature url="features/org.nuxeo.core.server.sdk_0.0.0.jar" id="org.nuxeo.osgi.core.server.sdk" version="0.0.0">
+      <category name="org.nuxeo.osgi.core.server.sdk"/>
+   </feature>
+   <feature url="features/org.nuxeo.core.server.equinox_0.0.0.jar" id="org.nuxeo.osgi.core.server.equinox" version="0.0.0">
+      <category name="org.nuxeo.osgi.core.server"/>
+   </feature>
+   <feature url="features/org.nuxeo.core.server.equinox.sdk_0.0.0.jar" id="org.nuxeo.osgi.core.server.equinox.sdk" version="0.0.0">
+      <category name="org.nuxeo.osgi.core.server.sdk"/>
+   </feature>
+   <feature url="features/org.nuxeo.core.server.web_0.0.0.jar" id="org.nuxeo.osgi.core.server.web" version="0.0.0">
+      <category name="org.nuxeo.osgi.core.server"/>
+   </feature>
+   <feature url="features/org.nuxeo.core.server.web.sdk_0.0.0.jar" id="org.nuxeo.osgi.core.server.web.sdk" version="0.0.0">
+      <category name="org.nuxeo.osgi.core.server.sdk"/>
+   </feature>
+   <feature url="features/org.nuxeo.core.server.opencmis_0.0.0.jar" id="org.nuxeo.osgi.core.server.opencmis" version="0.0.0">
+      <category name="org.nuxeo.osgi.core.server"/>
+   </feature>
+   <feature url="features/org.nuxeo.core.server.opencmis.sdk_0.0.0.jar" id="org.nuxeo.osgi.core.server.opencmis.sdk" version="0.0.0">
+      <category name="org.nuxeo.osgi.core.server.sdk"/>
+   </feature>
+   <feature url="features/org.nuxeo.ide.project_5.4.1.qualifier.jar" id="org.nuxeo.ide.project" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.ide"/>
+   </feature>
+   <category-def name="org.nuxeo.osgi.core.server" label="Nuxeo OSGi Core Server"/>
+   <category-def name="org.nuxeo.osgi.core.server.sdk" label="Nuxeo OSGi Core Server SDK"/>
+   <category-def name="org.nuxeo.osgi.ide" label="Nuxeo OSGI IDE"/>
+</site>

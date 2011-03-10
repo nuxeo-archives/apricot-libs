@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-auth-osgi</artifactId>
+  <artifactId>org.nuxeo.ecm.core.auth</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Core Authentication Support</name>
   <description>Nuxeo Core authentication support. Provides helper for authenticating against the core.</description>

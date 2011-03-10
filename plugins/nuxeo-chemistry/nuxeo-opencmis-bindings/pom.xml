@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-opencmis-bindings-osgi</artifactId>
+  <artifactId>org.nuxeo.ecm.core.opencmis.bindings</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Chemistry OpenCMIS Bindings</name>
   <description>Nuxeo Core: Chemistry OpenCMIS Bindings</description>

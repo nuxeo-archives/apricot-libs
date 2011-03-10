@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.runtime</groupId>
-  <artifactId>nuxeo-runtime-management-metrics-osgi</artifactId>
+  <artifactId>org.nuxeo.runtime.management.metrics</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Runtime Management Metrics</name>
   <description></description>

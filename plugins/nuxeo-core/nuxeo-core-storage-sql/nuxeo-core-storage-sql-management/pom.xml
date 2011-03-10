@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.core</groupId>
-  <artifactId>nuxeo-core-storage-sql-management-osgi</artifactId>
+  <artifactId>org.nuxeo.ecm.core.storage.sql.management</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Core SQL Storage Management</name>
   <description>Nuxeo Core: SQL Storage Management.</description>

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.nuxeo.ecm.platform</groupId>
-  <artifactId>nuxeo-platform-audit-api-osgi</artifactId>
+  <artifactId>org.nuxeo.ecm.platform.audit.api</artifactId>
   <version>5.4.1-SNAPSHOT</version>
   <name>Nuxeo Audit Service - API</name>
   <description>Nuxeo Enterprise Platform: Audit Service API.</description>
