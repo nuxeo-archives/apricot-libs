@@ -32,6 +32,7 @@
     <module>../products/core-server/features/web-sdk</module>
     <module>../products/core-server/features/opencmis</module>
     <module>../products/core-server/features/opencmis-sdk</module>
+    <module>../products/core-server/features/sdk</module>
     <module>../products/core-server/product</module>
   </modules>
 

@@ -4,6 +4,7 @@
 <product name="Nuxeo OSGi Core Server SDK" uid="org.nuxeo.osgi.core.server.sdk" version="5.4.1.qualifier" useFeatures="true" includeLaunchers="false">
 
    <features>
+      <feature id="org.nuxeo.sdk" version="0.0.0"/>
       <feature id="org.nuxeo.osgi.core.server.base.sdk" version="0.0.0"/>
       <feature id="org.nuxeo.osgi.core.server.equinox.sdk" version="0.0.0"/>
       <feature id="org.nuxeo.osgi.core.server.h2.sdk" version="0.0.0"/>
