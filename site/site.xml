@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.nuxeo.core.server_0.0.0.jar" id="org.nuxeo.osgi.core.server" version="0.0.0">
+   <feature url="features/org.nuxeo.core.server.base_0.0.0.jar" id="org.nuxeo.osgi.core.server.base" version="0.0.0">
       <category name="org.nuxeo.osgi.core.server"/>
    </feature>
-   <feature url="features/org.nuxeo.core.server.sdk_0.0.0.jar" id="org.nuxeo.osgi.core.server.sdk" version="0.0.0">
+   <feature url="features/org.nuxeo.core.server.base.sdk_0.0.0.jar" id="org.nuxeo.osgi.core.server.base.sdk" version="0.0.0">
       <category name="org.nuxeo.osgi.core.server.sdk"/>
    </feature>
    <feature url="features/org.nuxeo.core.server.equinox_0.0.0.jar" id="org.nuxeo.osgi.core.server.equinox" version="0.0.0">
@@ -29,5 +29,5 @@
    </feature>
    <category-def name="org.nuxeo.osgi.core.server" label="Nuxeo OSGi Core Server"/>
    <category-def name="org.nuxeo.osgi.core.server.sdk" label="Nuxeo OSGi Core Server SDK"/>
-   <category-def name="org.nuxeo.osgi.ide" label="Nuxeo OSGI IDE"/>
+   <category-def name="org.nuxeo.osgi.ide" label="Nuxeo OSGi IDE"/>
 </site>

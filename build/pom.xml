@@ -24,8 +24,8 @@
     <module>../products/core-server/config</module>
     <module>../products/core-server/features/equinox</module>
     <module>../products/core-server/features/equinox-sdk</module>
-    <module>../products/core-server/features/core</module>
-    <module>../products/core-server/features/core-sdk</module>
+    <module>../products/core-server/features/base</module>
+    <module>../products/core-server/features/base-sdk</module>
     <module>../products/core-server/features/h2</module>
     <module>../products/core-server/features/h2-sdk</module>
     <module>../products/core-server/features/web</module>
@@ -33,8 +33,6 @@
     <module>../products/core-server/features/opencmis</module>
     <module>../products/core-server/features/opencmis-sdk</module>
     <module>../products/core-server/product</module>
-    <module>../site</module>
-
   </modules>
 
   <scm>

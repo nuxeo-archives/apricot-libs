@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="Nuxeo OSGi Core Server SDK" uid="org.nuxeo.osgi.core.server.sdk" version="5.4.1.qualifier" useFeatures="true" includeLaunchers="false">
+
+   <features>
+      <feature id="org.nuxeo.osgi.core.server.base.sdk" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.equinox.sdk" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.h2.sdk" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.web.sdk" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.opencmis.sdk" version="0.0.0"/>
+   </features>
+
+</product>

@@ -2,6 +2,7 @@
 ^.settings
 /target/
 /addons/
+^tests/
 -test
 -testlib
 mirrors

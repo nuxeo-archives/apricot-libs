@@ -47,6 +47,7 @@
 	  <products>
 	    <product>
 	      <id>org.nuxeo.osgi.core.server</id>
+	      <id>org.nuxeo.osgi.core.server.sdk</id>
 	    </product>
 	  </products>
 	</configuration>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Nuxeo OSGI Core Server Platform">
+<target name="Nuxeo OSGI Core Server Platform" sequenceNumber="3">
 <locations>
-<location includeAllPlatforms="false" includeMode="planner" type="InstallableUnit">
-<unit id="org.nuxeo.osgi.core.server" version="5.4.1.201103092316"/>
-<repository location="http://osgi.nuxeo.org/p2/core-server/current/repository"/>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="false" type="InstallableUnit">
+<unit id="org.nuxeo.osgi.core.server.feature.group" version="5.4.1.201103111007"/>
+<repository location="http://osgi.nuxeo.org/p2/update/current/site"/>
 </location>
 </locations>
 <launcherArgs>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.osgi.core.server"
-      label="Nuxeo OSGi Core"
+      id="org.nuxeo.osgi.core.server.base.sdk"
+      label="Nuxeo OSGi Core Base SDK"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
@@ -17,146 +17,151 @@
       [Enter License Description here.]
    </license>
 
+   <requires>
+      <import feature="org.nuxeo.osgi.core.server.base" version="0.0.0.qualifier"/>
+   </requires>
+
    <plugin
-         id="org.nuxeo.ecm.core.storage.sql.ra"
+      id="org.nuxeo.common.source"
+         download-size="0"
+         install-size="0"
+         version="5.4.1.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="org.nuxeo.ecm.core.schema.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.common"
+         id="org.nuxeo.runtime.jtajca.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.schema"
+         id="org.nuxeo.ecm.platform.dublincore.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.runtime.jtajca"
+         id="org.nuxeo.ecm.core.api.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.platform.dublincore"
+         id="org.nuxeo.ecm.core.convert.api.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.api"
+         id="org.nuxeo.ecm.core.storage.sql.extensions.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.convert.api"
+         id="org.nuxeo.ecm.core.storage.sql.ra.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.storage.sql.extensions"
+         id="org.nuxeo.ecm.core.io.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.io"
+         id="org.nuxeo.ecm.core.auth.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.auth"
+         id="org.nuxeo.ecm.core.query.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.query"
+         id="org.nuxeo.ecm.core.event.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.event"
+         id="org.nuxeo.ecm.platform.rendering.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.platform.rendering"
+         id="org.nuxeo.ecm.core.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core"
+         id="org.nuxeo.ecm.core.storage.sql.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.storage.sql"
+         id="org.nuxeo.runtime.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.runtime"
+         id="org.nuxeo.ecm.core.convert.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.core.convert"
+         id="org.nuxeo.ecm.automation.core.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.automation.core"
+         id="org.nuxeo.ecm.automation.server.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.nuxeo.ecm.automation.server"
+         id="org.nuxeo.runtime.start.source"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
-         id="org.nuxeo.runtime.start"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
+<!--
    <plugin
          id="com.sun.xml.xsom"
          download-size="0"
@@ -480,5 +485,5 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
+ -->
 </feature>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.nuxeo.osgi.core.equinox</name>
+	<name>org.nuxeo.osgi.core.server.equinox</name>
 	<comment></comment>
 	<projects>
 	</projects>

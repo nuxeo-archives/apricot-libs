@@ -2,7 +2,7 @@
 
 GEN_NAME=org.nuxeo.osgi.ide.project.generator
 GEN_DIR=../ide/project-generator
-JAR=${GEN_DIR}/target/${GEN_NAME}-*.jar
+JAR=${GEN_DIR}/target/${GEN_NAME}-5.4.1-SNAPSHOT.jar
 
 #JAVA_OPTS="$JAVA_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=y"
 
