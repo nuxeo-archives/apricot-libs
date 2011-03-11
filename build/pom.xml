@@ -88,6 +88,16 @@
 				<version>${tycho-version}</version>
 				<configuration>
 					<resolver>p2</resolver>
+
+<environments>
+	<environment>
+		<os>linux</os>
+		<ws>gtk</ws>
+		<arch>x86</arch>
+		<nl>en_US</nl>
+	</environment>
+</environments>
+
 				</configuration>
 			</plugin>
 			<plugin>
