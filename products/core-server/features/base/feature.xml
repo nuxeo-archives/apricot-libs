@@ -488,4 +488,9 @@
          version="0.0.0"
          unpack="false"/>
 
+   <data
+         id="pom.xml"
+         download-size="0"
+         install-size="0"/>
+
 </feature>
