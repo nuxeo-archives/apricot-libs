@@ -1,8 +1,8 @@
 #!/bin/sh
 
-GEN_NAME=org.nuxeo.osgi.ide.project.generator                                                                                                               
-GEN_DIR=../ide/project-generator                                                                                                                               
-JAR=${GEN_DIR}/target/${GEN_NAME}-*.jar                                                                                                                     
+GEN_NAME=org.nuxeo.osgi.ide.project.generator
+GEN_DIR=../ide/project-generator   
+JAR=${GEN_DIR}/target/${GEN_NAME}-5.4.1-SNAPSHOT.jar
 
 echo $JAR
 

@@ -151,6 +151,13 @@
          unpack="false"/>
 
    <plugin
+         id="org.nuxeo.osgi.core.server.config"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
          id="org.nuxeo.runtime.start"
          download-size="0"
          install-size="0"

@@ -12,7 +12,7 @@
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <File>${nuxeo.home}/log/nxserver.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>logs/%d{yyyy_MM_dd}.cloud.%i.log</FileNamePattern>
+            <FileNamePattern>log/%d{yyyy_MM_dd}.%i.log</FileNamePattern>
             <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
               <MaxFileSize>10MB</MaxFileSize>
             </TimeBasedFileNamingAndTriggeringPolicy>
@@ -31,6 +31,6 @@
         <!--appender-ref ref="FILE" /-->
     </root>
     
-    <!--logger name="org.nuxeo" level="debug" /-->
+   <logger name="org.nuxeo" level="INFO"/>
     
 </configuration>

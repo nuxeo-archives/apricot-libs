@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>nuxeo-core-server</artifactId>
@@ -17,18 +17,9 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.sonatype.tycho</groupId>
-	<artifactId>tycho-p2-publisher-plugin</artifactId>
-	<version>${tycho-version}</version>
-	<configuration>
-	  <publishArtifacts>true</publishArtifacts>
-	</configuration>
-      </plugin>
-      <plugin>
+       <plugin>
         <groupId>org.sonatype.tycho</groupId>
 	<artifactId>tycho-p2-director-plugin</artifactId>
-	<version>${tycho-version}</version>
 	<executions>
 	  <execution>
 	    <id>materialize-products</id>
@@ -46,8 +37,8 @@
 	<configuration>
 	  <products>
 	    <product>
-	      <id>org.nuxeo.osgi.core.server</id>
 	      <id>org.nuxeo.osgi.core.server.sdk</id>
+	      <id>org.nuxeo.osgi.core.server</id>
 	    </product>
 	  </products>
 	</configuration>

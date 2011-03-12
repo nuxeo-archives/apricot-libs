@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Nuxeo OSGi Core Server" uid="org.nuxeo.osgi.core.server" id="nuxeo-core-server-application.NuxeoProduct" application="nuxeo-core-server-application.NuxeoApp" version="5.4.1.qualifier" useFeatures="true" includeLaunchers="false">
+<product name="Nuxeo OSGi Core Server" uid="org.nuxeo.osgi.core.server" version="5.4.1.qualifier" useFeatures="true" includeLaunchers="true">
+
 
    <configIni use="default">
    </configIni>
 
    <launcherArgs>
       <programArgs>-consoleLog -console</programArgs>
-      <vmArgs>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dnuxeo.home=${env_var:HOME}/.nxserver-osgi -Dh2.baseDir=/${env_var:HOME}/.nxserver-osgi/data/h2 -Djetty.logs=${env_var:HOME}/.nxserver-osgi/log</vmArgs>
+      <vmArgs>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.eclipse.equinox.http.jetty.http.port=8080</vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
    <windowImages/>
+
 
    <launcher name="nxserver">
       <solaris/>
@@ -21,22 +23,30 @@
       </win>
    </launcher>
 
+
    <vm>
    </vm>
+
 
    <plugins>
    </plugins>
 
    <features>
-      <feature id="org.nuxeo.osgi.core.server.base" version="0.0.0"/>
-      <feature id="org.nuxeo.osgi.core.server.equinox" version="0.0.0"/>
-      <feature id="org.nuxeo.osgi.core.server.h2" version="0.0.0"/>
-      <feature id="org.nuxeo.osgi.core.server.web" version="0.0.0"/>
-      <feature id="org.nuxeo.osgi.core.server.opencmis" version="0.0.0"/>
+      <feature id="org.nuxeo.osgi.core.server.base"/>
+      <feature id="org.nuxeo.osgi.core.server.equinox"/>
+      <feature id="org.nuxeo.osgi.core.server.h2"/>
+      <feature id="org.nuxeo.osgi.core.server.web"/>
+      <feature id="org.nuxeo.osgi.core.server.opencmis"/>
    </features>
 
    <configurations>
       <plugin id="org.nuxeo.runtime.start" autoStart="true" startLevel="5" />
+      <property name="eclipse.ignoreApp" value="true" />
+      <property name="java.awt.headless" value="true" />
+      <property name="logback.configurationFile" value="./logback.xml" />
+      <property name="osgi.noShutdown" value="true" />
+      <property name="osgi.requiredJavaVersion" value="1.6.0" />
+      <property name="osgi.startLevel" value="100" />
    </configurations>
 
 </product>
