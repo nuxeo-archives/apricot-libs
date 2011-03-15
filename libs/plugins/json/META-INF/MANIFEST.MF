@@ -18,7 +18,7 @@ Import-Package: org.apache.commons.lang.exception,
  org.apache.commons.collections.map,
  org.apache.commons.beanutils,
  org.apache.commons.lang,
- org.apache.oro.text.regex,
+ org.apache.oro.text.regex;resolution:=optional,
  org.apache.commons.logging,
  org.apache.commons.lang.builder
 Require-Bundle: net.sf.ezmorph
