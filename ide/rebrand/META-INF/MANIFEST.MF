@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Nuxeo IDE Rebrand
+Bundle-SymbolicName: org.nuxeo.osgi.ide.rebrand
+Bundle-Version: 5.4.1.qualifier
+Bundle-Vendor: Nuxeo
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.apache.commons.logging,
+ org.junit;version="4.8.1";resolution:=optional,
+ org.objectweb.asm,
+ org.objectweb.asm.commons,
+ org.objectweb.asm.util,
+ org.osgi.framework,
+ org.osgi.service.packageadmin,
+ org.osgi.util.tracker
+Export-Package: org.nuxeo.osgi.ide.rebrand
+Bundle-Activator: org.nuxeo.osgi.ide.rebrand.Activator

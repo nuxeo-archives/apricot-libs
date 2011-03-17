@@ -13,6 +13,7 @@
   <description>Provide common OSGi tycho build directives.</description>
 
   <modules>
+    <module>../ide/rebrand</module>
     <module>../ide/project</module>
     <module>../ide/project-generator</module>
     <module>../ide/project-feature</module>
