@@ -24,16 +24,9 @@
    </launcher>
 
 
-   <vm>
-   </vm>
-
-
-   <plugins>
-   </plugins>
-
    <features>
-      <feature id="org.nuxeo.osgi.core.server.base"/>
       <feature id="org.nuxeo.osgi.core.server.equinox"/>
+      <feature id="org.nuxeo.osgi.core.server.base"/>
       <feature id="org.nuxeo.osgi.core.server.h2"/>
       <feature id="org.nuxeo.osgi.core.server.web"/>
       <feature id="org.nuxeo.osgi.core.server.opencmis"/>

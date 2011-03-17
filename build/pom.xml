@@ -23,14 +23,14 @@
     <module>../plugins/h2/functions</module>
     <module>../products/core-server/config</module>
     <module>../products/core-server/features/equinox</module>
-    <module>../products/core-server/features/equinox-sdk</module>
     <module>../products/core-server/features/base</module>
-    <module>../products/core-server/features/base-sdk</module>
     <module>../products/core-server/features/h2</module>
-    <module>../products/core-server/features/h2-sdk</module>
     <module>../products/core-server/features/web</module>
-    <module>../products/core-server/features/web-sdk</module>
     <module>../products/core-server/features/opencmis</module>
+    <module>../products/core-server/features/equinox-sdk</module>
+    <module>../products/core-server/features/base-sdk</module>
+    <module>../products/core-server/features/h2-sdk</module>
+    <module>../products/core-server/features/web-sdk</module>
     <module>../products/core-server/features/opencmis-sdk</module>
     <module>../products/core-server/features/sdk</module>
     <module>../products/core-server/product</module>
@@ -89,17 +89,16 @@
 	<version>${tycho-version}</version>
 	<configuration>
 	  <resolver>p2</resolver>
-
           <environments>
             <environment>
               <os>linux</os>
               <ws>gtk</ws>
-              <arch>x86_64</arch>
+              <arch>x86</arch>
             </environment>
             <environment>
               <os>linux</os>
               <ws>gtk</ws>
-              <arch>x86</arch>
+              <arch>x86_64</arch>
             </environment>
             <environment>
               <os>win32</os>
@@ -169,53 +168,5 @@
       </plugin>
     </plugins>
   </build>
-  <!--
-     <build>
-       <directory>${project.basedir}/target</directory>
 
-       <plugins>
-	 <plugin>
-    	   <groupId>org.codehaus.mojo</groupId>
-    	   <artifactId>build-helper-maven-plugin</artifactId>
-    	   <version>1.3</version>
-	 </plugin>
-	 <plugin>
-           <groupId>org.sonatype.tycho</groupId>
-           <artifactId>target-platform-configuration</artifactId>
-    	   <version>${tycho-version}</version>
-           <configuration>
-             <resolver>p2</resolver>
-           </configuration>
-	 </plugin>
-	 <plugin>
-	   <groupId>org.sonatype.tycho</groupId>
-	   <artifactId>maven-osgi-packaging-plugin</artifactId>
-	   <version>${tycho-version}</version>
-	   <configuration>
-	     <archiveSite>true</archiveSite>
-	   </configuration>
-	 </plugin>
-	 <plugin>
-           <groupId>org.sonatype.tycho</groupId>
-           <artifactId>tycho-maven-plugin</artifactId>
-           <version>${tycho-version}</version>
-           <extensions>true</extensions>
-	 </plugin>
-	 <plugin>
-	   <groupId>org.sonatype.tycho</groupId>
-	   <artifactId>maven-osgi-source-plugin</artifactId>
-	   <version>${tycho-version}</version>
-	   <executions>
-	     <execution>
-	       <id>plugin-source</id>
-	       <goals>
-		 <goal>plugin-source</goal>
-	       </goals>
-	     </execution>
-	   </executions>
-	 </plugin>
-       </plugins>
-
-     </build>
-     -->
 </project>

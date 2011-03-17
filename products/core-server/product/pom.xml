@@ -37,7 +37,7 @@
 	<configuration>
 	  <products>
 	    <product>
-	      <id>org.nuxeo.osgi.core.server.sdk</id>
+	      <id>org.nuxeo.osgi.core.server.sdk</id> 
 	      <id>org.nuxeo.osgi.core.server</id>
 	    </product>
 	  </products>
