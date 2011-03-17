@@ -21,19 +21,18 @@
     <module>../plugins</module>
     <module>../plugins/h2/connector</module>
     <module>../plugins/h2/functions</module>
-    <module>../products/core-server/config</module>
-    <module>../products/core-server/features/equinox</module>
-    <module>../products/core-server/features/base</module>
-    <module>../products/core-server/features/h2</module>
-    <module>../products/core-server/features/web</module>
-    <module>../products/core-server/features/opencmis</module>
-    <module>../products/core-server/features/equinox-sdk</module>
-    <module>../products/core-server/features/base-sdk</module>
-    <module>../products/core-server/features/h2-sdk</module>
-    <module>../products/core-server/features/web-sdk</module>
-    <module>../products/core-server/features/opencmis-sdk</module>
-    <module>../products/core-server/features/sdk</module>
-    <module>../products/core-server/product</module>
+    <module>../config</module>
+    <module>../features/equinox</module>
+    <module>../features/base</module>
+    <module>../features/h2</module>
+    <module>../features/web</module>
+    <module>../features/opencmis</module>
+    <module>../features/equinox-sdk</module>
+    <module>../features/base-sdk</module>
+    <module>../features/h2-sdk</module>
+    <module>../features/web-sdk</module>
+    <module>../features/opencmis-sdk</module>
+    <module>../repository</module>
   </modules>
 
   <scm>
