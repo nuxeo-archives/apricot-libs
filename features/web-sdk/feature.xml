@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.nuxeo.osgi.core.web.sdk"
-      label="Nuxeo Core Web SDK"
+      label="Nuxeo OSGi Core Web SDK"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
