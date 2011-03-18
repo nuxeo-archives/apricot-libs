@@ -16,12 +16,11 @@
     <module>../ide/rebrand</module>
     <module>../ide/project</module>
     <module>../ide/project-generator</module>
-    <module>../ide/project-feature</module>
-    <module>../ide/project-site</module>
     <module>../plugins</module>
     <module>../plugins/h2/connector</module>
     <module>../plugins/h2/functions</module>
     <module>../config</module>
+    <module>../features/ide</module>
     <module>../features/equinox</module>
     <module>../features/base</module>
     <module>../features/h2</module>

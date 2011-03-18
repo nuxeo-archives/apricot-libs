@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.ide.project"
+      id="org.nuxeo.osgi.ide.project"
       label="Nuxeo OSGi Launcher Feature"
       version="5.4.1.qualifier">
 
@@ -25,6 +25,13 @@
 
    <plugin
          id="org.nuxeo.osgi.ide.project.generator"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.nuxeo.osgi.ide.rebrand"
          download-size="0"
          install-size="0"
          version="0.0.0"

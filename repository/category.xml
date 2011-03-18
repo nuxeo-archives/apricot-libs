@@ -1,41 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.nuxeo.osgi.core.base_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.base" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.runtime"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.equinox_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.equinox" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.runtime"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.h2_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.h2" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.runtime"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.opencmis_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.opencmis" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.runtime"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.web_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.web" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.runtime"/>
-   </feature>
    <feature url="features/org.nuxeo.osgi.core_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.runtime"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.base.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.base.sdk" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.sdk"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.equinox.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.equinox.sdk" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.sdk"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.h2.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.h2.sdk" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.sdk"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.opencmis.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.opencmis.sdk" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.sdk"/>
-   </feature>
-   <feature url="features/org.nuxeo.osgi.core.web.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.web.sdk" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.sdk"/>
+      <category name="org.nuxeo.osgi.core"/>
    </feature>
    <feature url="features/org.nuxeo.osgi.core.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.sdk" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.core.sdk"/>
+      <category name="org.nuxeo.osgi.core"/>
    </feature>
-   <category-def name="org.nuxeo.osgi.core.runtime" label="Nuxeo OSGi Core Repository"/>
-   <category-def name="org.nuxeo.osgi.core.sdk" label="Nuxeo OSGI Core SDK"/>
+   <feature url="features/org.nuxeo.osgi.core.base_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.base" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.equinox_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.equinox" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.h2_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.h2" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.opencmis_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.opencmis" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.web_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.web" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.base.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.base.sdk" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.equinox.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.equinox.sdk" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.h2.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.h2.sdk" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.opencmis.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.opencmis.sdk" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.core.web.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.web.sdk" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.components"/>
+   </feature>
+   <feature url="features/org.nuxeo.osgi.ide.project_5.4.1.qualifier.jar" id="org.nuxeo.osgi.ide.project" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.ide"/>
+   </feature>
+   <category-def name="org.nuxeo.osgi.ide" label="Nuxeo OSGi IDE"/>
+   <category-def name="org.nuxeo.osgi.core" label="Nuxeo OSGi Core"/>
+   <category-def name="org.nuxeo.osgi.core.components" label="Nuxeo OSGi Core Components"/>
 </site>
