@@ -32,6 +32,7 @@
     <module>../features/h2-sdk</module>
     <module>../features/web-sdk</module>
     <module>../features/opencmis-sdk</module>
+    <module>../features/sdk</module>
     <module>../repository</module>
   </modules>
 

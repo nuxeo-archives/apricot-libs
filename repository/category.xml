@@ -30,6 +30,9 @@
    <feature url="features/org.nuxeo.osgi.core.web.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.web.sdk" version="5.4.1.qualifier">
       <category name="org.nuxeo.osgi.core.sdk"/>
    </feature>
+   <feature url="features/org.nuxeo.osgi.core.sdk_5.4.1.qualifier.jar" id="org.nuxeo.osgi.core.sdk" version="5.4.1.qualifier">
+      <category name="org.nuxeo.osgi.core.sdk"/>
+   </feature>
    <category-def name="org.nuxeo.osgi.core.runtime" label="Nuxeo OSGi Core Repository"/>
    <category-def name="org.nuxeo.osgi.core.sdk" label="Nuxeo OSGI Core SDK"/>
 </site>
