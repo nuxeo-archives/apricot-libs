@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="Nuxeo OSGI Core Server Platform" sequenceNumber="3">
+<target name="Nuxeo OSGI Core Server Platform">
 <locations>
-<location includeAllPlatforms="false" includeMode="slicer" includeSource="false" type="InstallableUnit">
-<unit id="org.nuxeo.osgi.core.server.opencmis.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.web.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.base.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.equinox.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.h2.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.opencmis.sdk.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.web.sdk.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.base.sdk.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.equinox.sdk.feature.group" version="5.4.1.201103172359"/>
-<unit id="org.nuxeo.osgi.core.server.h2.sdk.feature.group" version="5.4.1.201103172359"/>
+<location includeAllPlatforms="false" includeMode="slicer" type="InstallableUnit">
+<unit id="org.nuxeo.osgi.core.opencmis.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.opencmis.sdk.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.web.sdk.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.base.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.base.sdk.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.equinox.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.equinox.sdk.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.h2.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.h2.sdk.feature.group" version="0.0.0"/>
+<unit id="org.nuxeo.osgi.core.web.feature.group" version="0.0.0"/>
 <repository location="http://localhost/p2/core-server/current/repository"/>
 </location>
 </locations>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
 <setAttribute key="additional_plugins">
-<setEntry value="org.eclipse.osgi:3.7.0.v20110124-0830:default:false"/>
-<setEntry value="org.nuxeo.osgi.ide.rebrand:5.4.1.qualifier:default:true"/>
+<setEntry value="org.eclipse.osgi:3.6.1.R36x_v20100806:default:false"/>
 </setAttribute>
 <booleanAttribute key="append.args" value="true"/>
 <booleanAttribute key="automaticAdd" value="false"/>
@@ -24,10 +23,11 @@
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dnuxeo.home=${env_var:HOME}/.nxserver-osgi -Dh2.baseDir=/${env_var:HOME}/.nxserver-osgi/data/h2 -Djetty.logs=${env_var:HOME}/.nxserver-osgi/log -Dorg.eclipse.equinox.http.jetty.http.port=8080 -Dlogback.configurationFile=${env_var:HOME}/.nxserver-osgi/config/logback.xml"/>
 <stringAttribute key="pde.version" value="3.3"/>
 <setAttribute key="selected_features">
-<setEntry value="org.nuxeo.osgi.core.server.equinox:default"/>
-<setEntry value="org.nuxeo.osgi.core.server.h2:default"/>
-<setEntry value="org.nuxeo.osgi.core.server.opencmis:default"/>
-<setEntry value="org.nuxeo.osgi.core.server:default"/>
+<setEntry value="org.nuxeo.osgi.core.base:default"/>
+<setEntry value="org.nuxeo.osgi.core.equinox:default"/>
+<setEntry value="org.nuxeo.osgi.core.h2:default"/>
+<setEntry value="org.nuxeo.osgi.core.opencmis:default"/>
+<setEntry value="org.nuxeo.osgi.core.web.sdk:default"/>
 </setAttribute>
 <booleanAttribute key="show_selected_only" value="false"/>
 <stringAttribute key="target_bundles" value="org.eclipse.osgi.services@default:default,org.eclipse.equinox.http.jetty@default:default,org.eclipse.equinox.http.servlet@default:default,org.eclipse.osgi@-1:true"/>
