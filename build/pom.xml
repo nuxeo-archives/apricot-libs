@@ -27,12 +27,13 @@
     <module>../features/h2</module>
     <module>../features/web</module>
     <module>../features/opencmis</module>
+    <module>../features/core</module>
     <module>../features/equinox-sdk</module>
     <module>../features/base-sdk</module>
     <module>../features/h2-sdk</module>
     <module>../features/web-sdk</module>
     <module>../features/opencmis-sdk</module>
-    <module>../features/sdk</module>
+    <module>../features/core-sdk</module>
     <module>../repository</module>
   </modules>
 
