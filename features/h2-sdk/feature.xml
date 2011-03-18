@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.nuxeo.osgi.core.h2.sdk"
-      label="Nuxeo OSGi Core H2 Connector"
+      label="Nuxeo OSGi Core H2 Connector SDK"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
