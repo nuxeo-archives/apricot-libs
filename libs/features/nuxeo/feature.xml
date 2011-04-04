@@ -17,6 +17,12 @@
       [Enter License Description here.]
    </license>
 
+   <plugin
+         id="org.nuxeo.common"
+         download-size="0"
+         install-size="0"
+         version="5.4.1.I20110316_0115"
+         unpack="false"/>
 
    <plugin
          id="com.sun.jersey.core"
@@ -151,8 +157,8 @@
          download-size="0"
          install-size="0"
          version="0.0.0"
-         unpack="false"/>   
-   
+         unpack="false"/>
+
    <plugin
          id="antlr"
          download-size="0"
@@ -222,6 +228,41 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-   
+
+   <!-- only for tests : specific version must be specified to get the no_aop version -->
+   <plugin
+         id="com.google.inject"
+         download-size="0"
+         install-size="0"
+         version="2.0.0.no_aop"
+         unpack="false"/>
+
+   <plugin
+         id="org.jmock"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.concordion"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.openqa.selenium"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.nuxeo.osgi"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

@@ -1,0 +1,27 @@
+Export-Package: org.nuxeo.osgi,
+ org.nuxeo.osgi.application;osgi=split;mandatory:=true,
+ org.nuxeo.osgi.application.client,
+ org.nuxeo.osgi.application.loader
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Category: runtime
+Bundle-Name: OSGIAdapter
+Created-By: 1.6.0_20 (Sun Microsystems Inc.)
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Version: 5.4.2.qualifier
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.nuxeo.osgi
+Import-Package: javax.annotation;version="1.0",
+ javax.management,
+ org.apache.commons.logging,
+ org.jboss.deployment;resolution:=optional,
+ org.jboss.logging;resolution:=optional,
+ org.jboss.mx.loading;resolution:=optional,
+ org.jboss.system;resolution:=optional,
+ org.jboss.system.server;resolution:=optional,
+ org.nuxeo.common,
+ org.nuxeo.common.collections,
+ org.nuxeo.common.utils,
+ org.osgi.framework;version="1.4",
+ org.osgi.service.packageadmin

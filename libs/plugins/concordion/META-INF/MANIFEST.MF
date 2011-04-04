@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: matic
+Build-Jdk: 1.6.0_24
+Export-Package: org.concordion,org.concordion.api,org.concordion.integ
+ ration.junit3,org.concordion.integration.junit4,org.concordion.intern
+ al,org.concordion.internal.command,org.concordion.internal.listener,o
+ rg.concordion.internal.util
+Bundle-Vendor: Nuxeo
+Bundle-Version: 1.3.0
+Bundle-Name: Concordion
+Bundle-ManifestVersion: 2
+Import-Package: org.junit.runner; version="4.8.1",org.junit.runner.not
+ ification; version="4.8.1",org.junit.internal.runners; version="4.8.1
+ ",junit.framework; version="4.8.1"
+Bundle-SymbolicName: org.concordion
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

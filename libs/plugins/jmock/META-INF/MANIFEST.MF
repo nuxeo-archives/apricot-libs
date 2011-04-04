@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: matic
+Build-Jdk: 1.6.0_24
+Export-Package: org.jmock,org.jmock.builder,org.jmock.core,org.jmock.c
+ ore.constraint,org.jmock.core.matcher,org.jmock.core.stub,org.jmock.e
+ xpectation,org.jmock.util
+Bundle-Vendor: Nuxeo
+Bundle-Version: 1.2.0
+Bundle-Name: JMock
+Bundle-ManifestVersion: 2
+Import-Package: junit.framework
+Bundle-SymbolicName: org.jmock
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
