@@ -28,6 +28,7 @@
     <module>../plugins/mvel2</module>
     <module>../plugins/wem</module>
     <module>../plugins/xstream</module>
+    <module>../plugins/postgresql</module>
     <!-- start OpenCMIS -->
     <module>../plugins/antlr-runtime</module>
     <module>../plugins/antlr</module>
