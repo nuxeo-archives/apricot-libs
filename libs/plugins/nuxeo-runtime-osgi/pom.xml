@@ -4,7 +4,7 @@
 
   <artifactId>org.nuxeo.osgi</artifactId>
   <name>Nuxeo Runtime OSGi</name>
-  <version>5.4.2.SNAPSHOT</version>
+  <version>5.4.2-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 
   <parent>
