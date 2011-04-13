@@ -1,0 +1,20 @@
+Export-Package: org.nuxeo.osgi
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Category: runtime
+Bundle-Name: Nuxeo Runtime OSGi Implementation
+Created-By: 1.6.0_20 (Sun Microsystems Inc.)
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Version: 5.4.1.qualifier
+Eclipse-BuddyPolicy: registered
+Bundle-ManifestVersion: 2
+Import-Package: org.apache.commons.logging,
+ org.nuxeo.common.utils,
+ org.jboss.deployment;resolution:=optional,
+ org.jboss.logging;resolution:=optional,
+ org.jboss.mx.loading;resolution:=optional,
+ org.jboss.system;resolution:=optional,
+ org.jboss.system.server;resolution:=optional,
+ org.osgi.framework
+Bundle-SymbolicName: org.nuxeo.osgi;singleton:=true
