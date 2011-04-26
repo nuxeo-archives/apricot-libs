@@ -21,7 +21,7 @@
          id="org.nuxeo.common"
          download-size="0"
          install-size="0"
-         version="5.4.1.I20110316_0115"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin

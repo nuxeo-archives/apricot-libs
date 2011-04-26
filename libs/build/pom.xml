@@ -11,6 +11,7 @@
   <packaging>pom</packaging>
 
   <modules>
+    <module>../plugins/nuxeo-common</module>
     <module>../plugins/jersey-core</module>
     <module>../plugins/jersey-server</module>
     <module>../plugins/relaxng</module>
@@ -130,12 +131,6 @@
 
   <dependencies>
       <dependency>
-        <groupId>org.nuxeo.common</groupId>
-        <artifactId>nuxeo-common</artifactId>
-        <classifier>osgi</classifier>
-        <version>5.4.1-I20110316_0115</version>
-      </dependency>
-      <dependency>
         <groupId>commons-codec</groupId>
         <artifactId>commons-codec</artifactId>
         <version>1.4</version>
@@ -152,11 +147,6 @@
         <version>2.2</version>
       </dependency>
       <!-- required only for tests -->
-      <dependency>
-        <groupId>org.nuxeo.runtime</groupId>
-        <artifactId>nuxeo-runtime-osgi</artifactId>
-        <version>5.4.2-SNAPSHOT</version>
-      </dependency>
       <dependency>
         <groupId>com.google.inject</groupId>
         <artifactId>guice</artifactId>
