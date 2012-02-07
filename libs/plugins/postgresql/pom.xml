@@ -4,7 +4,7 @@
 
   <artifactId>postgresql</artifactId>
   <name>Nuxeo OSGi Libraries postgresql </name>
-  <version>9.0.801</version>
+  <version>9.1.901</version>
   <packaging>eclipse-plugin</packaging>
 
   <parent>
@@ -31,7 +31,7 @@
                  <artifactItem>
                    <groupId>postgresql</groupId>
                    <artifactId>postgresql</artifactId>
-                   <version>9.0-801.jdbc4</version>
+                   <version>9.1-901.jdbc4</version>
                    <type>jar</type>
                    <overWrite>false</overWrite>
                    <outputDirectory>${project.basedir}</outputDirectory>

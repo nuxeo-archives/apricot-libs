@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Postgresql JDBC4 Driver
 Bundle-SymbolicName: org.postgresql
-Bundle-Version: 9.0.801
+Bundle-Version: 9.1.901
 Export-Package: org.postgresql,
  org.postgresql.copy,
  org.postgresql.core,
@@ -25,7 +25,9 @@ Export-Package: org.postgresql,
  org.postgresql.ssl,
  org.postgresql.translation,
  org.postgresql.util,
- org.postgresql.xa
+ org.postgresql.xa,
+ org.postgresql.xa.jdbc3,
+ org.postgresql.xa.jdbc4
 Import-Package: javax.security.auth,
  javax.net,
  javax.xml.transform.dom,
@@ -45,4 +47,3 @@ Import-Package: javax.security.auth,
  javax.xml.transform.sax,
  javax.naming,
  javax.xml.transform.stax
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6

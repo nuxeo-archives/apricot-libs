@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: xbean naming
+Bundle-SymbolicName: org.apache.xbean.naming
+Bundle-Version: 3.9.0
+Export-Package: org.apache.xbean.naming.context,
+ org.apache.xbean.naming.global,
+ org.apache.xbean.naming.java,
+ org.apache.xbean.naming.reference,
+ org.apache.xbean.naming.referenceable
+Bundle-Vendor: Apache Geronimo
+Import-Package: javax.naming, javax.naming.spi

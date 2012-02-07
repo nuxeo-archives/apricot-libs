@@ -4,7 +4,7 @@
 
   <artifactId>xsom</artifactId>
   <name>Nuxeo OSGi Libraries xsom</name>
-  <version>0.0.20060306-SNAPSHOT</version>
+  <version>1.0.20081112-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 
   <parent>
@@ -29,9 +29,9 @@
              <configuration>
                <artifactItems>
                  <artifactItem>
-		   <groupId>com.sun.xml</groupId>
+		   <groupId>com.sun.xsom</groupId>
 		   <artifactId>xsom</artifactId>
-		   <version>20060306</version>
+		   <version>20081112</version>
                    <type>jar</type>
                    <overWrite>false</overWrite>
                    <outputDirectory>${project.basedir}</outputDirectory>

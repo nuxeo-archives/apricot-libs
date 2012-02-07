@@ -12,8 +12,8 @@
 
   <modules>
     <module>../plugins/nuxeo-common</module>
-    <module>../plugins/jersey-core</module>
-    <module>../plugins/jersey-server</module>
+    <!--module>../plugins/jersey-core</module>
+    <module>../plugins/jersey-server</module-->
     <module>../plugins/relaxng</module>
     <module>../plugins/xsom</module>
     <module>../plugins/ezmorph</module>
@@ -26,10 +26,11 @@
     <module>../plugins/freemarker</module>
     <module>../plugins/javasimon</module>
     <module>../plugins/joda-time</module>
-    <module>../plugins/mvel2</module>
+    <!--module>../plugins/mvel2</module-->
     <module>../plugins/wem</module>
     <module>../plugins/xstream</module>
     <module>../plugins/postgresql</module>
+    <module>../plugins/xbean-naming</module>
     <!-- start OpenCMIS -->
     <module>../plugins/antlr-runtime</module>
     <module>../plugins/antlr</module>
@@ -134,6 +135,41 @@
         <groupId>commons-codec</groupId>
         <artifactId>commons-codec</artifactId>
         <version>1.4</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.jersey</groupId>
+        <artifactId>jersey-core</artifactId>
+        <classifier>minimal</classifier>
+        <version>1.11</version>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.jersey</groupId>
+        <artifactId>jersey-server</artifactId>
+        <version>1.11</version>
+        <exclusions>
+          <!-- exclude bad jersey-core -->
+          <exclusion>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-core</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.jersey</groupId>
+        <artifactId>jersey-servlet</artifactId>
+        <version>1.11</version>
+        <exclusions>
+          <!-- exclude bad jersey-core -->
+          <exclusion>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-core</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.mvel</groupId>
+        <artifactId>mvel2</artifactId>
+        <version>2.0.19</version>
       </dependency>
       <dependency>
         <groupId>org.codehaus.groovy</groupId>

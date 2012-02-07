@@ -2,9 +2,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>mvel2</artifactId>
-  <name>Nuxeo OSGi Libraies mvel2</name>
-  <version>2.0.19-SNAPSHOT</version>
+  <artifactId>xbean-naming</artifactId>
+  <name>Nuxeo OSGi Libraries xbean-naming</name>
+  <version>3.9.0</version>
   <packaging>eclipse-plugin</packaging>
 
   <parent>
@@ -29,9 +29,10 @@
              <configuration>
                <artifactItems>
                  <artifactItem>
-		   <groupId>org.mvel</groupId>
-		   <artifactId>mvel2</artifactId>
-		   <version>2.0.19</version>
+		   <groupId>org.apache.xbean</groupId>
+		   <artifactId>xbean-naming</artifactId>
+		   <version>3.9</version>
+                   <type>jar</type>
                    <overWrite>false</overWrite>
                    <outputDirectory>${project.basedir}</outputDirectory>
 		   <includes>**/*</includes>
