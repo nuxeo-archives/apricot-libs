@@ -2,8 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry excluding="java/" kind="src" path=""/>
 	<classpathentry kind="src" path="java"/>
-	<classpathentry kind="src" path="resources"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="output" path="PARENT-1-PROJECT_LOC/bin"/>
 </classpath>
-

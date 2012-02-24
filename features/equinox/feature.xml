@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.nuxeo.osgi.core.equinox"
-      label="Nuxeo OSGi Core Equinox Framework"
+      id="org.nuxeo.osgi.libs.equinox"
+      label="Nuxeo Core Server Libraries from Equinox"
       version="5.4.1.qualifier"
       provider-name="Nuxeo">
 
@@ -17,12 +17,34 @@
       [Enter License Description here.]
    </license>
 
-   <requires>
-      <import plugin="javax.servlet"/>
-      <import plugin="org.mortbay.jetty.util"/>
-      <import plugin="org.mortbay.jetty.server"/>
-   </requires>
 
+   <plugin
+         id="org.eclipse.equinox.http.jetty"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.equinox.http.servlet"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.mortbay.jetty.server"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.mortbay.jetty.util"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
          id="org.eclipse.osgi.services"
@@ -37,6 +59,5 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
 
 </feature>

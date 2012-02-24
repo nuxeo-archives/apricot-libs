@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/org.nuxeo.ide.project_5.4.1.qualifier.jar" id="org.nuxeo.ide.project" version="5.4.1.qualifier">
-      <category name="org.nuxeo.osgi.ide"/>
-   </feature>
-   <category-def name="org.nuxeo.osgi.ide" label="Nuxeo OSGi IDE"/>
-</site>
