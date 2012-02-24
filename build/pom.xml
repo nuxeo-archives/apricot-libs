@@ -5,7 +5,7 @@
   <groupId>org.nuxeo.osgi.libs</groupId>
   <name>Nuxeo OSGi Libraries tycho build</name>
   <artifactId>nuxeo-osgi-libs-tycho</artifactId>
-  <version>5.6-SNAPSHOT</version>
+  <version>5.6.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <profiles>
@@ -15,7 +15,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <modules>
-        <module>../plugins/nuxeo-common</module>
+        <!--<module>../plugins/nuxeo-common</module>-->
         <module>../plugins/relaxng</module>
         <module>../plugins/xsom</module>
         <module>../plugins/ezmorph</module>
@@ -47,7 +47,7 @@
         <module>../plugins/jmock</module>
         <module>../plugins/concordion</module>
         <module>../plugins/selenium</module>
-        <module>../plugins/nuxeo-runtime-osgi</module>
+        <!--<module>../plugins/nuxeo-runtime-osgi</module>-->
         <!-- end OpenCMIS -->
       </modules>
     </profile>
@@ -303,13 +303,8 @@
       </dependency>
       <dependency>
         <groupId>org.nuxeo.osgi.libs</groupId>
-        <artifactId>org.nuxeo.common</artifactId>
-        <version>5.6-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-        <groupId>org.nuxeo.osgi.libs</groupId>
         <artifactId>org.nuxeo.osgi</artifactId>
-        <version>5.6-SNAPSHOT</version>
+        <version>5.6.0-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.nuxeo.osgi.libs</groupId>
@@ -370,17 +365,17 @@
       <dependency>
         <groupId>org.nuxeo.osgi.libs</groupId>
         <artifactId>nuxeo-osgi-libs-equinox</artifactId>
-        <version>5.6-SNAPSHOT</version>
+        <version>5.6.0-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.nuxeo.osgi.libs</groupId>
         <artifactId>nuxeo-osgi-libs-nuxeo</artifactId>
-        <version>5.6-SNAPSHOT</version>
+        <version>5.6.0-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.nuxeo.osgi.libs</groupId>
         <artifactId>nuxeo-osgi-libs-orbit</artifactId>
-        <version>5.6-SNAPSHOT</version>
+        <version>5.6.0-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
