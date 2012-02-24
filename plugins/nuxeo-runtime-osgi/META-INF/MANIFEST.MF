@@ -9,7 +9,7 @@ Bundle-Category: runtime
 Bundle-Name: OSGIAdapter
 Created-By: 1.6.0_20 (Sun Microsystems Inc.)
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-Version: 5.4.2.qualifier
+Bundle-Version: 5.6.0.qualifier
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.nuxeo.osgi
 Import-Package: javax.annotation;version="1.0",

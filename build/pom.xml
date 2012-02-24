@@ -1,63 +1,77 @@
-<?xml version="1.0"?>
-<project xmlns="http:/maven.apache.org/POM/4.0.0"
-	 xmlns:xsi="http:/www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http:/maven.apache.org/POM/4.0.0 http:/maven.apache.org/maven-v4_0_0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>org.nuxeo.osgi.libs</groupId>
   <name>Nuxeo OSGi Libraries tycho build</name>
   <artifactId>nuxeo-osgi-libs-tycho</artifactId>
-  <version>5.4.1-SNAPSHOT</version>
+  <version>5.6.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <modules>
-    <module>../plugins/nuxeo-common</module>
-    <!--module>../plugins/jersey-core</module>
-    <module>../plugins/jersey-server</module-->
-    <module>../plugins/relaxng</module>
-    <module>../plugins/xsom</module>
-    <module>../plugins/ezmorph</module>
-    <module>../plugins/json</module>
-    <module>../plugins/jexl</module>
-    <module>../plugins/geronimo-components-connector</module>
-    <module>../plugins/geronimo-components-transaction</module>
-    <module>../plugins/geronimo-specs-connector</module>
-    <module>../plugins/dom4j</module>
-    <module>../plugins/freemarker</module>
-    <module>../plugins/javasimon</module>
-    <module>../plugins/joda-time</module>
-    <!--module>../plugins/mvel2</module-->
-    <module>../plugins/wem</module>
-    <module>../plugins/xstream</module>
-    <module>../plugins/postgresql</module>
-    <module>../plugins/xbean-naming</module>
-    <!-- start OpenCMIS -->
-    <module>../plugins/antlr-runtime</module>
-    <module>../plugins/antlr</module>
-    <module>../plugins/jaxws-dev</module>
-    <module>../plugins/chemistry-opencmis-commons-api</module>
-    <module>../plugins/chemistry-opencmis-commons-impl</module>
-    <module>../plugins/chemistry-opencmis-client-api</module>
-    <module>../plugins/chemistry-opencmis-client-bindings</module>
-    <module>../plugins/chemistry-opencmis-client-impl</module>
-    <module>../plugins/chemistry-opencmis-server-support</module>
-    <module>../plugins/chemistry-opencmis-server-bindings</module>
-    <!-- tests -->
-    <module>../plugins/jmock</module>
-    <module>../plugins/concordion</module>
-    <module>../plugins/selenium</module>
-    <module>../plugins/nuxeo-runtime-osgi</module>
-    <!-- end   OpenCMIS-->
-    <module>../features/equinox</module>
-    <module>../features/orbit</module>
-    <module>../features/nuxeo</module>
-    <module>../product</module>
-  </modules>
+  <profiles>
+    <profile>
+      <id>plugins</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <!--<module>../plugins/nuxeo-common</module>-->
+        <module>../plugins/relaxng</module>
+        <module>../plugins/xsom</module>
+        <module>../plugins/ezmorph</module>
+        <module>../plugins/json</module>
+        <module>../plugins/jexl</module>
+        <module>../plugins/geronimo-components-connector</module>
+        <module>../plugins/geronimo-components-transaction</module>
+        <module>../plugins/geronimo-specs-connector</module>
+        <module>../plugins/dom4j</module>
+        <module>../plugins/freemarker</module>
+        <module>../plugins/javasimon</module>
+        <module>../plugins/joda-time</module>
+        <module>../plugins/wem</module>
+        <module>../plugins/xstream</module>
+        <module>../plugins/postgresql</module>
+        <module>../plugins/xbean-naming</module>
+        <!-- start OpenCMIS -->
+        <module>../plugins/antlr-runtime</module>
+        <module>../plugins/antlr</module>
+        <module>../plugins/jaxws-dev</module>
+        <module>../plugins/chemistry-opencmis-commons-api</module>
+        <module>../plugins/chemistry-opencmis-commons-impl</module>
+        <module>../plugins/chemistry-opencmis-client-api</module>
+        <module>../plugins/chemistry-opencmis-client-bindings</module>
+        <module>../plugins/chemistry-opencmis-client-impl</module>
+        <module>../plugins/chemistry-opencmis-server-support</module>
+        <module>../plugins/chemistry-opencmis-server-bindings</module>
+        <!-- tests -->
+        <module>../plugins/jmock</module>
+        <module>../plugins/concordion</module>
+        <module>../plugins/selenium</module>
+        <!--<module>../plugins/nuxeo-runtime-osgi</module>-->
+        <!-- end OpenCMIS -->
+      </modules>
+    </profile>
+    <!-- <profiles> -->
+    <profile>
+      <id>features</id>
+      <modules>
+        <module>../features/equinox</module>
+        <module>../features/orbit</module>
+        <module>../features/nuxeo</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>product</id>
+      <modules>
+        <module>../product</module>
+      </modules>
+    </profile>
+  </profiles>
 
   <scm>
-    <connection>scm:hg:http://hg.nuxeo.org/sandbox/nuxeo-osgi</connection>
-    <developerConnection>scm:hg:https://hg.nuxeo.org/sandbox/nuxeo-osgi</developerConnection>
-    <url>http://hg.nuxeo.org/nuxeo/</url>
+    <connection>scm:git:git://github.com/nuxeo/apricot-libs.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com:nuxeo/apricot-libs.git</developerConnection>
+    <url>https://github.com/nuxeo/apricot-libs</url>
   </scm>
 
   <properties>
@@ -66,7 +80,8 @@
     <eclipse-version>current</eclipse-version>
     <nuxeo-version>current</nuxeo-version>
     <mirror-url>http://osgi.nuxeo.org/p2/mirrors</mirror-url>
-    <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}</equinox-site>
+    <equinox-site>${mirror-url}/eclipse/updates/${eclipse-version}
+    </equinox-site>
     <orbit-site>${mirror-url}/eclipse/orbit/${orbit-version}</orbit-site>
   </properties>
 
@@ -130,11 +145,37 @@
     </pluginRepository>
   </pluginRepositories>
 
-  <dependencies>
+  <dependencyManagement>
+    <dependencies>
       <dependency>
-        <groupId>commons-codec</groupId>
-        <artifactId>commons-codec</artifactId>
-        <version>1.4</version>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>antlr</artifactId>
+        <version>2.7.7</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>antlr-runtime</artifactId>
+        <version>3.1.3</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>relaxng</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>xsom</artifactId>
+        <version>1.0.20081112-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>xstream</artifactId>
+        <version>1.3.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mvel</groupId>
+        <artifactId>mvel2</artifactId>
+        <version>2.0.19</version>
       </dependency>
       <dependency>
         <groupId>com.sun.jersey</groupId>
@@ -166,66 +207,225 @@
           </exclusion>
         </exclusions>
       </dependency>
+      <!-- required only for developing opencmis bridge in PDE -->
       <dependency>
-        <groupId>org.mvel</groupId>
-        <artifactId>mvel2</artifactId>
-        <version>2.0.19</version>
+        <groupId>com.sun.xml.ws</groupId>
+        <artifactId>jaxws-rt</artifactId>
+        <version>2.2</version>
+        <exclusions>
+          <!-- requires com.sun.istack:istack-commons-runtime:jar:1.1 which doesn't
+            exist -->
+          <exclusion>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>policy</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>jaxws-dev</artifactId>
+        <version>2.2</version>
+      </dependency>
+      <dependency>
+        <groupId>nuxeo-osgi-libs-tycho</groupId>
+        <artifactId>net.sf.ezmorph</artifactId>
+        <version>1.0.4-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>json-lib</artifactId>
+        <version>2.2.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>chemistry-opencmis-client-api</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>chemistry-opencmis-client-bindings</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>chemistry-opencmis-client-impl</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>chemistry-opencmis-commons-api</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>chemistry-opencmis-commons-impl</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>chemistry-opencmis-server-bindings</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>chemistry-opencmis-server-support</artifactId>
+        <version>0.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>org.concordion</artifactId>
+        <version>1.3.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>dom4j</artifactId>
+        <version>1.6.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>org.freemarker</artifactId>
+        <version>2.3.16-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>jexl</artifactId>
+        <version>1.1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>org.jmock</artifactId>
+        <version>1.2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>1.6.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>org.nuxeo.osgi</artifactId>
+        <version>5.6.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>9.1.901</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>selenium</artifactId>
+        <version>2.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>wem</artifactId>
+        <version>2.0.2-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>xbean-naming</artifactId>
+        <version>3.9.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>geronimo-components-connector</artifactId>
+        <version>2.2.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>geronimo-components-transaction</artifactId>
+        <version>2.2.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>nuxeo-osgi-libs-tycho</groupId>
+        <artifactId>geronimo-specs-connector</artifactId>
+        <version>2.0.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>javasimon</artifactId>
+        <version>2.3.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.4</version>
       </dependency>
       <dependency>
         <groupId>org.codehaus.groovy</groupId>
         <artifactId>groovy-all</artifactId>
         <version>1.5.7</version>
       </dependency>
-      <!-- required only for developing opencmis bridge in PDE -->
-      <dependency>
-        <groupId>com.sun.xml.ws</groupId>
-        <artifactId>jaxws-rt</artifactId>
-        <version>2.2</version>
-      </dependency>
-      <!-- required only for tests -->
       <dependency>
         <groupId>com.google.inject</groupId>
         <artifactId>guice</artifactId>
         <version>2.0-no_aop</version>
       </dependency>
-  </dependencies>
+
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>nuxeo-osgi-libs-equinox</artifactId>
+        <version>5.6.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>nuxeo-osgi-libs-nuxeo</artifactId>
+        <version>5.6.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.nuxeo.osgi.libs</groupId>
+        <artifactId>nuxeo-osgi-libs-orbit</artifactId>
+        <version>5.6.0-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <directory>${project.basedir}/target</directory>
-
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>1.3</version>
+        </plugin>
+        <plugin>
+          <groupId>org.sonatype.tycho</groupId>
+          <artifactId>target-platform-configuration</artifactId>
+          <version>${tycho-version}</version>
+          <configuration>
+            <resolver>p2</resolver>
+            <pomDependencies>consider</pomDependencies>
+            <ignoreTychoRepositories>true</ignoreTychoRepositories>
+            <environments>
+              <environment>
+                <os>linux</os>
+                <ws>gtk</ws>
+                <arch>x86</arch>
+                <nl>en_US</nl>
+              </environment>
+            </environments>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.sonatype.tycho</groupId>
+          <artifactId>tycho-maven-plugin</artifactId>
+          <version>${tycho-version}</version>
+          <extensions>true</extensions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
     <plugins>
-      <plugin>
-    	<groupId>org.codehaus.mojo</groupId>
-    	<artifactId>build-helper-maven-plugin</artifactId>
-    	<version>1.3</version>
-      </plugin>
       <plugin>
         <groupId>org.sonatype.tycho</groupId>
         <artifactId>target-platform-configuration</artifactId>
-    	<version>${tycho-version}</version>
-        <configuration>
-          <resolver>p2</resolver>
-          <pomDependencies>consider</pomDependencies>
-    	  <ignoreTychoRepositories>true</ignoreTychoRepositories>
-    	  <environments>
-    	    <environment>
-    	      <os>linux</os>
-    	      <ws>gtk</ws>
-    	      <arch>x86</arch>
-    	      <nl>en_US</nl>
-    	    </environment>
-    	  </environments>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.sonatype.tycho</groupId>
         <artifactId>tycho-maven-plugin</artifactId>
-        <version>${tycho-version}</version>
         <extensions>true</extensions>
       </plugin>
     </plugins>
-
   </build>
-
 
 </project>
