@@ -11,45 +11,60 @@
   <parent>
     <groupId>org.nuxeo.osgi.libs</groupId>
     <artifactId>nuxeo-osgi-libs-tycho</artifactId>
-    <version>5.4.1-SNAPSHOT</version>
+    <version>5.6-SNAPSHOT</version>
     <relativePath>../build/pom.xml</relativePath>
   </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.nuxeo.osgi.libs</groupId>
+      <artifactId>nuxeo-osgi-libs-equinox</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.osgi.libs</groupId>
+      <artifactId>nuxeo-osgi-libs-nuxeo</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nuxeo.osgi.libs</groupId>
+      <artifactId>nuxeo-osgi-libs-orbit</artifactId>
+    </dependency>
+  </dependencies>
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.sonatype.tycho</groupId>
-	<artifactId>tycho-p2-publisher-plugin</artifactId>
-	<version>${tycho-version}</version>
-	<configuration>
-	  <publishArtifacts>true</publishArtifacts>
-	</configuration>
+        <artifactId>tycho-p2-publisher-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <publishArtifacts>true</publishArtifacts>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.sonatype.tycho</groupId>
-	<artifactId>tycho-p2-director-plugin</artifactId>
-	<version>${tycho-version}</version>
-	<executions>
-	  <execution>
-	    <id>materialize-products</id>
-	    <goals>
-	      <goal>materialize-products</goal>
-	    </goals>
-	  </execution>
-	  <execution>
-	    <id>archive-products</id>
-	    <goals>
-	      <goal>archive-products</goal>
-	    </goals>
-	  </execution>
-	</executions>
-	<configuration>
-	  <products>
-	    <product>
-	      <id>org.nuxeo.osgi.libs</id>
-	    </product>
-	  </products>
-	</configuration>
+        <artifactId>tycho-p2-director-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <executions>
+          <execution>
+            <id>materialize-products</id>
+            <goals>
+              <goal>materialize-products</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>archive-products</id>
+            <goals>
+              <goal>archive-products</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <products>
+            <product>
+              <id>org.nuxeo.osgi.libs</id>
+            </product>
+          </products>
+        </configuration>
       </plugin>
     </plugins>
   </build>

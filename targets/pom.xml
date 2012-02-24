@@ -12,7 +12,7 @@
   <parent>
     <groupId>org.nuxeo.osgi</groupId>
     <artifactId>nuxeo-osgi-tycho</artifactId>
-    <version>5.4.1-SNAPSHOT</version>
+    <version>5.6-SNAPSHOT</version>
     <relativePath>../build/pom.xml</relativePath>
   </parent>
 

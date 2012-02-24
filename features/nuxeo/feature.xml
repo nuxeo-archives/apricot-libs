@@ -2,7 +2,7 @@
 <feature
       id="org.nuxeo.osgi.libs.nuxeo"
       label="Nuxeo OSGi Orbit Extension"
-      version="5.4.1.qualifier"
+      version="5.6.0.qualifier"
       provider-name="Nuxeo">
 
    <description url="http://www.example.com/description">
@@ -37,20 +37,6 @@
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-
-   <!--plugin
-         id="com.sun.jersey.core"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="com.sun.jersey.server"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/-->
 
    <plugin
          id="com.sun.jersey.jersey-core"

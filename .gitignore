@@ -1,10 +1,11 @@
-^.metadata
-^.settings
-^Servers
-^External Plug-in Libraries
-.*/target
+.metadata
+.settings
+Servers
+External Plug-in Libraries
+*/target
+*/*/target
 bin
-.*~
-.~.bak
-.*.orig
-.*.reject
+*~
+*~.bak
+*.orig
+*.reject
